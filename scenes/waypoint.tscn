@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://3ue6heb7xd6"]
+
+[ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_kvbum"]
+[ext_resource type="Script" uid="uid://bweiq17juwgf1" path="res://scenes/tracker.gd" id="2_hy65e"]
+
+[node name="Target" type="Node2D" unique_id=1236049755]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1355834024]
+position = Vector2(1010, 217)
+texture = ExtResource("1_kvbum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=370523916]
+position = Vector2(-1, -81)
+scale = Vector2(0.6953125, 0.5546875)
+texture = ExtResource("1_kvbum")
+script = ExtResource("2_hy65e")
