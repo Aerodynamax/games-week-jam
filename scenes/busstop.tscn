@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bomsm2spsaqmi" path="res://scripts/bus stop/busstop.gd" id="1_oi4tm"]
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="2_hr2fb"]
 [ext_resource type="Script" uid="uid://babpdsfvhi2mh" path="res://scripts/tracker.gd" id="3_hr2fb"]
-[ext_resource type="Texture2D" uid="uid://bpria67c3rm0l" path="res://images.png" id="3_xjad6"]
+[ext_resource type="Texture2D" uid="uid://pffjjphot4gb" path="res://assets/sprites/spr_arrow.png" id="3_xjad6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r32pp"]
 bg_color = Color(0.6027165, 0.60574514, 0.54955053, 1)
@@ -33,8 +33,7 @@ show_percentage = false
 [node name="tracker" type="Sprite2D" parent="." unique_id=1079494508]
 physics_interpolation_mode = 1
 visible = false
-scale = Vector2(0.062639825, 0.06263983)
 texture = ExtResource("3_xjad6")
 script = ExtResource("3_hr2fb")
-on_screen_offset = Vector2(0, -30)
+on_screen_offset = Vector2(0, -48)
 screen_margin = 48.0
