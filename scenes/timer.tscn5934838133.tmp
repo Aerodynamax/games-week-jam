@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqm6lwxvn4n4m"]
+
+[ext_resource type="Script" uid="uid://cn6h7jrhepjux" path="res://scenes/timer_panel.gd" id="1_srplv"]
+[ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scenes/stop_panel.gd" id="2_5lxq6"]
+
+[node name="Timer" type="Node2D" unique_id=1544295259]
+
+[node name="Panel" type="Panel" parent="." unique_id=859173201]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.319999, 1.1999998)
+script = ExtResource("1_srplv")
+
+[node name="Time" type="Label" parent="Panel" unique_id=666944796]
+layout_mode = 0
+offset_left = 10.284811
+offset_top = 2.5000005
+offset_right = 52.284813
+offset_bottom = 25.5
+scale = Vector2(0.20393267, 1.3451842)
+text = "hello"
+
+[node name="Panel2" type="Panel" parent="." unique_id=1666307502]
+offset_left = 918.0
+offset_top = 6.0
+offset_right = 1152.0
+offset_bottom = 253.0
+script = ExtResource("2_5lxq6")
+
+[node name="Label" type="Label" parent="Panel2" unique_id=889068055]
+layout_mode = 0
+offset_right = 223.0
+offset_bottom = 238.0
+text = "Stop 1
+Stop 2
+Stop 3
+Stop 4
+Stop 5
+"
