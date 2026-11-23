@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c3a0g5yhf0ows"]
+
+[ext_resource type="Script" uid="uid://c7au0m7yi37p5" path="res://scripts/npc.gd" id="1_if67s"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q367f"]
+size = Vector2(10, 10)
+
+[node name="NPC" type="PathFollow2D" unique_id=1939084926]
+rotation = -1.565588
+loop = false
+script = ExtResource("1_if67s")
+move_speed = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269261412]
+texture = SubResource("PlaceholderTexture2D_q367f")
