@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dahdrat61sk6j"]
 
-[ext_resource type="Script" uid="uid://dn12hct27fqcm" path="res://scripts/timetableslot.gd" id="1_bykfa"]
+[ext_resource type="Script" uid="uid://dn12hct27fqcm" path="res://scripts/bus stop ui/timetableslot.gd" id="1_bykfa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bykfa"]
 bg_color = Color(0.2585664, 0.2585664, 0.25856638, 1)

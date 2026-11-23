@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ohjfqnwsvd7a"]
+
+[ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="1_72ypr"]
+
+[node name="NPC" unique_id=1939084926 instance=ExtResource("1_72ypr")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1269261412]
+region_rect = Rect2(6, 7, 6, 7)
