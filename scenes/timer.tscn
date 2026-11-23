@@ -1,20 +1,29 @@
 [gd_scene format=3 uid="uid://bqm6lwxvn4n4m"]
 
 [ext_resource type="Script" uid="uid://cn6h7jrhepjux" path="res://scenes/timer_panel.gd" id="1_srplv"]
+[ext_resource type="FontFile" uid="uid://wg7h0etqv1f4" path="res://at01.ttf" id="2_5lxq6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_srplv"]
+font = ExtResource("2_5lxq6")
+font_size = 56
+font_color = Color(0.72166157, 0.1835084, 0.15302119, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Node2D" unique_id=1544295259]
 
 [node name="Panel" type="Panel" parent="." unique_id=859173201]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 41.613926
+offset_bottom = 88.33334
 scale = Vector2(6.319999, 1.1999998)
 script = ExtResource("1_srplv")
 
 [node name="Time" type="Label" parent="Panel" unique_id=666944796]
 layout_mode = 0
-offset_left = 10.284811
-offset_top = 2.5000005
-offset_right = 52.284813
-offset_bottom = 25.5
+offset_left = 6.170886
+offset_top = 13.333336
+offset_right = 174.17088
+offset_bottom = 58.333336
 scale = Vector2(0.20393267, 1.3451842)
 text = "Placeholder"
+label_settings = SubResource("LabelSettings_srplv")
