@@ -1,18 +1,8 @@
-extends Control
+class_name TimeTable
+extends Node2D
 
-@onready var label: Label = $Label
-@onready var timer: Timer = $Timer
-var elapsed_seconds: int = 0
+@onready var timetable = get_node("Panel2")
+@onready var timer = get_node("Panel")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	timer.start()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
-func _on_timer_timeout() -> void:
-	elapsed_seconds += 1
-	label.text = "%d" % elapsed_seconds
+func change_target():
+	timetable.next(timer.time)

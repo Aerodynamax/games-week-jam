@@ -2,11 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="1_r32pp"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="2_65iv0"]
+[ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/timer.tscn" id="3_65iv0"]
 
 [node name="Testscene" type="Node2D" unique_id=1033832060]
 
-[node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("1_r32pp")]
-position = Vector2(827, 251)
-
 [node name="Player" parent="." unique_id=713872924 instance=ExtResource("2_65iv0")]
 position = Vector2(375, 125)
+
+[node name="Timer" parent="." unique_id=1544295259 instance=ExtResource("3_65iv0")]
+
+[node name="Busstop2" parent="." unique_id=1412730420 instance=ExtResource("1_r32pp")]
+position = Vector2(283, 482)
+wait_Time = 0.0
+loc_Name = "Fart street"
+loc_time = 9000
+
+[node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("1_r32pp")]
+position = Vector2(827, 251)
+wait_Time = 0.1
+loc_Name = "Peepee"
+loc_time = 666

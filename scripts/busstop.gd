@@ -7,6 +7,8 @@ extends Node2D
 @export var loc_Name: String 
 @export var loc_time: int
 var waited_Time = 0
+var selected = false
+var finished = false
 
 
 func _physics_process(delta: float) -> void:
@@ -14,9 +16,10 @@ func _physics_process(delta: float) -> void:
 	if player.global_position.distance_to(global_position) <= wait_Distance:
 		progressBar.value = 100 - waited_Time/wait_Time * 100
 		waited_Time+=delta
-		if waited_Time>wait_Time:
+		if waited_Time>wait_Time and not finished:
 			change_target()
 			progressBar.hide()
+			finished = true
 
 func change_target():
-	print("BIG")
+	Global.timetable.change_target()

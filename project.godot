@@ -36,6 +36,7 @@ import/blender/enabled=false
 [global_group]
 
 Player="The player node"
+timetable=""
 
 [input]
 

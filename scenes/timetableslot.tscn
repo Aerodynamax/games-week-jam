@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dahdrat61sk6j"]
+
+[ext_resource type="Script" uid="uid://dn12hct27fqcm" path="res://scripts/timetableslot.gd" id="1_bykfa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bykfa"]
+bg_color = Color(0.2585664, 0.2585664, 0.25856638, 1)
+
+[node name="Timetableslot" type="Control" unique_id=861696364]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -608.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bykfa")
+
+[node name="Panel" type="Panel" parent="." unique_id=1187984284]
+layout_mode = 0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bykfa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=1845855700]
+layout_mode = 0
+offset_left = 7.0
+offset_right = 193.0
+offset_bottom = 40.0
+
+[node name="Location" type="Label" parent="Panel/HBoxContainer" unique_id=1336282017]
+layout_mode = 2
+text = "Blank street"
+
+[node name="Control" type="Control" parent="Panel/HBoxContainer" unique_id=1639578382]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Time" type="Label" parent="Panel/HBoxContainer" unique_id=300838774]
+layout_mode = 2
+text = "10:20"
