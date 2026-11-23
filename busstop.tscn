@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b2pvdlsyod2yl"]
+
+[ext_resource type="Script" uid="uid://bomsm2spsaqmi" path="res://busstop.gd" id="1_2fh5s"]
+
+[node name="Busstop" type="Node2D" unique_id=834891058 groups=["busstop"]]
+script = ExtResource("1_2fh5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=381094470]
