@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnbgtqxygfaq1"
-path="res://.godot/imported/spr_house_green.png-b4a4ef8d00bdce0c0c9fbb5946d6948c.ctex"
+uid="uid://pffjjphot4gb"
+path="res://.godot/imported/spr_arrow.png-8772bc6ed76851f33742df32e1f464fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/spr_house_green.png"
-dest_files=["res://.godot/imported/spr_house_green.png-b4a4ef8d00bdce0c0c9fbb5946d6948c.ctex"]
+source_file="res://assets/sprites/spr_arrow.png"
+dest_files=["res://.godot/imported/spr_arrow.png-8772bc6ed76851f33742df32e1f464fa.ctex"]
 
 [params]
 

@@ -30,3 +30,4 @@ ignore_rotation = false
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+rotation_smoothing_speed = 0.6
