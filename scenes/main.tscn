@@ -8,7 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bk1reou44gab4" path="res://scenes/building_blocks/crossing.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/npc.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://rsv2vgqu8rn1" path="res://scenes/NPCs/normal/npc2.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="11_trceg"]
+[ext_resource type="PackedScene" uid="uid://ohjfqnwsvd7a" path="res://scenes/NPCs/normal/npc4.tscn" id="12_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="13_jkv2x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
 texture = ExtResource("1_jyhfs")
@@ -575,9 +579,9 @@ texture = ExtResource("6_tefeu")
 [node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146]
 curve = SubResource("Curve2D_o6xl0")
 script = ExtResource("8_tipki")
-npc_templates = Array[Resource]([ExtResource("9_85g3d")])
+npc_templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
 
 [node name="Path2D2" type="Path2D" parent="NPCPaths" unique_id=1101850301]
 curve = SubResource("Curve2D_tipki")
 script = ExtResource("8_tipki")
-npc_templates = Array[Resource]([ExtResource("9_85g3d")])
+npc_templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
