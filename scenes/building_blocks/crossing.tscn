@@ -1,15 +1,31 @@
 [gd_scene format=3 uid="uid://bk1reou44gab4"]
 
 [ext_resource type="Script" uid="uid://ccy7gq1x34bnw" path="res://scripts/crossing.gd" id="1_s5itv"]
+[ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/sprites/tiles/spr_road_tiles.png" id="2_dcwx3"]
+[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="2_dhqgn"]
+[ext_resource type="PackedScene" uid="uid://ckegrf2j13rp4" path="res://scenes/NPCs/crossing/crossing_npc2.tscn" id="3_j041f"]
+[ext_resource type="PackedScene" uid="uid://cy8bfqgdj3cug" path="res://scenes/NPCs/crossing/crossing_npc3.tscn" id="4_6h213"]
+[ext_resource type="PackedScene" uid="uid://cwvs2cmomq2ih" path="res://scenes/NPCs/crossing/crossing_npc4.tscn" id="5_n7e4t"]
+[ext_resource type="PackedScene" uid="uid://cc1e6ps4jawvi" path="res://scenes/NPCs/crossing/crossing_npc5.tscn" id="6_vcmix"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
-size = Vector2(106.5, 20)
+size = Vector2(300, 300)
 
 [node name="Crossing" type="Area2D" unique_id=1627377999]
 collision_layer = 2
 script = ExtResource("1_s5itv")
+npc_templates = Array[Resource]([ExtResource("2_dhqgn"), ExtResource("3_j041f"), ExtResource("4_6h213"), ExtResource("5_n7e4t"), ExtResource("6_vcmix")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491178627]
 shape = SubResource("RectangleShape2D_q367f")
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1683684462]
+texture = ExtResource("2_dcwx3")
+region_enabled = true
+region_rect = Rect2(-0.3517685, 143.9856, 64.32307, 16.419998)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=244307274]
+rect = Rect2(-30, -10, 60, 20)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
