@@ -8,6 +8,8 @@ func round_to_dec(num, digit):
 #region movement
 
 var acceleration := 2.5
+var deceleration := 3.5
+var stopping_deceleration := 5.0
 var velocity_speed   := 5.0
 
 var max_speed := 600.0
@@ -19,12 +21,27 @@ var _forwards_lerp_vel: float = 0.0
 func movement(delta: float) -> Vector2:
 	var forwards := Input.get_axis("backward", "forward")
 	
-	_forwards_lerp_acc = round_to_dec(lerpf(_forwards_lerp_acc, forwards, delta * acceleration), 3)
+	var _acc = acceleration
+	# decelerate when out of drift
+	if forwards < 0 and _forwards_lerp_vel < drift_min_forward_speed:
+		_acc = deceleration
 	
-	if _forwards_lerp_acc > 0:
+	print(_forwards_lerp_vel)
+	
+	_forwards_lerp_acc = round_to_dec(lerpf(_forwards_lerp_acc, forwards, delta * _acc), 3)
+	
+	# stop abruptly if not moving
+	if _forwards_lerp_acc < 0.05 and forwards == 0:
+		_forwards_lerp_acc = 0
+	
+	if _forwards_lerp_acc > 0.2:
 		_forwards_lerp_vel = round_to_dec(lerpf(_forwards_lerp_vel, _forwards_lerp_acc * max_speed, delta * velocity_speed), 3)
 	else:
 		_forwards_lerp_vel = round_to_dec(lerpf(_forwards_lerp_vel, _forwards_lerp_acc * max_speed_backwards, delta * velocity_speed), 3)
+	
+	# stop abruptly
+	if _forwards_lerp_vel < 0.5 and forwards == 0:
+		_forwards_lerp_vel = 0
 	
 	return transform.x * _forwards_lerp_vel
 
