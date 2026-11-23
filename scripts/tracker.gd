@@ -17,9 +17,9 @@ func _process(delta: float) -> void:
 		return
 	
 	var target_global_position: Vector2 = get_parent().global_position
-	var viewport_dimensions: Vector2 = get_viewport().get_visible_rect().size
-	var screen_coordinates: Vector2 = (target_global_position - camera_node.get_target_position()) * camera_node.zoom + viewport_dimensions * 0.5
-	var screen_inset_rectangle: Rect2 = Rect2(Vector2.ZERO, viewport_dimensions).grow(-screen_margin)
+	var viewport_dimensions: Rect2 = Global.screen_bounds.shape.get_rect()
+	var screen_coordinates: Vector2 = (target_global_position - camera_node.get_target_position()) * camera_node.zoom + viewport_dimensions.get_center()
+	var screen_inset_rectangle: Rect2 = viewport_dimensions.grow(-screen_margin)
 	
 	var target_display_position: Vector2
 	var target_display_rotation: float
@@ -28,15 +28,15 @@ func _process(delta: float) -> void:
 		target_display_position = target_global_position + on_screen_offset
 		target_display_rotation = 0.0
 	else:
-		var clamped_x = clamp(screen_coordinates.x, screen_margin, viewport_dimensions.x - screen_margin)
-		var clamped_y = clamp(screen_coordinates.y, screen_margin, viewport_dimensions.y - screen_margin)
-		var clamped_screen_coords: Vector2 = Vector2(clamped_x, clamped_y)
+		var clamped_x = clamp(screen_coordinates.x, viewport_dimensions.position.x, viewport_dimensions.position.x + viewport_dimensions.size.x - (2 * screen_margin) - (2 * (self.get_rect().size.x - self.get_rect().position.x)))
+		var clamped_y = clamp(screen_coordinates.y, viewport_dimensions.position.y + screen_margin + (self.get_rect().size.y + self.get_rect().position.y), viewport_dimensions.position.y + viewport_dimensions.size.y - (2 * screen_margin))
+		var clamped_screen_coords := Vector2(clamped_x, clamped_y)
 		
-		target_display_position = camera_node.global_position + (clamped_screen_coords - viewport_dimensions * 0.5) / camera_node.zoom
+		target_display_position = camera_node.global_position + ((clamped_screen_coords + viewport_dimensions.get_center() / 2) / camera_node.zoom)
 		
 		var vector_to_target: Vector2 = target_global_position - target_display_position
 		target_display_rotation = vector_to_target.angle() - PI * 0.5
-		
+	
 	global_position = lerp(global_position, target_display_position, delta * smoothing_speed) 
 	rotation = lerp(rotation, target_display_rotation, delta * smoothing_speed)
 		

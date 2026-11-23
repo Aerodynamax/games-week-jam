@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/timetableslot.tscn" id="3_g5y8c"]
 [ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="3_w4wbt"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxiu"]
+size = Vector2(912, 650)
+
 [node name="TimeTable" type="Control" unique_id=322771032 groups=["timetable"]]
 layout_mode = 3
 anchors_preset = 0
@@ -45,3 +48,11 @@ alignment = 1
 layout_mode = 2
 offset_transform_enabled = true
 theme_override_constants/separation = 43
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1926091268 groups=["ScreenBounds"]]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=841289918]
+position = Vector2(457, 325)
+shape = SubResource("RectangleShape2D_dqxiu")
