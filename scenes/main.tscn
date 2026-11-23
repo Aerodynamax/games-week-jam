@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c76oqqe8xb40t" path="res://assets/sprites/buildings/spr_house_red.png" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bk1reou44gab4" path="res://scenes/building_blocks/crossing.tscn" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/npc.tscn" id="9_85g3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
 texture = ExtResource("1_jyhfs")
@@ -572,6 +574,10 @@ texture = ExtResource("6_tefeu")
 
 [node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146]
 curve = SubResource("Curve2D_o6xl0")
+script = ExtResource("8_tipki")
+npc_templates = Array[Resource]([ExtResource("9_85g3d")])
 
 [node name="Path2D2" type="Path2D" parent="NPCPaths" unique_id=1101850301]
 curve = SubResource("Curve2D_tipki")
+script = ExtResource("8_tipki")
+npc_templates = Array[Resource]([ExtResource("9_85g3d")])

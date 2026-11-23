@@ -24,7 +24,6 @@ func cross_road(dest_path: Path2D) -> void:
 	lerp_time = 0
 
 func _move_at_crossing(delta) -> void:
-	print("crossing!!")
 	lerp_time += delta
 	if (lerp_time <= time_to_cross):
 		position = lerp(crossing_start_point, crossing_end_point, lerp_time / time_to_cross)
