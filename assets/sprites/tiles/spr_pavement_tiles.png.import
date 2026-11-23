@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wqcq8hhuwfxh"
-path="res://.godot/imported/road_tiles_TEMP.png-177d7e3f731e83feda464098b0d31486.ctex"
+uid="uid://bcp4cffv1dcgl"
+path="res://.godot/imported/spr_pavement_tiles.png-472bdfb55a25c30db33bacd71e4add7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/road_tiles_TEMP.png"
-dest_files=["res://.godot/imported/road_tiles_TEMP.png-177d7e3f731e83feda464098b0d31486.ctex"]
+source_file="res://assets/sprites/tiles/spr_pavement_tiles.png"
+dest_files=["res://.godot/imported/spr_pavement_tiles.png-472bdfb55a25c30db33bacd71e4add7f.ctex"]
 
 [params]
 

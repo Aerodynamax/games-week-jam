@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du0rwwc1isll3"
-path="res://.godot/imported/tileset_TEMP.png-f8d3c278bf2486870a01682db52881c4.ctex"
+uid="uid://c76oqqe8xb40t"
+path="res://.godot/imported/spr_house_red.png-7eb415e1ece99802618d50c5749cf278.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset_TEMP.png"
-dest_files=["res://.godot/imported/tileset_TEMP.png-f8d3c278bf2486870a01682db52881c4.ctex"]
+source_file="res://assets/sprites/buildings/spr_house_red.png"
+dest_files=["res://.godot/imported/spr_house_red.png-7eb415e1ece99802618d50c5749cf278.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx4576nkvdo2i"
-path="res://.godot/imported/bus_TEMP.png-3e1cd83cdc248133d4719aa17bfb7227.ctex"
+uid="uid://3afh8f76xp0h"
+path="res://.godot/imported/spr_bus.png-f85fa5a5bd604607cfb130555845f937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bus_TEMP.png"
-dest_files=["res://.godot/imported/bus_TEMP.png-3e1cd83cdc248133d4719aa17bfb7227.ctex"]
+source_file="res://assets/sprites/spr_bus.png"
+dest_files=["res://.godot/imported/spr_bus.png-f85fa5a5bd604607cfb130555845f937.ctex"]
 
 [params]
 
