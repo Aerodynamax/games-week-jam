@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c3a0g5yhf0ows"]
+
+[ext_resource type="Script" uid="uid://c7au0m7yi37p5" path="res://scripts/npc.gd" id="1_if67s"]
+[ext_resource type="Texture2D" uid="uid://bbhcrwwx30ulv" path="res://assets/sprites/spr_npcs.png" id="2_qojcf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
+size = Vector2(7.0051117, 7.9998894)
+
+[node name="NPC" type="PathFollow2D" unique_id=1939084926 groups=["NPC"]]
+rotation = -1.565588
+loop = false
+script = ExtResource("1_if67s")
+move_speed = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269261412]
+texture = ExtResource("2_qojcf")
+region_enabled = true
+region_rect = Rect2(6, 0, 6, 7)
+
+[node name="StaticBody2D" type="Area2D" parent="." unique_id=1013112484]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=902056998]
+position = Vector2(5.9604645e-08, 3.7252903e-09)
+scale = Vector2(1.0000006, 1.0000006)
+shape = SubResource("RectangleShape2D_q367f")
