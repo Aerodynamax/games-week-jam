@@ -11,7 +11,7 @@ func calculate_scores():
 	var time = Global.timetable.get_time() - 540
 	var seconds = fmod(time, 60)
 	var minutes = fmod(time, 3600) / 60
-	var score = Global.timetable.get_score()
+	var score = Global.score
 	
 	timelabel.text = "%02d:%02d" % [minutes, seconds]
 	scorelabel.text = str(score)

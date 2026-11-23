@@ -1,7 +1,5 @@
 extends Panel
 
-var score :int = 0
 
-func add_score(points : int):
-	score +=points
-	$Score.text= "$" + str(score)
+func _process(delta: float) -> void:
+	$Score.text = "$" + str(Global.score)

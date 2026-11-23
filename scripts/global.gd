@@ -28,6 +28,10 @@ func _get_timetable() -> TimeTable:
 #endregion
 
 #region endscreen
+
+var score : int = 0
+
+
 var Endscreen: EndScreen:
 	get():
 		return _get_EndScreen()

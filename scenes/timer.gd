@@ -10,10 +10,3 @@ func change_target():
 
 func get_time() -> int:
 	return timer.time
-
-func get_score() -> int:
-	return score.score 
-
-
-func add_score(points : int):
-	score.add_score(points)
