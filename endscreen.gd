@@ -26,6 +26,7 @@ func scroll():
 	
 	
 	tween.tween_property(sprite, "position", Vector2(573.0, 401.0), 1)
+	get_tree().paused = true
 	
 
 
@@ -34,6 +35,7 @@ func _on_button_pressed() -> void:
 	colorrect.show()
 	tween.tween_property(colorrect, "color", Color(0.0, 0.0, 0.0, 1.0), 1)
 	await tween.finished
+	get_tree().paused = false
 	get_tree().reload_current_scene()
 
 func _ready() -> void:
