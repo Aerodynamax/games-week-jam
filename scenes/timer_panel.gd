@@ -1,0 +1,24 @@
+extends Panel
+
+var time: float = 34200
+var hours: int = 0
+var minutes: int = 0
+var seconds: int = 0
+var mseconds: int = 0
+ 
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	time += delta 
+	mseconds = fmod(time, 1) * 100
+	seconds = fmod(time, 60)
+	minutes = fmod(time, 3600) / 60
+	hours = fmod(time, 86400) / 3600 
+	
+	$Time.text = "%2d:%02d:%02d.%03d" % [hours, minutes, seconds, mseconds]
+	
+	

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqm6lwxvn4n4m"]
+
+[ext_resource type="Script" uid="uid://cn6h7jrhepjux" path="res://scenes/timer_panel.gd" id="1_srplv"]
+
+[node name="Timer" type="Node2D" unique_id=1544295259]
+
+[node name="Panel" type="Panel" parent="." unique_id=859173201]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.319999, 1.1999998)
+script = ExtResource("1_srplv")
+
+[node name="Time" type="Label" parent="Panel" unique_id=666944796]
+layout_mode = 0
+offset_left = 10.284811
+offset_top = 2.5000005
+offset_right = 52.284813
+offset_bottom = 25.5
+scale = Vector2(0.20393267, 1.3451842)
+text = "hello"
+
+[node name="Panel2" type="Panel" parent="." unique_id=1666307502]
+offset_left = 918.0
+offset_top = 6.0
+offset_right = 1152.0
+offset_bottom = 253.0
