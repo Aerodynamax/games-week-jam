@@ -24,6 +24,7 @@ func _get_opposite_side(path: Path2D) -> Path2D:
 
 
 func _on_area_entered(area: Area2D) -> void:
+	pass
 	#var npc = area.get_parent() as NPC
 	#if npc != null:
 		#if (npc.is_crossing == false):
