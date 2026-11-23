@@ -7,9 +7,7 @@
 [node name="Testscene" type="Node2D" unique_id=1033832060]
 
 [node name="Player" parent="." unique_id=713872924 instance=ExtResource("2_65iv0")]
-position = Vector2(375, 125)
-
-[node name="Timer" parent="." unique_id=1544295259 instance=ExtResource("3_65iv0")]
+position = Vector2(315, 173)
 
 [node name="Busstop2" parent="." unique_id=1412730420 instance=ExtResource("1_r32pp")]
 position = Vector2(283, 482)
@@ -22,3 +20,12 @@ position = Vector2(827, 251)
 wait_Time = 10.0
 loc_Name = "Peepee"
 loc_time = 666
+
+[node name="Busstop3" parent="." unique_id=560038497 instance=ExtResource("1_r32pp")]
+position = Vector2(107, 301)
+loc_Name = "Joestreet"
+loc_time = 100
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=416120333]
+
+[node name="Timer" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_65iv0")]

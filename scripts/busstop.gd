@@ -3,7 +3,7 @@ extends Node2D
 @onready var player : CharacterBody2D = Global.player
 @onready var progressBar : ProgressBar = get_node("ProgressBar")
 @export var wait_Time : float = 2.0
-@export var wait_Distance : int = 300
+@export var wait_Distance : int = 80.0
 @export var loc_Name: String 
 @export var loc_time: int
 var waited_Time = 0

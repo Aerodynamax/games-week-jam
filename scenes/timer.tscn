@@ -5,10 +5,13 @@
 [ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/stop_panel.gd" id="2_5lxq6"]
 [ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/timetableslot.tscn" id="3_g5y8c"]
 
-[node name="Timer" type="Node2D" unique_id=1544295259 groups=["timetable"]]
+[node name="Timer" type="Control" unique_id=322771032 groups=["timetable"]]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_bi5oq")
 
 [node name="Panel" type="Panel" parent="." unique_id=859173201]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(6.319999, 1.1999998)
@@ -24,6 +27,7 @@ scale = Vector2(0.20393267, 1.3451842)
 text = "hello"
 
 [node name="Panel2" type="Panel" parent="." unique_id=1666307502]
+layout_mode = 0
 offset_left = 918.0
 offset_top = 6.0
 offset_right = 1152.0

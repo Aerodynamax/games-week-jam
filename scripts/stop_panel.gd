@@ -8,25 +8,31 @@ var current_stop: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	stops = get_tree().get_nodes_in_group("busstop")
 	
-	for i in get_tree().get_nodes_in_group("busstop"):
-		stops.append(i)
+	
+	stops.sort_custom(func(a,b): return a.loc_time<b.loc_time)
+	
+	for i in stops:
 		var new_timetable = timetableslot.instantiate()
 		new_timetable.setup(i.loc_Name, i.loc_time)
 		timetables.append(new_timetable)
 		vBox.add_child(new_timetable)
+		var kids = vBox.get_children()
+		
+		
+		
 	timetables[0].point_selected()
-	get_current_stop().current = true
+	stops[0].current = true
 
 
-func get_current_stop() -> Node2D: 
-	return stops[current_stop]
+
 
 func next(time:int):
 	timetables[current_stop].point_reached(time)
-	get_current_stop().current = false
+	stops[current_stop].current = false
 	if current_stop>=timetables.size()-1:
 		return
 	current_stop +=1
 	timetables[current_stop].point_selected()
-	get_current_stop().current = true
+	stops[current_stop].current = true
