@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="1_r32pp"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="2_65iv0"]
-[ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/timer.tscn" id="3_65iv0"]
+[ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/timetable.tscn" id="3_65iv0"]
 
 [node name="Testscene" type="Node2D" unique_id=1033832060]
 

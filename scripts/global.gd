@@ -18,11 +18,23 @@ func _get_player() -> Player:
 #region TimeTable
 var timetable: TimeTable:
 	get():
-		return _get_timetable()
+		return _get_timetable_ui()
 
-func _get_timetable() -> TimeTable:
+func _get_timetable_ui() -> TimeTable:
 	for node in get_tree().get_nodes_in_group("timetable"):
 		if node is TimeTable:
 			return node
 	return null
 #endregion
+
+##region TimeTable
+#var timetable: TimeTable:
+	#get():
+		#return _get_timetable()
+#
+#func _get_timetable() -> TimeTable:
+	#for node in get_tree().get_nodes_in_group("timetable"):
+		#if node is TimeTable:
+			#return node
+	#return null
+##endregion

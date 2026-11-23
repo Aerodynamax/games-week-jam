@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 	
 	var target_global_position: Vector2 = get_parent().global_position
 	var viewport_dimensions: Vector2 = get_viewport().get_visible_rect().size
-	var screen_coordinates: Vector2 = (target_global_position - camera_node.global_position) * camera_node.zoom + viewport_dimensions * 0.5
+	var screen_coordinates: Vector2 = (target_global_position - camera_node.get_target_position()) * camera_node.zoom + viewport_dimensions * 0.5
 	var screen_inset_rectangle: Rect2 = Rect2(Vector2.ZERO, viewport_dimensions).grow(-screen_margin)
 	
 	var target_display_position: Vector2

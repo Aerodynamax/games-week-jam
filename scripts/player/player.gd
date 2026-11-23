@@ -5,7 +5,7 @@ extends CharacterBody2D
 func round_to_dec(num, digit):
 	return round(num * pow(10.0, digit)) / pow(10.0, digit)
 
-@onready var camera := $Camera2D
+@onready var camera: Camera2D = $Camera2D
 @onready var sprite: Sprite2D = $Sprite
 
 #region movement
@@ -180,7 +180,6 @@ func _physics_process(delta: float) -> void:
 	camera_movement(delta)
 	
 	# make the sprite turn extra in drifts
-	print(_drift_vel_and_dir.extra_rot)
 	sprite.rotation = lerpf(sprite.rotation, PI/2 + _drift_vel_and_dir.extra_rot, delta * drift_extra_rot_lerp)
 	
 	rotation += _rot

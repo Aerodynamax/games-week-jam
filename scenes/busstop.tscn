@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://b2pvdlsyod2yl"]
 
-[ext_resource type="Script" uid="uid://bomsm2spsaqmi" path="res://scripts/busstop.gd" id="1_oi4tm"]
+[ext_resource type="Script" uid="uid://bomsm2spsaqmi" path="res://scripts/bus stop/busstop.gd" id="1_oi4tm"]
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="2_hr2fb"]
+[ext_resource type="Script" uid="uid://babpdsfvhi2mh" path="res://scripts/tracker.gd" id="3_hr2fb"]
+[ext_resource type="Texture2D" uid="uid://bpria67c3rm0l" path="res://images.png" id="3_xjad6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r32pp"]
 bg_color = Color(0.6027165, 0.60574514, 0.54955053, 1)
@@ -11,7 +13,6 @@ bg_color = Color(0, 0, 1, 1)
 
 [node name="Busstop" type="Node2D" unique_id=834891058 groups=["busstop"]]
 script = ExtResource("1_oi4tm")
-wait_Distance = 80
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=381094470]
 z_index = -1
@@ -28,3 +29,11 @@ offset_bottom = 10.0
 theme_override_styles/background = SubResource("StyleBoxFlat_r32pp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_l2n4a")
 show_percentage = false
+
+[node name="tracker" type="Sprite2D" parent="." unique_id=1079494508]
+physics_interpolation_mode = 1
+scale = Vector2(0.062639825, 0.06263983)
+texture = ExtResource("3_xjad6")
+script = ExtResource("3_hr2fb")
+on_screen_offset = Vector2(0, -30)
+screen_margin = 32.0

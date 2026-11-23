@@ -1,16 +1,27 @@
+class_name TimetableSlot
 extends Control
 
 @onready var Location : Label = get_node("Panel/HBoxContainer/Location")
 @onready var Locationtime : Label = get_node("Panel/HBoxContainer/Time")
 @onready var selected :Panel = get_node("Panel")
-var loc_name :String
-var loc_time : int
+var loc_name : String
+var loc_time: int
 var selected_style = Color(0.485, 0.485, 0.485, 1.0)
 var finished_style = Color(0.117, 0.117, 0.117, 1.0)
 
-func setup(Location_name: String, Location_time:int) -> void:
-	loc_name = Location_name
-	loc_time = Location_time
+func _on_update(name: String, time: int, waited_time: float, finished: bool, current: bool, completed_time: int):
+	loc_name = name
+	loc_time = time
+	
+	if current:
+		self.point_selected()
+	if finished and completed_time > 0:
+		self.point_reached(completed_time)
+
+func setup(stop: BusStop):
+	stop.on_update.connect(_on_update)
+	loc_name = stop.loc_Name
+	loc_time = stop.loc_time
 
 func _ready() -> void:
 	Location.text = loc_name
