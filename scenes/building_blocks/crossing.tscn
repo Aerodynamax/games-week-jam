@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bk1reou44gab4"]
+
+[ext_resource type="Script" uid="uid://ccy7gq1x34bnw" path="res://scripts/crossing.gd" id="1_s5itv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
+size = Vector2(106.5, 20)
+
+[node name="Crossing" type="Area2D" unique_id=1627377999]
+collision_layer = 2
+script = ExtResource("1_s5itv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=491178627]
+shape = SubResource("RectangleShape2D_q367f")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

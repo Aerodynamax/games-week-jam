@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://du0rwwc1isll3" path="res://assets/tileset_TEMP.png" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/npc.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bk1reou44gab4" path="res://scenes/building_blocks/crossing.tscn" id="3_sugp2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
 texture = ExtResource("1_o5qli")
@@ -26,7 +27,7 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_sugp2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -507, -134, 0, 0, 0, 0, -25, -137, 0, 0, 0, 0, -24, -508)
+"points": PackedVector2Array(0, 0, 0, 0, -24, -508, 0, 0, 0, 0, -25, -137, 0, 0, 0, 0, -507, -134)
 }
 point_count = 3
 
@@ -44,6 +45,23 @@ tile_set = SubResource("TileSet_hrio3")
 
 [node name="WalkablePaths" type="Node2D" parent="." unique_id=1273443377]
 
+[node name="Crossing2" parent="WalkablePaths" unique_id=1627377999 node_paths=PackedStringArray("side_a", "side_b") instance=ExtResource("3_sugp2")]
+position = Vector2(-268, -94)
+rotation = 1.5707964
+side_a = NodePath("../WalkablePavement2")
+side_b = NodePath("../WalkablePavement3")
+
+[node name="Crossing4" parent="WalkablePaths" unique_id=27065518 node_paths=PackedStringArray("side_a", "side_b") instance=ExtResource("3_sugp2")]
+position = Vector2(236, -94)
+rotation = 1.5707964
+side_a = NodePath("../WalkablePavement")
+side_b = NodePath("../WalkablePavement4")
+
+[node name="Crossing3" parent="WalkablePaths" unique_id=1579048805 node_paths=PackedStringArray("side_a", "side_b") instance=ExtResource("3_sugp2")]
+position = Vector2(17, -228)
+side_a = NodePath("../WalkablePavement3")
+side_b = NodePath("../WalkablePavement4")
+
 [node name="WalkablePavement" type="Path2D" parent="WalkablePaths" unique_id=1585160366]
 curve = SubResource("Curve2D_o5qli")
 
@@ -58,5 +76,10 @@ curve = SubResource("Curve2D_sugp2")
 
 [node name="WalkablePavement4" type="Path2D" parent="WalkablePaths" unique_id=1003973863]
 curve = SubResource("Curve2D_jyhfs")
+
+[node name="Crossing" parent="WalkablePaths" unique_id=2130896380 node_paths=PackedStringArray("side_a", "side_b") instance=ExtResource("3_sugp2")]
+position = Vector2(16, -54)
+side_a = NodePath("../WalkablePavement")
+side_b = NodePath("../WalkablePavement2")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=637254433]
