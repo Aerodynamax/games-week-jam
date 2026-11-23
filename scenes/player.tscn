@@ -10,6 +10,7 @@ height = 52.0
 [node name="Player" type="CharacterBody2D" unique_id=713872924 groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_3vyb7")
+camera_zoomed_out = 2.4
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=415645758]
 position = Vector2(-15, 0)

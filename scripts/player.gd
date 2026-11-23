@@ -58,9 +58,12 @@ func movement(delta: float) -> Vector2:
 #region rotation
 
 @export_group("Turning", "turning")
+@export_range(10, 200, 0.1, "or_greater", "or_less") var turning_min_vel_to_turn: float = 100.0
 @export_range(0.5, 4.0, 0.1, "or_greater", "or_less") var turning_speed: float = 2.4
+@export_range(0.5, 4.0, 0.1, "or_greater", "or_less") var turning_speed_backwards: float = 1.6
 @export_range(0.5, 4.0, 0.1, "or_greater", "or_less") var turning_acceleration: float = 2.0
 @export_range(0.5, 4.0, 0.1, "or_greater", "or_less") var turning_deceleration: float = 5.0
+
 var _rotation_vel: float = 0.0
 
 var prev_rotation: float = 0.0
@@ -69,8 +72,13 @@ var prev_rotation: float = 0.0
 func steer(delta: float) -> float:
 	var rotation_direction := Input.get_axis("left", "right")
 	
-	# TODO: reduce turning when not moving
-	var true_turning_speed = turning_speed
+	# reduce turning when not moving
+	var true_turning_speed := turning_speed
+	if _forwards_lerp_vel < 0:
+		true_turning_speed = turning_speed_backwards
+	
+	true_turning_speed = true_turning_speed * clampf(absf(_forwards_lerp_vel) / turning_min_vel_to_turn, 0, 1)
+	
 	
 	# stop rotating quickly when the keys aren't pressed
 	var lerp_amount = turning_deceleration
@@ -107,6 +115,10 @@ class DriftData:
 			self.perpendicular_velocity = perpendicular_velocity
 
 func drift(delta: float) -> DriftData:
+	# don't if reversing
+	if _forwards_lerp_vel < 0:
+		return DriftData.new(0, Vector2.ZERO)
+	
 	
 	# calculate extra bit of angle to make the bus actually look like it's drifting
 	
@@ -171,7 +183,7 @@ func _physics_process(delta: float) -> void:
 	print(_drift_vel_and_dir.extra_rot)
 	sprite.rotation = lerpf(sprite.rotation, PI/2 + _drift_vel_and_dir.extra_rot, delta * drift_extra_rot_lerp)
 	
-	global_rotation += _rot
+	rotation += _rot
 	velocity = _vel
 	move_and_slide()
 	
