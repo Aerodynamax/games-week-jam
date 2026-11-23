@@ -5,7 +5,7 @@ extends CharacterBody2D
 func round_to_dec(num, digit):
 	return round(num * pow(10.0, digit)) / pow(10.0, digit)
 
-@onready var camera := $Camera2D
+@onready var camera: Camera2D = $Camera2D
 @onready var sprite: Sprite2D = $Sprite
 
 #region movement
