@@ -72,4 +72,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Restart"
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=586802144]
+layout_mode = 0
+offset_left = -355.0
+offset_top = -381.0
+offset_right = 1589.0
+offset_bottom = 1728.0
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="Sprite2D/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

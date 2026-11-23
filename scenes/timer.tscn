@@ -62,4 +62,4 @@ offset_top = 2.5000005
 offset_right = 52.284813
 offset_bottom = 25.5
 scale = Vector2(0.20393267, 1.3451842)
-text = "hello"
+text = "$0"
