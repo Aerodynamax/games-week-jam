@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://bykdnh1eji7mu"]
 
-[ext_resource type="Texture2D" uid="uid://clvwe4urnt8yc" path="res://assets/tiles/spr_grass_tiles.png" id="1_jyhfs"]
-[ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/tiles/spr_road_tiles.png" id="2_0wfyh"]
-[ext_resource type="Texture2D" uid="uid://bcp4cffv1dcgl" path="res://assets/tiles/spr_pavement_tiles.png" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://clvwe4urnt8yc" path="res://assets/sprites/tiles/spr_grass_tiles.png" id="1_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/sprites/tiles/spr_road_tiles.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://bcp4cffv1dcgl" path="res://assets/sprites/tiles/spr_pavement_tiles.png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://c76oqqe8xb40t" path="res://assets/sprites/spr_house_red.png" id="5_tbgi4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
 texture = ExtResource("1_jyhfs")
@@ -537,3 +538,8 @@ tile_set = SubResource("TileSet_n548s")
 
 [node name="Player" parent="." unique_id=713872924 instance=ExtResource("3_sugp2")]
 position = Vector2(7, 56)
+rotation = -1.600614
+
+[node name="SprHouseRed" type="Sprite2D" parent="." unique_id=879490978]
+position = Vector2(-145, -232)
+texture = ExtResource("5_tbgi4")

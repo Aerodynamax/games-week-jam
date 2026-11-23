@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcp4cffv1dcgl"
-path="res://.godot/imported/spr_pavement_tiles.png-1a31f44c121b3d23dbb326af3fc7afd7.ctex"
+path="res://.godot/imported/spr_pavement_tiles.png-472bdfb55a25c30db33bacd71e4add7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/spr_pavement_tiles.png"
-dest_files=["res://.godot/imported/spr_pavement_tiles.png-1a31f44c121b3d23dbb326af3fc7afd7.ctex"]
+source_file="res://assets/sprites/tiles/spr_pavement_tiles.png"
+dest_files=["res://.godot/imported/spr_pavement_tiles.png-472bdfb55a25c30db33bacd71e4add7f.ctex"]
 
 [params]
 

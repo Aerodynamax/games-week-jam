@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjywa82iaslol"
-path="res://.godot/imported/spr_road_tiles.png-1568163ba9997b6cf19c4476df9f9cd0.ctex"
+uid="uid://3afh8f76xp0h"
+path="res://.godot/imported/spr_bus.png-f85fa5a5bd604607cfb130555845f937.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/spr_road_tiles.png"
-dest_files=["res://.godot/imported/spr_road_tiles.png-1568163ba9997b6cf19c4476df9f9cd0.ctex"]
+source_file="res://assets/sprites/spr_bus.png"
+dest_files=["res://.godot/imported/spr_bus.png-f85fa5a5bd604607cfb130555845f937.ctex"]
 
 [params]
 
