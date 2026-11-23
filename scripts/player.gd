@@ -48,7 +48,7 @@ func movement(delta: float) -> Vector2:
 	
 	
 	# stop abruptly
-	if _forwards_lerp_vel < 0.5 and forwards == 0:
+	if abs(_forwards_lerp_vel) < 0.5 and forwards == 0:
 		_forwards_lerp_vel = 0
 	
 	return transform.x * _forwards_lerp_vel
@@ -77,7 +77,7 @@ func steer(delta: float) -> float:
 	if _forwards_lerp_vel < 0:
 		true_turning_speed = turning_speed_backwards
 	
-	true_turning_speed = true_turning_speed * clampf(absf(_forwards_lerp_vel) / turning_min_vel_to_turn, 0, 1)
+	true_turning_speed = true_turning_speed * clampf(absf(_forwards_lerp_vel + _impulse_velocity.length()) / turning_min_vel_to_turn, 0, 1)
 	
 	
 	# stop rotating quickly when the keys aren't pressed
@@ -124,7 +124,7 @@ func drift(delta: float) -> DriftData:
 	
 	var extra_rot_percent: float = clamp((abs(_rotation_vel) - (drift_min_rot_speed - drift_transition_rot_amount)) / (drift_min_rot_speed - drift_transition_rot_amount), 0.0, 1.0)
 	# the amount (in the correct direction)
-	var extra_rot_amount: float = extra_rot_percent * drift_extra_rot_amount * (_rotation_vel/abs(_rotation_vel))
+	var extra_rot_amount: float = extra_rot_percent * drift_extra_rot_amount * sign(_rotation_vel)
 	# prevent NaN
 	if extra_rot_percent <= 0.2:
 		extra_rot_amount = 0
@@ -132,7 +132,7 @@ func drift(delta: float) -> DriftData:
 	
 	# only if going fast enough
 	if abs(_rotation_vel) > drift_min_rot_speed and abs(_forwards_lerp_vel) > drift_min_forward_speed:
-		var magic_math: float = (abs(_rotation_vel) - (drift_min_rot_speed)) * (_rotation_vel/abs(_rotation_vel)) / (turning_speed - (drift_min_rot_speed))
+		var magic_math: float = (abs(_rotation_vel) - (drift_min_rot_speed)) * sign(_rotation_vel) / (turning_speed - (drift_min_rot_speed))
 		
 		_perpendicular_vel_amount = clampf(magic_math, -1, 1)
 		
@@ -159,13 +159,72 @@ func drift(delta: float) -> DriftData:
 ## the speed where the camera starts zooming in.  Any speeds below this will have the camera transitioning between zoomed in & out, any speeds above this will be locked to the zoomed out camera zoom
 @export_range(100, 600, 1, "or_greater", "or_less") var camera_zoomed_out_speed: float = 300.0
 
+var camera_lerp_speed: float = 3.0
+
+@onready var _camera_zoom: float = camera_zoomed_in
+
 func camera_movement(delta: float):
-	
+	# get the target zoom
 	var camera_zoom_percent: float = clampf((abs(_forwards_lerp_vel) - camera_zoomed_in_speed) / camera_zoomed_out_speed, 0, 1)
 	
 	var camera_zoom_amount: float = camera_zoomed_in - (camera_zoomed_in - camera_zoomed_out) * camera_zoom_percent
+	
+	# lerp to it
+	_camera_zoom = lerp(_camera_zoom, camera_zoom_amount, delta * camera_lerp_speed)
+	
+	camera.zoom = Vector2.ONE * _camera_zoom
 
-	camera.zoom = Vector2.ONE * camera_zoom_amount
+#endregion
+
+#region impulses
+
+@export_group("Impulses", "impulse")
+## the speed at which an impulse will return to normal
+@export_range(1.0, 3.0, 0.1, "or_greater", "or_less") var impulse_gravity: float = 2.0
+## if the force is above this number it will begin being flung in the air.
+@export_range(30.0, 100.0, 0.1, "or_greater", "or_less") var impulse_force_required_to_bounce: float = 48.0
+## the highest the bounce can effect the scale as a percent. [br][br]
+## ( 1.0 = no effect )
+@export_range(1.0, 2.0, 0.1, "or_greater", "or_less") var impulse_bounce_scale_percent: float = 1.3
+
+var _impulse_velocity := Vector2.ZERO
+@onready var _default_scale := sprite.scale
+
+func stop_movement() -> void:
+	self._forwards_lerp_acc = 0
+	self._forwards_lerp_vel = 0
+
+## Applies a "force" in the world's reference frame. [br]
+## x : up / down of the world/viewport, y = left / right of the world/viewport. [br][br]
+## For example, to apply a 100 pixel force upwards, you would do:
+## [codeblock]
+## Global.player.apply_impulse( Vector2(0, 100) )
+## [/codeblock]
+## Or, to apply a 300 pixel force backwards, you would do:
+## [codeblock]
+## Global.player.apply_impulse( Global.player.transform.x * -300 )
+## [/codeblock]
+func apply_impulse(force: Vector2) -> void:
+	_impulse_velocity += force
+	
+	# make the bus bounce if big
+	sprite.scale = _default_scale * clampf((_impulse_velocity.length() - impulse_force_required_to_bounce) / impulse_force_required_to_bounce, 1, 1.3)
+	
+	# move camera if big
+	#_camera_zoom -= (sprite.scale / _default_scale).x /2
+
+func update_impulses(delta: float) -> Vector2:
+	# early return if unnecessary
+	if _impulse_velocity.length() == 0:
+		return Vector2.ZERO
+	
+	# reduce the velocity
+	_impulse_velocity = lerp(_impulse_velocity, Vector2.ZERO, delta * impulse_gravity)
+	
+	# return the bus to normal if bounced
+	sprite.scale = lerp(sprite.scale, _default_scale, delta * impulse_gravity * 2)
+	
+	return _impulse_velocity
 
 #endregion
 
@@ -174,17 +233,16 @@ func _physics_process(delta: float) -> void:
 	var _rot := steer(delta)
 	var _drift_vel_and_dir := drift(delta)
 	
-	# make the camera not follow the drift horizontal velocity
+	 #make the camera not follow the drift horizontal velocity
 	camera.offset = _drift_vel_and_dir.perpendicular_velocity * delta
 	
 	camera_movement(delta)
 	
 	# make the sprite turn extra in drifts
-	print(_drift_vel_and_dir.extra_rot)
 	sprite.rotation = lerpf(sprite.rotation, PI/2 + _drift_vel_and_dir.extra_rot, delta * drift_extra_rot_lerp)
 	
 	rotation += _rot
-	velocity = _vel
+	velocity = _vel + update_impulses(delta)
 	move_and_slide()
 	
 	prev_rotation = rotation
