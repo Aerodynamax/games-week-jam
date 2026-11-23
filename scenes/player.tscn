@@ -24,5 +24,9 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_dqxiu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=36937776]
+position = Vector2(50, 0)
+rotation = 1.5707964
+ignore_rotation = false
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+rotation_smoothing_enabled = true
