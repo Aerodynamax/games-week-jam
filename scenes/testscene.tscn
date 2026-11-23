@@ -13,12 +13,12 @@ position = Vector2(375, 125)
 
 [node name="Busstop2" parent="." unique_id=1412730420 instance=ExtResource("1_r32pp")]
 position = Vector2(283, 482)
-wait_Time = 0.0
+wait_Time = 10.0
 loc_Name = "Fart street"
 loc_time = 9000
 
 [node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("1_r32pp")]
 position = Vector2(827, 251)
-wait_Time = 0.1
+wait_Time = 10.0
 loc_Name = "Peepee"
 loc_time = 666

@@ -9,17 +9,19 @@ extends Node2D
 var waited_Time = 0
 var selected = false
 var finished = false
+var current = false
 
 
 func _physics_process(delta: float) -> void:
-	progressBar.visible = player.global_position.distance_to(global_position) <= wait_Distance
-	if player.global_position.distance_to(global_position) <= wait_Distance:
-		progressBar.value = 100 - waited_Time/wait_Time * 100
-		waited_Time+=delta
-		if waited_Time>wait_Time and not finished:
-			change_target()
-			progressBar.hide()
-			finished = true
+	if current:
+		progressBar.visible = player.global_position.distance_to(global_position) <= wait_Distance
+		if player.global_position.distance_to(global_position) <= wait_Distance:
+			progressBar.value = 100 - waited_Time/wait_Time * 100
+			waited_Time+=delta
+			if waited_Time>wait_Time and not finished:
+				change_target()
+				progressBar.hide()
+				finished = true
 
 func change_target():
 	Global.timetable.change_target()

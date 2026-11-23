@@ -16,14 +16,17 @@ func _ready() -> void:
 		timetables.append(new_timetable)
 		vBox.add_child(new_timetable)
 	timetables[0].point_selected()
+	get_current_stop().current = true
 
 
-func get_current_stop (): 
-	stops[current_stop]
+func get_current_stop() -> Node2D: 
+	return stops[current_stop]
 
 func next(time:int):
 	timetables[current_stop].point_reached(time)
+	get_current_stop().current = false
 	if current_stop>=timetables.size()-1:
 		return
-	current_stop += 1
+	current_stop +=1
 	timetables[current_stop].point_selected()
+	get_current_stop().current = true

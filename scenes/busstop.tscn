@@ -16,6 +16,7 @@ script = ExtResource("1_oi4tm")
 texture = ExtResource("2_hr2fb")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=459311186]
+visible = false
 z_index = 1
 offset_left = -130.0
 offset_top = -27.0
