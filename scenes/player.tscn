@@ -16,3 +16,6 @@ texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=412997270]
 shape = SubResource("CapsuleShape2D_dqxiu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2109912096]
+position_smoothing_enabled = true
