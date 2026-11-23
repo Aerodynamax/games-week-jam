@@ -37,8 +37,7 @@ func _move_along_path(delta: float) -> void:
 func try_cross_road(dest_path: Path2D) -> void:
 	if time_since_crossing < crossing_cooldown:
 		return
-	print("trying to cross road")
-	if randf_range(0, 1) <= 0.5: #currently set to a 50% chance of crossing the road at a crossing
+	if randf_range(0, 1) <= 0.5: # currently set to a 50% chance of crossing the road at a crossing
 		is_crossing = true
 		crossing_dest_path = dest_path
 		crossing_start_point = position
