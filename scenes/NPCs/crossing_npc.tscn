@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://rvekaqaterui"]
+
+[ext_resource type="Script" uid="uid://birck2qcpcg6" path="res://scripts/crossing_npc.gd" id="1_2osd1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q367f"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
+
+[node name="CrossingNPC" type="StaticBody2D" unique_id=1698074755]
+script = ExtResource("1_2osd1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=542430420]
+z_index = 1
+texture = SubResource("PlaceholderTexture2D_q367f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161969154]
+shape = SubResource("RectangleShape2D_q367f")
