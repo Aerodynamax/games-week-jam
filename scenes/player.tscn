@@ -10,7 +10,8 @@ height = 52.0
 [node name="Player" type="CharacterBody2D" unique_id=713872924 groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_3vyb7")
-camera_zoomed_out = 2.4
+camera_zoomed_out = 2.0
+camera_zoomed_in_speed = 175.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=415645758]
 position = Vector2(-15, 0)
@@ -25,3 +26,4 @@ shape = SubResource("CapsuleShape2D_dqxiu")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1114529361]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+position_smoothing_speed = 7.0
