@@ -39,7 +39,6 @@ var _rotation_vel: float = 0.0
 func steer(delta: float):
 	var rotation_direction := Input.get_axis("left", "right")
 	
-	
 	_rotation_vel = round_to_dec(lerpf(_rotation_vel, rotation_direction, delta * turning_acceleration), 3)
 	
 	var true_turning_speed = turning_speed * (_forwards_lerp_vel / max_speed)
