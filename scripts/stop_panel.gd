@@ -32,7 +32,9 @@ func next(time:int):
 	timetables[current_stop].point_reached(time)
 	stops[current_stop].current = false
 	if current_stop>=timetables.size()-1:
-		return
-	current_stop +=1
-	timetables[current_stop].point_selected()
-	stops[current_stop].current = true
+		Global.Endscreen.calculate_scores()
+		Global.Endscreen.scroll()
+	else:
+		current_stop +=1
+		timetables[current_stop].point_selected()
+		stops[current_stop].current = true

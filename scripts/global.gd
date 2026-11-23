@@ -26,3 +26,15 @@ func _get_timetable() -> TimeTable:
 			return node
 	return null
 #endregion
+
+#region endscreen
+var Endscreen: EndScreen:
+	get():
+		return _get_EndScreen()
+
+func _get_EndScreen() -> EndScreen:
+	for node in get_tree().get_nodes_in_group("EndScreen"):
+		if node is EndScreen:
+			return node
+	return null
+#endregion
