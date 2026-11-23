@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bqb7gaoohi3wo"]
+
+[ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_asekn"]
+[ext_resource type="Script" uid="uid://wgl1ki5lqdwq" path="res://scenes/collideable_object.gd" id="1_s517g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
+size = Vector2(62, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mixel"]
+size = Vector2(128, 126)
+
+[node name="CollideableObject" type="RigidBody2D" unique_id=336904130]
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 2
+script = ExtResource("1_s517g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=870773434]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=299843940]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_qr2vy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750377753]
+scale = Vector2(0.45709762, 0.40453976)
+shape = SubResource("RectangleShape2D_mixel")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=678080495]
+scale = Vector2(0.45709762, 0.40453976)
+texture = ExtResource("1_asekn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
