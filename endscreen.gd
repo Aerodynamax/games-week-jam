@@ -17,9 +17,9 @@ func calculate_scores():
 	scorelabel.text = str(score)
 	var scorecalc = score/time
 	if scorecalc>70:
-		scorelabel.text = "LIFE!!!"
+		ranklabel.text = "LIFE!!!"
 	else:
-		scorelabel.text = str(scorecalc) + " YEARS!!!"
+		ranklabel.text = str(scorecalc) + " YEARS!!!"
 
 func scroll():
 	var tween = create_tween()
