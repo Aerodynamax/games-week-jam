@@ -8,6 +8,9 @@ extends Node2D
 @export var loc_Name: String
 @export var loc_time: int
 
+@onready var tracker := $tracker
+
+
 var waited_Time: float = 0:
 	set(val):
 		waited_Time = val
@@ -16,11 +19,17 @@ var waited_Time: float = 0:
 var finished: bool = false:
 	set(val):
 		finished = val
+		
+		if tracker is Sprite2D and finished:
+			tracker.visible = false
+		
 		emit_on_update()
 
 var current: bool = false:
 	set(val):
 		current = val
+		if tracker is Sprite2D:
+			tracker.visible = current
 		emit_on_update()
 
 var completed_time: int:

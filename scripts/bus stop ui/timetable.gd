@@ -47,10 +47,11 @@ func next(time:int):
 	stops[current_stop].finished = true
 	stops[current_stop].completed_time = time
 	
+	stops[current_stop].current = false
 	
 	# set the next one to be current
 	if current_stop < stops.size() - 1:
-		stops[current_stop].current = false
 		current_stop += 1
+		
 		stops[current_stop].current = true
 	
