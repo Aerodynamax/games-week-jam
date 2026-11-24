@@ -42,7 +42,7 @@ func _get_screen_bounds() -> CollisionShape2D:
 
 #region endscreen
 
-var score : int = 0
+var score : float = 0
 
 
 var Endscreen: EndScreen:

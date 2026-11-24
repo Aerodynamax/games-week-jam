@@ -590,11 +590,13 @@ npc_templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun")
 
 [node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("14_jkv2x")]
 position = Vector2(-48, -156)
+value = 300000000.0
 
 [node name="CollideableObject2" parent="." unique_id=1392028784 instance=ExtResource("14_jkv2x")]
 position = Vector2(79, -433)
+value = 300000000.0
 
 [node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("15_jbj1t")]
 position = Vector2(-78, -29)
 loc_Name = "Poo street"
-loc_time = 3000
+loc_time = 560

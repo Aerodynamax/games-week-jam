@@ -19,7 +19,7 @@ func calculate_scores():
 	if scorecalc>70:
 		ranklabel.text = "LIFE!!!"
 	else:
-		ranklabel.text = str(scorecalc) + " YEARS!!!"
+		ranklabel.text = str(int(scorecalc)) + " YEARS!!!"
 
 func fail():
 	timelabel.text = "YOU"
