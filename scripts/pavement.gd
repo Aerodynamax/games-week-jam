@@ -1,8 +1,8 @@
 class_name Pavement extends Path2D
 
-@export_group("Templates")
-@export var templates: Array[Resource]
-@export var jaywalking_templates: Array[Resource]
+var templates: Array[Resource]
+var jaywalking_templates: Array[Resource]
+var is_road: bool
 
 @export_group("Spawn Timer")
 @export var min_spawn_timer: float = 4
@@ -23,6 +23,11 @@ var spawn_timer: float = 0
 var jaywalk_timer: float = 0
 
 func _ready() -> void:
+	var path_manager: PathManager = get_parent()
+	templates = path_manager.templates
+	jaywalking_templates = path_manager.templates
+	is_road = path_manager.is_road
+	
 	var initial_spawn = randi_range(init_spawn_min, init_spawn_max)
 	for i in initial_spawn:
 		var npc = templates.pick_random().instantiate()
@@ -35,9 +40,10 @@ func _process(delta: float) -> void:
 	if spawn_timer < 0:
 		_spawn_npc()
 	
-	jaywalk_timer -= delta
-	if jaywalk_timer < 0:
-		_spawn_jaywalker()
+	if !is_road:
+		jaywalk_timer -= delta
+		if jaywalk_timer < 0:
+			_spawn_jaywalker()
 
 func _spawn_npc() -> PathFollow2D:
 	var npc = templates.pick_random().instantiate()
