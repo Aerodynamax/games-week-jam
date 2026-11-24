@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://dxr0u3qxtx28s" path="res://assets/explosion frames/1_30.png" id="32_117nr"]
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="33_acaqv"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="34_sybd0"]
+[ext_resource type="AudioStream" uid="uid://d3vtfsxawhxg5" path="res://assets/sounds/explosion/explode-156615_2785350-lq.ogg" id="35_rjhso"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ymtmc"]
 animations = [{
@@ -147,6 +148,11 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_cs1tg"]
+random_pitch = 1.3348398
+streams_count = 1
+stream_0/stream = ExtResource("35_rjhso")
+
 [node name="Collision" type="Node2D" unique_id=100343889]
 script = ExtResource("1_u8cmh")
 
@@ -156,3 +162,8 @@ scale = Vector2(2.004223, 1.1813626)
 sprite_frames = SubResource("SpriteFrames_ymtmc")
 animation = &"explosion"
 frame = 32
+
+[node name="ExplosionAudio" type="AudioStreamPlayer2D" parent="." unique_id=1050082867]
+stream = SubResource("AudioStreamRandomizer_cs1tg")
+volume_db = 1.0
+pitch_scale = 2.0

@@ -8,6 +8,7 @@ extends Node2D
 @export var area2d : Area2D
 @export var Sprite : Sprite2D
 
+@onready var explosion_audio: AudioStreamPlayer2D = $ExplosionAudio
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,8 +31,13 @@ const COOKED_SPRITE = preload("res://assets/cooked_godot.png")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
-		get_parent().dead = true
+		if not get_parent() is RigidBody2D:
+			get_parent().dead = true
+		
 		if (body.get_velocity().length() > destruction_velocity):
+			
+			# audio
+			explosion_audio.play()
 			
 			print("Too fast!")
 			Collisionshape.set_deferred("disabled", true)
@@ -43,6 +49,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			Global.score += value
 			tween.tween_property(Sprite, "modulate:a:", 0.0, 1.0)
 			await tween.finished
+			await explosion_audio.finished
 			get_parent().queue_free()
 		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
 			body.stop_movement()

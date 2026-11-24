@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqb7gaoohi3wo"]
 
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_asekn"]
-[ext_resource type="PackedScene" uid="uid://vkwkv2cynpb0" path="res://scenes/collision.tscn" id="35_6typr"]
+[ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="35_6typr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
 size = Vector2(62, 55)

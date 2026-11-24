@@ -47,7 +47,7 @@ func movement(delta: float) -> Vector2:
 	
 	# audio
 	engine_audio.volume_linear = (_forwards_lerp_acc * (0.4) + 2.6)
-	engine_audio.pitch_scale = 0.8 + 1 * _forwards_lerp_acc
+	engine_audio.pitch_scale = 0.8 + 1 * abs(_forwards_lerp_acc)
 	
 	# stop abruptly if not moving
 	if _forwards_lerp_acc < 0.05 and forwards == 0:
@@ -266,6 +266,13 @@ func _physics_process(delta: float) -> void:
 	
 	prev_rotation = rotation
 
+
+@onready var explosion_audio: AudioStreamPlayer2D = $ExplosionAudio
+
 func end():
+	if dead: return
+	
+	# explode
 	$AnimatedSprite2D.play("explosion")
+	explosion_audio.play()
 	dead = true

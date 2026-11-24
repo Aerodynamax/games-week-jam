@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ccijw13vrf10q"
-path="res://.godot/imported/sou_tyre_screech.wav-ae531b15a9c2981ee60ba11f1f6b683c.sample"
+path="res://.godot/imported/sou_tyre_screech.wav-150ca46aca5b49503d209fd3f96395ce.sample"
 
 [deps]
 
-source_file="res://assets/sounds/sou_tyre_screech.wav"
-dest_files=["res://.godot/imported/sou_tyre_screech.wav-ae531b15a9c2981ee60ba11f1f6b683c.sample"]
+source_file="res://assets/sounds/bus/sou_tyre_screech.wav"
+dest_files=["res://.godot/imported/sou_tyre_screech.wav-150ca46aca5b49503d209fd3f96395ce.sample"]
 
 [params]
 

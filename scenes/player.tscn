@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://3afh8f76xp0h" path="res://assets/sprites/spr_bus.png" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/UI/timetable.tscn" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://c8bgft2hdkvel" path="res://assets/sounds/mus_music.ogg" id="4_dqkch"]
-[ext_resource type="AudioStream" uid="uid://baksj0iw5jdrk" path="res://assets/sounds/bus/tires_squal_loop.wav" id="5_qlg0r"]
-[ext_resource type="AudioStream" uid="uid://dfa1n8b21xc6c" path="res://assets/sounds/bus/ford-mustang-engine-idle.wav" id="6_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="4_jc3p3"]
 [ext_resource type="Texture2D" uid="uid://cdecepdufsh78" path="res://assets/explosion frames/1_1.png" id="5_hax0n"]
+[ext_resource type="AudioStream" uid="uid://baksj0iw5jdrk" path="res://assets/sounds/bus/tires_squal_loop.wav" id="5_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://cqcbng1i4eswm" path="res://assets/explosion frames/1_2.png" id="6_t4otl"]
+[ext_resource type="AudioStream" uid="uid://dfa1n8b21xc6c" path="res://assets/sounds/bus/ford-mustang-engine-idle.wav" id="6_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://cvtqknxqxdi6c" path="res://assets/explosion frames/1_3.png" id="7_j2b1d"]
 [ext_resource type="Texture2D" uid="uid://b2n06nmr2orh4" path="res://assets/explosion frames/1_4.png" id="8_cs1tg"]
 [ext_resource type="Texture2D" uid="uid://ssjq7lbbo1um" path="res://assets/explosion frames/1_5.png" id="9_2dvfe"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://dxr0u3qxtx28s" path="res://assets/explosion frames/1_30.png" id="34_fuw3a"]
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_8txt3"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_2w11d"]
+[ext_resource type="AudioStream" uid="uid://d3vtfsxawhxg5" path="res://assets/sounds/explosion/explode-156615_2785350-lq.ogg" id="40_cs1tg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqxiu"]
 radius = 8.0
@@ -194,6 +195,7 @@ autoplay = true
 [node name="EngineAudio" type="AudioStreamPlayer2D" parent="." unique_id=1009127627]
 stream = ExtResource("6_tuyoq")
 autoplay = true
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1913588162]
 position = Vector2(-15, -50)
 scale = Vector2(3, 3)
@@ -201,3 +203,8 @@ sprite_frames = SubResource("SpriteFrames_770dr")
 animation = &"explosion"
 frame = 32
 frame_progress = 1.0
+
+[node name="ExplosionAudio" type="AudioStreamPlayer2D" parent="." unique_id=1362510998]
+stream = ExtResource("40_cs1tg")
+volume_db = 1.0
+pitch_scale = 2.0
