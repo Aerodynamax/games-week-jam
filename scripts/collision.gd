@@ -27,7 +27,7 @@ func _ready() -> void:
 	#Global.player.stop_movement()
 	#Global.player.apply_impulse(Global.player.transform.x * -300) # Replace with function body.
 
-const COOKED_SPRITE = preload("res://assets/cooked_godot.png")
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
