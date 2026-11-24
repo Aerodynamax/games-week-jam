@@ -30,6 +30,7 @@ const COOKED_SPRITE = preload("res://assets/cooked_godot.png")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
+		get_parent().dead = true
 		if (body.get_velocity().length() > destruction_velocity):
 			
 			print("Too fast!")
@@ -40,6 +41,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			var tween = get_tree().create_tween()
 			tween.tween_property(Sprite, "modulate:a", 0.2, 1.0)
 			Global.score += value
+			tween.tween_property(Sprite, "modulate:a:", 0.0, 1.0)
+			await tween.finished
+			get_parent().queue_free()
 		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
 			body.stop_movement()
 			body.apply_impulse(body.transform.x * -300)

@@ -22,8 +22,9 @@ region_rect = Rect2(6, 0, 6, 7)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161969154]
 shape = SubResource("RectangleShape2D_q367f")
 
-[node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "Sprite") instance=ExtResource("3_1ddq4")]
+[node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_1ddq4")]
 Collisionshape = NodePath("../CollisionShape2D")
+area2d = NodePath("../Area2D")
 Sprite = NodePath("../Sprite2D")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=63950964]
