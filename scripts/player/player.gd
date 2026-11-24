@@ -8,10 +8,9 @@ func round_to_dec(num, digit):
 @onready var camera: Camera2D = $Camera2D
 @onready var sprite: Sprite2D = $Sprite
 
+@onready var screech_sound = preload("uid://ccijw13vrf10q")
 
 #region movement
-
-var move = true
 
 @export_group("Movement")
 @export_range(1.0, 4.0, 0.05, "or_greater", "or_less") var acceleration := 2.0
@@ -53,6 +52,7 @@ func movement(delta: float) -> Vector2:
 	# stop abruptly
 	if abs(_forwards_lerp_vel) < 0.5 and forwards == 0:
 		_forwards_lerp_vel = 0
+		Global.play_audio(screech_sound, -10, 1)
 	
 	return transform.x * _forwards_lerp_vel
 
@@ -232,7 +232,6 @@ func update_impulses(delta: float) -> Vector2:
 #endregion
 
 func _physics_process(delta: float) -> void:
-	if not move: return
 	var _vel = movement(delta)
 	var _rot := steer(delta)
 	var _drift_vel_and_dir := drift(delta)
@@ -250,10 +249,3 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	prev_rotation = rotation
-
-
-func end():
-	$AnimatedSprite2D.play("explosion")
-	var tween = get_tree().create_tween()
-	tween.tween_property($Sprite, "modulate:a", 0.2, 1.0)
-	move = false
