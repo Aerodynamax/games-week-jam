@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bxcdp6nkn27cq"]
+
+[ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://endscreen.gd" id="1_sug1e"]
+[ext_resource type="Texture2D" uid="uid://c83febpcodwyc" path="res://scenes/Placeholder.webp" id="2_gcvua"]
+
+[node name="Endscreen" type="Control" unique_id=1154768268 groups=["EndScreen"]]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sug1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1779654585]
+position = Vector2(573, 981)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("2_gcvua")
+
+[node name="CenterContainer" type="CenterContainer" parent="Sprite2D" unique_id=159888194]
+offset_left = -841.17645
+offset_top = -585.29407
+offset_right = 309.50116
+offset_bottom = 59.52527
+scale = Vector2(1.471, 1.471)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/CenterContainer" unique_id=2041061560]
+layout_mode = 2
+theme_override_constants/separation = 31
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/CenterContainer/VBoxContainer" unique_id=1750553239]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1527071740]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Label" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=378323606]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Total time:"
+
+[node name="Label2" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=588295664]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Property Damage:"
+
+[node name="Label3" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=933824129]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Rank:"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1978794259]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Time" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=370924440]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Score" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=272431962]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Rank" type="Label" parent="Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=146814804]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "                            "
+
+[node name="Button" type="Button" parent="Sprite2D/CenterContainer/VBoxContainer" unique_id=886749467]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Restart"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=586802144]
+layout_mode = 0
+offset_left = -355.0
+offset_top = -381.0
+offset_right = 1589.0
+offset_bottom = 1728.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="Sprite2D/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
