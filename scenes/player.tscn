@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://3afh8f76xp0h" path="res://assets/sprites/spr_bus.png" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/UI/timetable.tscn" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://c8bgft2hdkvel" path="res://assets/sounds/mus_music.ogg" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://baksj0iw5jdrk" path="res://assets/sounds/bus/tires_squal_loop.wav" id="5_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://dfa1n8b21xc6c" path="res://assets/sounds/bus/ford-mustang-engine-idle.wav" id="6_tuyoq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqxiu"]
 radius = 8.0
@@ -36,4 +38,14 @@ position_smoothing_enabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1194550498]
 stream = ExtResource("4_dqkch")
+volume_db = -2.0
+autoplay = true
+
+[node name="DriftAudio" type="AudioStreamPlayer2D" parent="." unique_id=713975239]
+stream = ExtResource("5_qlg0r")
+volume_db = -80.0
+autoplay = true
+
+[node name="EngineAudio" type="AudioStreamPlayer2D" parent="." unique_id=1009127627]
+stream = ExtResource("6_tuyoq")
 autoplay = true
