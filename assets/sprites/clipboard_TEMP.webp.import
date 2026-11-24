@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c83febpcodwyc"
-path="res://.godot/imported/Placeholder.webp-fda5be9595675baafb2678cc07034f4f.ctex"
+path="res://.godot/imported/clipboard_TEMP.webp-04ddcc5611a04a0764808028147e6382.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/Placeholder.webp"
-dest_files=["res://.godot/imported/Placeholder.webp-fda5be9595675baafb2678cc07034f4f.ctex"]
+source_file="res://assets/sprites/clipboard_TEMP.webp"
+dest_files=["res://.godot/imported/clipboard_TEMP.webp-04ddcc5611a04a0764808028147e6382.ctex"]
 
 [params]
 

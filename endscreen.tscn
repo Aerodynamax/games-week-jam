@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxcdp6nkn27cq"]
 
 [ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://endscreen.gd" id="1_sug1e"]
-[ext_resource type="Texture2D" uid="uid://c83febpcodwyc" path="res://scenes/Placeholder.webp" id="2_gcvua"]
+[ext_resource type="Texture2D" uid="uid://c83febpcodwyc" path="res://assets/sprites/clipboard_TEMP.webp" id="2_gcvua"]
 
 [node name="Endscreen" type="Control" unique_id=1154768268 groups=["EndScreen"]]
 process_mode = 3

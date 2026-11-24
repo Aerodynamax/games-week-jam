@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://cn6h7jrhepjux" path="res://scripts/bus stop ui/timer_panel.gd" id="1_srplv"]
 [ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="2_5lxq6"]
 [ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/timetableslot.tscn" id="3_g5y8c"]
-[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scenes/score.gd" id="5_uktcg"]
+[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scripts/score.gd" id="5_uktcg"]
 
 [node name="Timer" type="Control" unique_id=322771032 groups=["timetable"]]
 layout_mode = 3
