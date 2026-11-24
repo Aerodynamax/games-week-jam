@@ -11,9 +11,15 @@
 [ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="11_trceg"]
 [ext_resource type="PackedScene" uid="uid://ohjfqnwsvd7a" path="res://scenes/NPCs/normal/npc4.tscn" id="12_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="13_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="14_y6deb"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://ckegrf2j13rp4" path="res://scenes/NPCs/crossing/crossing_npc2.tscn" id="15_og1vs"]
+[ext_resource type="PackedScene" uid="uid://cy8bfqgdj3cug" path="res://scenes/NPCs/crossing/crossing_npc3.tscn" id="16_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://8ci5dvmx3m70" path="res://scenes/NPCs/cars/car2.tscn" id="17_0ld40"]
+[ext_resource type="PackedScene" uid="uid://cwvs2cmomq2ih" path="res://scenes/NPCs/crossing/crossing_npc4.tscn" id="17_vxglm"]
+[ext_resource type="PackedScene" uid="uid://cc1e6ps4jawvi" path="res://scenes/NPCs/crossing/crossing_npc5.tscn" id="18_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://csmr1cc532ev7" path="res://scenes/NPCs/cars/car3.tscn" id="18_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://igf7myibmsr4" path="res://scenes/NPCs/cars/car4.tscn" id="19_yc10j"]
 
@@ -583,15 +589,19 @@ rotation = -1.600614
 
 [node name="NPCPaths" type="Node2D" parent="." unique_id=735434109]
 
-[node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146]
+[node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146 node_paths=PackedStringArray("adjacent_paths")]
 curve = SubResource("Curve2D_o6xl0")
 script = ExtResource("8_tipki")
 templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
+jaywalking_templates = Array[Resource]([ExtResource("14_y6deb"), ExtResource("15_og1vs"), ExtResource("16_2wyq8"), ExtResource("17_vxglm"), ExtResource("18_2f3dj")])
+adjacent_paths = [NodePath("../Path2D2")]
 
-[node name="Path2D2" type="Path2D" parent="NPCPaths" unique_id=1101850301]
+[node name="Path2D2" type="Path2D" parent="NPCPaths" unique_id=1101850301 node_paths=PackedStringArray("adjacent_paths")]
 curve = SubResource("Curve2D_tipki")
 script = ExtResource("8_tipki")
 templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
+jaywalking_templates = Array[Resource]([ExtResource("14_y6deb"), ExtResource("15_og1vs"), ExtResource("16_2wyq8"), ExtResource("17_vxglm"), ExtResource("18_2f3dj")])
+adjacent_paths = [NodePath("../Path2D")]
 
 [node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("15_jbj1t")]
 position = Vector2(-43.000008, -12)
