@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bnntwbjymno8y"]
+
+[ext_resource type="Script" uid="uid://cwpbclrdfqure" path="res://scripts/intro/intro.gd" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://7kcyjn6nkf5y" path="res://assets/background/train-tracks-sunrise.jpg" id="2_yjqpq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ioskq"]
+texture = ExtResource("2_yjqpq")
+
+[node name="Intro" type="Control" unique_id=1373093549]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ioskq")
+
+[node name="Panel" type="Panel" parent="." unique_id=1072322633]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ioskq")
