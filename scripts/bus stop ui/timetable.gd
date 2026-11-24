@@ -55,6 +55,7 @@ func next(time:int):
 		
 		stops[current_stop].current = true
 	else:
+		Global.player.fail()
 		Global.Endscreen.calculate_scores()
 		Global.Endscreen.scroll()
 
