@@ -39,6 +39,7 @@ func _on_button_pressed() -> void:
 	get_tree().reload_current_scene()
 
 func _ready() -> void:
+	colorrect.show()
 	var tween = create_tween()
 	
 	tween.tween_property(colorrect, "color", Color(0.0, 0.0, 0.0, 0.0), 1)

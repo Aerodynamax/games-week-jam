@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxcdp6nkn27cq"]
 
-[ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://endscreen.gd" id="1_sug1e"]
-[ext_resource type="Texture2D" uid="uid://c83febpcodwyc" path="res://scenes/Placeholder.webp" id="2_gcvua"]
+[ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://scripts/bus stop ui/endscreen.gd" id="1_0q5t1"]
+[ext_resource type="Texture2D" uid="uid://c83febpcodwyc" path="res://scenes/Placeholder.webp" id="2_w8nad"]
 
 [node name="Endscreen" type="Control" unique_id=1154768268 groups=["EndScreen"]]
 process_mode = 3
@@ -11,12 +11,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sug1e")
+script = ExtResource("1_0q5t1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1779654585]
 position = Vector2(573, 981)
 scale = Vector2(0.68, 0.68)
-texture = ExtResource("2_gcvua")
+texture = ExtResource("2_w8nad")
 
 [node name="CenterContainer" type="CenterContainer" parent="Sprite2D" unique_id=159888194]
 offset_left = -841.17645
@@ -74,6 +74,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Restart"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=586802144]
+visible = false
 layout_mode = 0
 offset_left = -355.0
 offset_top = -381.0

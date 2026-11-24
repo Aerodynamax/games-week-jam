@@ -234,7 +234,7 @@ func _physics_process(delta: float) -> void:
 	var _drift_vel_and_dir := drift(delta)
 	
 	 #make the camera not follow the drift horizontal velocity
-	camera.offset = _drift_vel_and_dir.perpendicular_velocity * delta
+	#camera.offset = _drift_vel_and_dir.perpendicular_velocity * delta
 	
 	camera_movement(delta)
 	
