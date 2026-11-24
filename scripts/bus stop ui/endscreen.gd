@@ -21,6 +21,11 @@ func calculate_scores():
 	else:
 		ranklabel.text = str(scorecalc) + " YEARS!!!"
 
+func fail():
+	timelabel.text = "YOU"
+	scorelabel.text = "ARE"
+	ranklabel.text = "FIRED"
+
 func scroll():
 	var tween = create_tween()
 	

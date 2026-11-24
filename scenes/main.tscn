@@ -597,4 +597,4 @@ position = Vector2(79, -433)
 [node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("15_jbj1t")]
 position = Vector2(-78, -29)
 loc_Name = "Poo street"
-loc_time = 10
+loc_time = 3000
