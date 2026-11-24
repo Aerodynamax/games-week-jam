@@ -4,12 +4,14 @@ var move_dir: int
 @export var move_speed: float = 10
 @export var existence_duration: float = 30
 var timer: float
+var dead = false
 
 func _ready() -> void:
 	progress_ratio = randf_range(0, 1) # selects a random point along the path for the NPC to start
 	move_dir = 1 if randi_range(0, 1) == 0 else -1 # selects a random direction to move along the path (either forwards or backwards)
 
 func _process(delta: float) -> void:
+	if dead: return
 	_move_along_path(delta)
 	timer += delta
 	if timer > existence_duration:
