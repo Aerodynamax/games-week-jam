@@ -32,7 +32,7 @@ func scroll():
 	
 	tween.tween_property(sprite, "position", Vector2(573.0, 401.0), 1)
 	
-	Global.player.fail()
+	Global.player.end()
 	
 
 

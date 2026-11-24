@@ -252,7 +252,7 @@ func _physics_process(delta: float) -> void:
 	prev_rotation = rotation
 
 
-func fail():
+func end():
 	$AnimatedSprite2D.play("explosion")
 	var tween = get_tree().create_tween()
 	tween.tween_property($Sprite, "modulate:a", 0.2, 1.0)
