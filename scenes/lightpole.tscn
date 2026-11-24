@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://rvyrct1258hr"]
 
+[ext_resource type="Script" uid="uid://wgl1ki5lqdwq" path="res://scripts/collideable_object.gd" id="1_pkmn4"]
+[ext_resource type="Texture2D" uid="uid://bw7dxdglyp7di" path="res://assets/sprites/props/spr_lightpole_broken.png" id="2_w8l65"]
 [ext_resource type="Texture2D" uid="uid://cp0o56mh7e6yx" path="res://assets/sprites/props/spr_lightpole_top.png" id="3_w8l65"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="4_3fiil"]
 [ext_resource type="Texture2D" uid="uid://cdecepdufsh78" path="res://assets/explosion frames/1_1.png" id="5_mi7e5"]
@@ -158,6 +160,9 @@ animations = [{
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 2
+script = ExtResource("1_pkmn4")
+destruction_velocity = 100.0
+cooked = ExtResource("2_w8l65")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=870773434]
 
