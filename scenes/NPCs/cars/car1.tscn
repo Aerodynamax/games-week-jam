@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bm1dwt8moga6l" path="res://assets/sprites/spr_cars.png" id="1_5cgiw"]
 [ext_resource type="Script" uid="uid://17k14f086rt4" path="res://scripts/car.gd" id="1_78kuv"]
-[ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="3_uplqw"]
+[ext_resource type="PackedScene" uid="uid://budw7ure5cste" path="res://scenes/collision.tscn" id="3_uplqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydyqq"]
 size = Vector2(32.001106, 20)
@@ -41,6 +41,7 @@ collision_mask = 2
 collide_with_areas = true
 
 [node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_uplqw")]
+value = 33.33
 Collisionshape = NodePath("../StaticBody2D/CollisionShape2D")
 area2d = NodePath("../Area2D")
 Sprite = NodePath("../Sprite2D")

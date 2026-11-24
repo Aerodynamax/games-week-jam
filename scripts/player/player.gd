@@ -10,6 +10,8 @@ func round_to_dec(num, digit):
 
 @onready var screech_sound = preload("uid://ccijw13vrf10q")
 
+var dead  = false
+
 #region movement
 
 @export_group("Movement")
@@ -245,6 +247,7 @@ func update_impulses(delta: float) -> Vector2:
 #endregion
 
 func _physics_process(delta: float) -> void:
+	if dead: return
 	var _vel = movement(delta)
 	var _rot := steer(delta)
 	var _drift_vel_and_dir := drift(delta)
@@ -262,3 +265,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	prev_rotation = rotation
+
+func end():
+	$AnimatedSprite2D.play("explosion")
+	dead = true
