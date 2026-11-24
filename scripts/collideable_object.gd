@@ -1,22 +1,15 @@
 extends RigidBody2D
 
 @export var destruction_velocity: float = 300.0
+@export var cooked_sprite : Texture2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("hi")
-
-
-
-
-	
-
 
 #func _on_body_entered(body: Node) -> void:
 	#print("hello")
 	#Global.player.stop_movement()
 	#Global.player.apply_impulse(Global.player.transform.x * -300) # Replace with function body.
-
-const COOKED_SPRITE = preload("res://assets/cooked_godot.png")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
@@ -25,7 +18,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			$CollisionShape2D.set_deferred("disabled", true)
 			$Area2D.set_deferred("monitoring", false)
 			$AnimatedSprite2D.play("explosion")
-			$Sprite2D.texture = COOKED_SPRITE
+			$Sprite2D.texture = cooked_sprite
+			$Sprite2D.rotation = deg_to_rad(randf_range(0, 360))
 			var tween = get_tree().create_tween()
 			tween.tween_property($Sprite2D, "modulate:a", 0.2, 1.0)
 			

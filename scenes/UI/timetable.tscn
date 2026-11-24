@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bqm6lwxvn4n4m"]
 
 [ext_resource type="Script" uid="uid://cn6h7jrhepjux" path="res://scripts/bus stop ui/timer_panel.gd" id="1_srplv"]
-[ext_resource type="Script" uid="uid://bhbacjoan5ix7" path="res://scripts/bus stop ui/timetable.gd" id="1_w4wbt"]
-[ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/UI/timetableslot.tscn" id="3_g5y8c"]
-[ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="3_w4wbt"]
-[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scenes/score.gd" id="5_ftwo6"]
-[ext_resource type="PackedScene" uid="uid://bxcdp6nkn27cq" path="res://scenes/UI/endscreen.tscn" id="6_f7mu3"]
+[ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="2_5lxq6"]
+[ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/timetableslot.tscn" id="3_g5y8c"]
+[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scripts/score.gd" id="5_uktcg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxiu"]
 size = Vector2(912, 650)

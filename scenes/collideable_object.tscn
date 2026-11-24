@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_asekn"]
 [ext_resource type="Script" uid="uid://wgl1ki5lqdwq" path="res://scripts/collideable_object.gd" id="1_s517g"]
+[ext_resource type="Texture2D" uid="uid://caks6fjngrtvw" path="res://assets/cooked_godot.png" id="2_4v1yd"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="3_6typr"]
 [ext_resource type="Texture2D" uid="uid://cdecepdufsh78" path="res://assets/explosion frames/1_1.png" id="4_4v1yd"]
 [ext_resource type="Texture2D" uid="uid://cqcbng1i4eswm" path="res://assets/explosion frames/1_2.png" id="5_ar0lo"]
@@ -37,10 +38,10 @@
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="35_ose1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
-size = Vector2(62, 55)
+size = Vector2(132, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mixel"]
-size = Vector2(117.109924, 119.383286)
+size = Vector2(259.47885, 204.4965)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mixel"]
 animations = [{
@@ -159,25 +160,20 @@ gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 2
 script = ExtResource("1_s517g")
+cooked_sprite = ExtResource("2_4v1yd")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=870773434]
 
 [node name="hitbox" type="CollisionShape2D" parent="Area2D" unique_id=299843940]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_qr2vy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750377753]
-position = Vector2(0.49999994, 0.15510662)
-scale = Vector2(0.43548828, 0.39946786)
 shape = SubResource("RectangleShape2D_mixel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=678080495]
-scale = Vector2(0.45709762, 0.40453976)
 texture = ExtResource("1_asekn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207732290]
-position = Vector2(3, -17)
-scale = Vector2(2.004223, 1.1813626)
 sprite_frames = SubResource("SpriteFrames_mixel")
 animation = &"explosion"
 

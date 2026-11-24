@@ -8,6 +8,7 @@ extends Node2D
 @export var loc_Name: String
 @export var loc_time: int
 
+
 @onready var tracker := $tracker
 
 
