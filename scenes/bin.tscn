@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://dxr0u3qxtx28s" path="res://assets/explosion frames/1_30.png" id="34_r2qr4"]
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_h3311"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_3s3xm"]
+[ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="36_rle04"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
 size = Vector2(12, 12)
@@ -175,6 +176,12 @@ texture = ExtResource("3_p8l8u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207732290]
 sprite_frames = SubResource("SpriteFrames_mixel")
 animation = &"explosion"
+
+[node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("36_rle04")]
+destruction_velocity = 30.0
+Collisionshape = NodePath("../CollisionShape2D")
+area2d = NodePath("../Area2D")
+Sprite = NodePath("../Sprite2D")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
