@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Games Week Jam"
-run/main_scene="uid://bykdnh1eji7mu"
+run/main_scene="uid://bnntwbjymno8y"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -43,7 +43,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [filesystem]
 
