@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://1ypud55hdr8y"]
+
+[ext_resource type="Texture2D" uid="uid://bm1dwt8moga6l" path="res://assets/sprites/spr_cars.png" id="1_5cgiw"]
+[ext_resource type="Script" uid="uid://17k14f086rt4" path="res://scripts/car.gd" id="1_78kuv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydyqq"]
+size = Vector2(32.001106, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
+
+[node name="Car" type="PathFollow2D" unique_id=1647538176]
+rotation = -1.5696702
+loop = false
+script = ExtResource("1_78kuv")
+move_speed = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1077474217]
+texture = ExtResource("1_5cgiw")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=296904696]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=311273634]
+position = Vector2(0.0005657678, -1.0112444e-10)
+scale = Vector2(1.0000004, 1.0000004)
+shape = SubResource("RectangleShape2D_ydyqq")
+
+[node name="ShapeCast2D" type="ShapeCast2D" parent="StaticBody2D" unique_id=616650873]
+position = Vector2(-6.9999948, 0.007882882)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_q367f")
+target_position = Vector2(12.999989, -0.0146396365)
+collision_mask = 2
+collide_with_areas = true
