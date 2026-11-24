@@ -32,6 +32,7 @@ show_percentage = false
 
 [node name="tracker" type="Sprite2D" parent="." unique_id=1079494508]
 physics_interpolation_mode = 1
+top_level = true
 texture = ExtResource("3_xjad6")
 script = ExtResource("3_hr2fb")
 on_screen_offset = Vector2(0, -48)

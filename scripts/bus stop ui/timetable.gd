@@ -25,7 +25,7 @@ func _ready() -> void:
 	stops = get_all_stops()
 	
 	# setup stop list
-	stop_list.setup()
+	await stop_list.setup()
 	
 	stops[0].current = true
 

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/sprites/tiles/spr_road_tiles.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://bcp4cffv1dcgl" path="res://assets/sprites/tiles/spr_pavement_tiles.png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="3_sugp2"]
-[ext_resource type="Texture2D" uid="uid://c76oqqe8xb40t" path="res://assets/sprites/buildings/spr_house_red.png" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="10_choun"]
 [ext_resource type="Script" uid="uid://ceejhlidf2j12" path="res://scripts/path_manager.gd" id="10_ya4ey"]
@@ -732,47 +731,47 @@ position = Vector2(171, -430)
 [node name="Busstop" parent="BusStops" unique_id=834891058 instance=ExtResource("15_jbj1t")]
 position = Vector2(-67, 491)
 rotation = -3.1415925
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Wexler Street"
+loc_time = 1000
 
 [node name="Busstop2" parent="BusStops" unique_id=1202129998 instance=ExtResource("15_jbj1t")]
 position = Vector2(-882, 180)
 rotation = -1.5707964
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Walter Avenue"
+loc_time = 1000
 
 [node name="Busstop3" parent="BusStops" unique_id=1813468865 instance=ExtResource("15_jbj1t")]
 position = Vector2(-649, -334)
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Lois Lane"
+loc_time = 1000
 
 [node name="Busstop4" parent="BusStops" unique_id=1317876085 instance=ExtResource("15_jbj1t")]
 position = Vector2(-208, -126)
 rotation = 1.5707964
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Pinkman Street"
+loc_time = 1000
 
 [node name="Busstop5" parent="BusStops" unique_id=733625638 instance=ExtResource("15_jbj1t")]
 position = Vector2(70, -845)
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Schrader Road"
+loc_time = 1000
 
 [node name="Busstop6" parent="BusStops" unique_id=705545013 instance=ExtResource("15_jbj1t")]
 position = Vector2(1079, -653)
 rotation = 1.5707964
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Hank Drive"
+loc_time = 1000
 
 [node name="Busstop7" parent="BusStops" unique_id=1430688366 instance=ExtResource("15_jbj1t")]
 position = Vector2(796, -124)
-loc_Name = "Poo street"
-loc_time = 10
+loc_Name = "Fring Fling"
+loc_time = 1000
 
 [node name="Busstop8" parent="BusStops" unique_id=1289506047 instance=ExtResource("15_jbj1t")]
 position = Vector2(525, 318)
 rotation = -1.5707964
-loc_Name = "Poo street"
-loc_time = 560
+loc_Name = "UTS"
+loc_time = 56000
 
 [node name="RoadPaths" type="Node2D" parent="." unique_id=1969480662]
 script = ExtResource("10_ya4ey")

@@ -12,6 +12,8 @@ extends Node2D
 
 func _ready() -> void:
 	$ProgressBar.rotation -= rotation
+	
+	current = current
 
 
 var waited_Time: float = 0:
@@ -22,7 +24,6 @@ var waited_Time: float = 0:
 var finished: bool = false:
 	set(val):
 		finished = val
-		
 		if tracker is Sprite2D and finished:
 			tracker.visible = false
 		
@@ -53,6 +54,7 @@ func emit_on_update():
 	)
 
 func _physics_process(delta: float) -> void:
+	print(current)
 	if current:
 		progressBar.visible = player.global_position.distance_to(global_position) <= wait_Distance
 		if player.global_position.distance_to(global_position) <= wait_Distance:
@@ -65,6 +67,7 @@ func _physics_process(delta: float) -> void:
 		if Global.timetable.get_time()>loc_time:
 			Global.Endscreen.fail()
 			Global.Endscreen.scroll()
+	
 
 func change_target():
 	Global.timetable.change_target()

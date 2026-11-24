@@ -17,8 +17,10 @@ func setup() -> void:
 	for stop in timetable.stops:
 		
 		var new_timetable := timetable_entry_template.instantiate() as TimetableSlot
-		new_timetable.setup(stop)
 		
 		timetable_entries.append(new_timetable)
+		new_timetable.setup(stop)
 		
 		vBox.add_child(new_timetable)
+	
+	
