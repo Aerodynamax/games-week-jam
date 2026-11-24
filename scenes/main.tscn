@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="13_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="16_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://8ci5dvmx3m70" path="res://scenes/NPCs/cars/car2.tscn" id="17_0ld40"]
+[ext_resource type="PackedScene" uid="uid://csmr1cc532ev7" path="res://scenes/NPCs/cars/car3.tscn" id="18_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://igf7myibmsr4" path="res://scenes/NPCs/cars/car4.tscn" id="19_yc10j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
 texture = ExtResource("1_jyhfs")
@@ -544,6 +548,18 @@ _data = {
 }
 point_count = 15
 
+[sub_resource type="Curve2D" id="Curve2D_jkv2x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -3, 328, 0, 0, 0, 0, -2, -560, 0, 0, 0, 0, 30, -597, 0, 0, 0, 0, 358, -592, 0, 0, 0, 0, 388, -562, 0, 0, 0, 0, 386, -498, 0, 0, 0, 0, 531, -349, 0, 0, 0, 0, 529, -107, 0, 0, 0, 0, 505, -74, 0, 0, 0, 0, -508, -76)
+}
+point_count = 10
+
+[sub_resource type="Curve2D" id="Curve2D_jbj1t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -504, -113, 0, 0, 0, 0, 498, -114, 0, 0, 0, 0, 496, -352, 0, 0, 0, 0, 355, -495, 0, 0, 0, 0, 350, -562, 0, 0, 0, 0, 37, -557, 0, 0, 0, 0, 33, 323)
+}
+point_count = 7
+
 [node name="Main" type="Node2D" unique_id=1716051565]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=617881891]
@@ -560,6 +576,7 @@ tile_set = SubResource("TileSet_n548s")
 
 [node name="Crossing" parent="." unique_id=1627377999 node_paths=PackedStringArray("side_a", "side_b") instance=ExtResource("7_o6xl0")]
 position = Vector2(16, -311)
+collision_layer = 4
 side_a = NodePath("../NPCPaths/Path2D")
 side_b = NodePath("../NPCPaths/Path2D2")
 
@@ -581,12 +598,12 @@ texture = ExtResource("6_tefeu")
 [node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146]
 curve = SubResource("Curve2D_o6xl0")
 script = ExtResource("8_tipki")
-npc_templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
+templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
 
 [node name="Path2D2" type="Path2D" parent="NPCPaths" unique_id=1101850301]
 curve = SubResource("Curve2D_tipki")
 script = ExtResource("8_tipki")
-npc_templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
+templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
 
 [node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("14_jkv2x")]
 position = Vector2(-48, -156)
@@ -598,3 +615,15 @@ position = Vector2(79, -433)
 position = Vector2(-78, -29)
 loc_Name = "Poo street"
 loc_time = 10
+
+[node name="RoadPaths" type="Node2D" parent="." unique_id=1969480662]
+
+[node name="Path2D" type="Path2D" parent="RoadPaths" unique_id=1955089820]
+curve = SubResource("Curve2D_jkv2x")
+script = ExtResource("8_tipki")
+templates = Array[Resource]([ExtResource("16_jbj1t"), ExtResource("17_0ld40"), ExtResource("18_gqmmt"), ExtResource("19_yc10j")])
+
+[node name="Path2D2" type="Path2D" parent="RoadPaths" unique_id=2125351528]
+curve = SubResource("Curve2D_jbj1t")
+script = ExtResource("8_tipki")
+templates = Array[Resource]([ExtResource("16_jbj1t"), ExtResource("17_0ld40"), ExtResource("18_gqmmt"), ExtResource("19_yc10j")])
