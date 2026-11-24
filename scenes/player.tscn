@@ -32,4 +32,3 @@ position_smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057277626]
 
 [node name="TimeTable" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_qhqgy")]
-visible = false

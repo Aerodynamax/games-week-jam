@@ -16,15 +16,14 @@ script = ExtResource("1_oi4tm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=381094470]
 position = Vector2(0, -9.536743e-07)
-scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_xjad6")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=459311186]
 z_index = 1
-offset_left = -30.0
-offset_top = -10.0
-offset_right = 30.0
-offset_bottom = 10.0
+offset_left = -26.0
+offset_top = -53.0
+offset_right = 26.0
+offset_bottom = -43.31
 theme_override_styles/background = SubResource("StyleBoxFlat_r32pp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_l2n4a")
 show_percentage = false

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_asekn"]
 [ext_resource type="Script" uid="uid://wgl1ki5lqdwq" path="res://scripts/collideable_object.gd" id="1_s517g"]
+[ext_resource type="Texture2D" uid="uid://caks6fjngrtvw" path="res://assets/cooked_godot.png" id="2_4v1yd"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="3_6typr"]
 [ext_resource type="Texture2D" uid="uid://cdecepdufsh78" path="res://assets/explosion frames/1_1.png" id="4_4v1yd"]
 [ext_resource type="Texture2D" uid="uid://cqcbng1i4eswm" path="res://assets/explosion frames/1_2.png" id="5_ar0lo"]
@@ -159,6 +160,7 @@ gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 2
 script = ExtResource("1_s517g")
+cooked_sprite = ExtResource("2_4v1yd")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=870773434]
 
