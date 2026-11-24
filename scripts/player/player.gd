@@ -25,8 +25,12 @@ var velocity_speed := 9.0
 ## The max speed while going backwards
 @export_range(100.0, 500.0, 1, "or_greater", "or_less") var max_speed_backwards := 200.0
 
+@onready var engine_audio: AudioStreamPlayer2D = $EngineAudio
+
 var _forwards_lerp_acc: float = 0.0
 var _forwards_lerp_vel: float = 0.0
+
+var skreetch_played: bool = false
 
 func movement(delta: float) -> Vector2:
 	var forwards := Input.get_axis("backward", "forward")
@@ -39,6 +43,10 @@ func movement(delta: float) -> Vector2:
 	
 	_forwards_lerp_acc = round_to_dec(lerpf(_forwards_lerp_acc, forwards, delta * _acc), 3)
 	
+	# audio
+	engine_audio.volume_linear = (_forwards_lerp_acc * (0.4) + 2.6)
+	engine_audio.pitch_scale = 0.8 + 1 * _forwards_lerp_acc
+	
 	# stop abruptly if not moving
 	if _forwards_lerp_acc < 0.05 and forwards == 0:
 		_forwards_lerp_acc = 0
@@ -50,9 +58,8 @@ func movement(delta: float) -> Vector2:
 	
 	
 	# stop abruptly
-	if abs(_forwards_lerp_vel) < 0.5 and forwards == 0:
+	if (abs(_forwards_lerp_vel) < 0.5 and not _forwards_lerp_vel == 0) and forwards == 0:
 		_forwards_lerp_vel = 0
-		Global.play_audio(screech_sound, -10, 1)
 	
 	return transform.x * _forwards_lerp_vel
 
@@ -105,6 +112,9 @@ func steer(delta: float) -> float:
 @export_range(150, 500, 1, "or_greater", "or_less") var drift_max_speed: float = 320.0
 @export_range(3.0, 8.0, 0.1, "or_greater", "or_less") var drift_friction_deceleration: float = 6.0
 
+@onready var drift_audio: AudioStreamPlayer2D = $DriftAudio
+
+
 var _perpendicular_vel_amount: float = 0.0
 
 class DriftData:
@@ -132,12 +142,15 @@ func drift(delta: float) -> DriftData:
 	if extra_rot_percent <= 0.2:
 		extra_rot_amount = 0
 	
+	# audio
+	drift_audio.volume_linear = extra_rot_percent * 0.65
 	
 	# only if going fast enough
 	if abs(_rotation_vel) > drift_min_rot_speed and abs(_forwards_lerp_vel) > drift_min_forward_speed:
 		var magic_math: float = (abs(_rotation_vel) - (drift_min_rot_speed)) * sign(_rotation_vel) / (turning_speed - (drift_min_rot_speed))
 		
 		_perpendicular_vel_amount = clampf(magic_math, -1, 1)
+		
 		
 	else:
 		_perpendicular_vel_amount = 0

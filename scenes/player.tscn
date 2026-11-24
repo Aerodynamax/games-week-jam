@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bo1ocx7d7wxj8" path="res://scripts/player/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://3afh8f76xp0h" path="res://assets/sprites/spr_bus.png" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/UI/timetable.tscn" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://c8bgft2hdkvel" path="res://assets/sounds/mus_music.ogg" id="4_dqkch"]
+[ext_resource type="AudioStream" uid="uid://baksj0iw5jdrk" path="res://assets/sounds/bus/tires_squal_loop.wav" id="5_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://dfa1n8b21xc6c" path="res://assets/sounds/bus/ford-mustang-engine-idle.wav" id="6_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="4_jc3p3"]
 [ext_resource type="Texture2D" uid="uid://cdecepdufsh78" path="res://assets/explosion frames/1_1.png" id="5_hax0n"]
 [ext_resource type="Texture2D" uid="uid://cqcbng1i4eswm" path="res://assets/explosion frames/1_2.png" id="6_t4otl"]
@@ -178,6 +181,19 @@ position_smoothing_enabled = true
 
 [node name="TimeTable" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_qhqgy")]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1194550498]
+stream = ExtResource("4_dqkch")
+volume_db = -2.0
+autoplay = true
+
+[node name="DriftAudio" type="AudioStreamPlayer2D" parent="." unique_id=713975239]
+stream = ExtResource("5_qlg0r")
+volume_db = -80.0
+autoplay = true
+
+[node name="EngineAudio" type="AudioStreamPlayer2D" parent="." unique_id=1009127627]
+stream = ExtResource("6_tuyoq")
+autoplay = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1913588162]
 position = Vector2(-15, -50)
 scale = Vector2(3, 3)
