@@ -31,11 +31,12 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "Player"):
-		if not get_parent() is RigidBody2D:
-			get_parent().dead = true
+		
 		
 		if (body.get_velocity().length() > destruction_velocity):
 			
+			if not get_parent() is RigidBody2D:
+				get_parent().dead = true
 			# audio
 			explosion_audio.play()
 			
