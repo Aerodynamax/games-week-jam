@@ -37,7 +37,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			area2d.set_deferred("monitoring", false)
 			animated_sprite_2d.frame=0
 			animated_sprite_2d.play("explosion")
-			Sprite.texture = COOKED_SPRITE
 			var tween = get_tree().create_tween()
 			tween.tween_property(Sprite, "modulate:a", 0.2, 1.0)
 			Global.score += value

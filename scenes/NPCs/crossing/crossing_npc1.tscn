@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://birck2qcpcg6" path="res://scripts/crossing_npc.gd" id="1_vut5d"]
 [ext_resource type="Texture2D" uid="uid://bbhcrwwx30ulv" path="res://assets/sprites/spr_npcs.png" id="2_1ddq4"]
+[ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="3_1ddq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
 size = Vector2(6, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0mi4"]
+size = Vector2(10, 12)
 
 [node name="CrossingNPC" type="StaticBody2D" unique_id=1698074755]
 script = ExtResource("1_vut5d")
@@ -17,3 +21,12 @@ region_rect = Rect2(6, 0, 6, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161969154]
 shape = SubResource("RectangleShape2D_q367f")
+
+[node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "Sprite") instance=ExtResource("3_1ddq4")]
+Collisionshape = NodePath("../CollisionShape2D")
+Sprite = NodePath("../Sprite2D")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=63950964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1350443774]
+shape = SubResource("RectangleShape2D_e0mi4")
