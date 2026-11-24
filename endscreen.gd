@@ -14,7 +14,7 @@ func calculate_scores():
 	var score = Global.score
 	
 	timelabel.text = "%02d:%02d" % [minutes, seconds]
-	scorelabel.text = str(score)
+	scorelabel.text = "$" + str(score) 
 	var scorecalc = score/time
 	if scorecalc>70:
 		ranklabel.text = "LIFE!!!"
