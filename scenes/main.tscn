@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="11_trceg"]
 [ext_resource type="PackedScene" uid="uid://ohjfqnwsvd7a" path="res://scenes/NPCs/normal/npc4.tscn" id="12_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="13_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://dplsgect1fdhi" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
