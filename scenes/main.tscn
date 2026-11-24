@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://8ci5dvmx3m70" path="res://scenes/NPCs/cars/car2.tscn" id="12_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://csmr1cc532ev7" path="res://scenes/NPCs/cars/car3.tscn" id="13_muem4"]
 [ext_resource type="PackedScene" uid="uid://igf7myibmsr4" path="res://scenes/NPCs/cars/car4.tscn" id="14_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="15_0ld40"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://rsv2vgqu8rn1" path="res://scenes/NPCs/normal/npc2.tscn" id="16_gqmmt"]
@@ -21,8 +20,12 @@
 [ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="20_y6deb"]
 [ext_resource type="PackedScene" uid="uid://ckegrf2j13rp4" path="res://scenes/NPCs/crossing/crossing_npc2.tscn" id="21_og1vs"]
 [ext_resource type="PackedScene" uid="uid://cy8bfqgdj3cug" path="res://scenes/NPCs/crossing/crossing_npc3.tscn" id="22_2wyq8"]
+[ext_resource type="PackedScene" uid="uid://b3eiboeo1qec7" path="res://scenes/house.tscn" id="23_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://cwvs2cmomq2ih" path="res://scenes/NPCs/crossing/crossing_npc4.tscn" id="23_vxglm"]
 [ext_resource type="PackedScene" uid="uid://cc1e6ps4jawvi" path="res://scenes/NPCs/crossing/crossing_npc5.tscn" id="24_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://8q2afmavfcki" path="res://scenes/fire_hydrant.tscn" id="24_vxglm"]
+[ext_resource type="PackedScene" uid="uid://d2lajxkxy2wia" path="res://scenes/bin.tscn" id="25_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://rvyrct1258hr" path="res://scenes/lightpole.tscn" id="26_yq6so"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
 texture = ExtResource("1_jyhfs")
@@ -711,16 +714,10 @@ tile_map_data = PackedByteArray("AAAAABoAAQAAAAMAAAD//xoAAQAAAAMAAAD+/xoAAQAAAAM
 tile_set = SubResource("TileSet_n548s")
 
 [node name="Player" parent="." unique_id=713872924 instance=ExtResource("3_sugp2")]
-position = Vector2(7, 56)
+position = Vector2(56, 605.00006)
 rotation = -1.600614
 
 [node name="NPCPaths" type="Node2D" parent="." unique_id=735434109]
-
-[node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("14_jkv2x")]
-position = Vector2(-48, -156)
-
-[node name="CollideableObject2" parent="." unique_id=1392028784 instance=ExtResource("14_jkv2x")]
-position = Vector2(171, -430)
 
 [node name="BusStops" type="Node2D" parent="." unique_id=1378042240]
 
@@ -898,29 +895,379 @@ script = ExtResource("10_choun")
 curve = SubResource("Curve2D_j8jky")
 script = ExtResource("10_choun")
 
-[node name="CommercialBuilding" parent="." unique_id=1409032900 instance=ExtResource("7_pm3ni")]
+[node name="Buildings" type="Node2D" parent="." unique_id=1704793177]
+
+[node name="CommercialBuilding" parent="Buildings" unique_id=1409032900 instance=ExtResource("7_pm3ni")]
 position = Vector2(-394, 48)
 
-[node name="CommercialBuilding2" parent="." unique_id=814106035 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding2" parent="Buildings" unique_id=814106035 instance=ExtResource("7_pm3ni")]
 position = Vector2(-710, 9)
 
-[node name="CommercialBuilding3" parent="." unique_id=1184225239 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding3" parent="Buildings" unique_id=1184225239 instance=ExtResource("7_pm3ni")]
 position = Vector2(-538, -164)
 
-[node name="CommercialBuilding4" parent="." unique_id=855577278 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding4" parent="Buildings" unique_id=855577278 instance=ExtResource("7_pm3ni")]
 position = Vector2(463, -303)
 
-[node name="CommercialBuilding5" parent="." unique_id=570128738 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding5" parent="Buildings" unique_id=570128738 instance=ExtResource("7_pm3ni")]
 position = Vector2(752, -327)
 
-[node name="CommercialBuilding6" parent="." unique_id=1316612125 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding6" parent="Buildings" unique_id=1316612125 instance=ExtResource("7_pm3ni")]
 position = Vector2(458, -58)
 
-[node name="CommercialBuilding7" parent="." unique_id=917790761 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding7" parent="Buildings" unique_id=917790761 instance=ExtResource("7_pm3ni")]
 position = Vector2(233, 260)
 
-[node name="CommercialBuilding8" parent="." unique_id=1488438580 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding8" parent="Buildings" unique_id=1488438580 instance=ExtResource("7_pm3ni")]
 position = Vector2(737, 59)
 
-[node name="CommercialBuilding9" parent="." unique_id=1244018206 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding9" parent="Buildings" unique_id=1244018206 instance=ExtResource("7_pm3ni")]
 position = Vector2(-682, -494)
+
+[node name="House" parent="." unique_id=336904130 instance=ExtResource("23_2wyq8")]
+position = Vector2(-709, 321)
+
+[node name="House2" parent="." unique_id=2112687281 instance=ExtResource("23_2wyq8")]
+position = Vector2(-380, -520)
+
+[node name="House3" parent="." unique_id=155447709 instance=ExtResource("23_2wyq8")]
+position = Vector2(-185, -669)
+
+[node name="House4" parent="." unique_id=1873702750 instance=ExtResource("23_2wyq8")]
+position = Vector2(509, -525)
+
+[node name="House5" parent="." unique_id=282235305 instance=ExtResource("23_2wyq8")]
+position = Vector2(630, -527)
+
+[node name="House6" parent="." unique_id=1485095566 instance=ExtResource("23_2wyq8")]
+position = Vector2(900, -874)
+
+[node name="House7" parent="." unique_id=1319535180 instance=ExtResource("23_2wyq8")]
+position = Vector2(1118, -740)
+
+[node name="House8" parent="." unique_id=12254098 instance=ExtResource("23_2wyq8")]
+position = Vector2(1121, -827)
+
+[node name="FireHydrant" parent="." unique_id=981796315 instance=ExtResource("24_vxglm")]
+position = Vector2(128, -515)
+
+[node name="Bin" parent="." unique_id=16962140 instance=ExtResource("25_2f3dj")]
+position = Vector2(352, -513)
+
+[node name="FireHydrant2" parent="." unique_id=1290016509 instance=ExtResource("24_vxglm")]
+position = Vector2(-126, -607)
+
+[node name="Bin2" parent="." unique_id=1882278122 instance=ExtResource("25_2f3dj")]
+position = Vector2(-317, -319)
+
+[node name="CollideableObject" parent="." unique_id=1710731415 instance=ExtResource("26_yq6so")]
+position = Vector2(-314, -383)
+
+[node name="CollideableObject2" parent="." unique_id=1847096515 instance=ExtResource("26_yq6so")]
+position = Vector2(-313, -467)
+
+[node name="CollideableObject3" parent="." unique_id=1471066046 instance=ExtResource("26_yq6so")]
+position = Vector2(-310, -579)
+
+[node name="House9" parent="." unique_id=2060869933 instance=ExtResource("23_2wyq8")]
+position = Vector2(-591, 323)
+
+[node name="House10" parent="." unique_id=684916168 instance=ExtResource("23_2wyq8")]
+position = Vector2(-481, 325)
+
+[node name="House11" parent="." unique_id=201602247 instance=ExtResource("23_2wyq8")]
+position = Vector2(-372, 326)
+
+[node name="House12" parent="." unique_id=2006796379 instance=ExtResource("23_2wyq8")]
+position = Vector2(-780, 507)
+
+[node name="House13" parent="." unique_id=1740721919 instance=ExtResource("23_2wyq8")]
+position = Vector2(-661, 506)
+
+[node name="House14" parent="." unique_id=83604727 instance=ExtResource("23_2wyq8")]
+position = Vector2(-543, 507)
+
+[node name="House15" parent="." unique_id=436893965 instance=ExtResource("23_2wyq8")]
+position = Vector2(-427, 526)
+
+[node name="House16" parent="." unique_id=442238747 instance=ExtResource("23_2wyq8")]
+position = Vector2(-301, 528)
+
+[node name="House17" parent="." unique_id=1921997526 instance=ExtResource("23_2wyq8")]
+position = Vector2(-162, 522)
+
+[node name="CommercialBuilding" parent="." unique_id=966161557 instance=ExtResource("7_pm3ni")]
+position = Vector2(-560, 59)
+
+[node name="CommercialBuilding2" parent="." unique_id=1301707183 instance=ExtResource("7_pm3ni")]
+position = Vector2(-557, -49)
+
+[node name="CommercialBuilding3" parent="." unique_id=1692392960 instance=ExtResource("7_pm3ni")]
+position = Vector2(-389, -160)
+
+[node name="House18" parent="." unique_id=592595883 instance=ExtResource("23_2wyq8")]
+position = Vector2(-914, 497)
+
+[node name="House19" parent="." unique_id=114080943 instance=ExtResource("23_2wyq8")]
+position = Vector2(-931, 402)
+
+[node name="House20" parent="." unique_id=1963652211 instance=ExtResource("23_2wyq8")]
+position = Vector2(-937, 310)
+
+[node name="CollideableObject4" parent="." unique_id=1511675247 instance=ExtResource("26_yq6so")]
+position = Vector2(-856, -92)
+
+[node name="CollideableObject5" parent="." unique_id=1073726777 instance=ExtResource("26_yq6so")]
+position = Vector2(-856, -275)
+
+[node name="CollideableObject6" parent="." unique_id=1119203256 instance=ExtResource("26_yq6so")]
+position = Vector2(-857, -481)
+
+[node name="House21" parent="." unique_id=480081893 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1163, -619)
+
+[node name="House22" parent="." unique_id=1944408178 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1162, -698)
+
+[node name="House23" parent="." unique_id=722368127 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1037, -624)
+
+[node name="House24" parent="." unique_id=2085790888 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1038, -700)
+
+[node name="House25" parent="." unique_id=1489937840 instance=ExtResource("23_2wyq8")]
+position = Vector2(-914, -619)
+
+[node name="House26" parent="." unique_id=1327794545 instance=ExtResource("23_2wyq8")]
+position = Vector2(-910, -700)
+
+[node name="CollideableObject7" parent="." unique_id=1376398082 instance=ExtResource("26_yq6so")]
+position = Vector2(-1073, -486)
+
+[node name="House27" parent="." unique_id=527427124 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1159, -873)
+
+[node name="House28" parent="." unique_id=389269641 instance=ExtResource("23_2wyq8")]
+position = Vector2(-1036, -872)
+
+[node name="House29" parent="." unique_id=413423260 instance=ExtResource("23_2wyq8")]
+position = Vector2(-903, -876)
+
+[node name="CollideableObject8" parent="." unique_id=1888128386 instance=ExtResource("26_yq6so")]
+position = Vector2(-229, 373)
+
+[node name="CollideableObject9" parent="." unique_id=231227880 instance=ExtResource("26_yq6so")]
+position = Vector2(-232, 153)
+
+[node name="CollideableObject10" parent="." unique_id=1065926525 instance=ExtResource("26_yq6so")]
+position = Vector2(-231, -56)
+
+[node name="CollideableObject11" parent="." unique_id=2051829525 instance=ExtResource("26_yq6so")]
+position = Vector2(-232, -347)
+
+[node name="CollideableObject12" parent="." unique_id=595043651 instance=ExtResource("26_yq6so")]
+position = Vector2(-194, -520)
+
+[node name="Bin3" parent="." unique_id=1725047128 instance=ExtResource("25_2f3dj")]
+position = Vector2(-230, -519)
+
+[node name="Bin4" parent="." unique_id=870271994 instance=ExtResource("25_2f3dj")]
+position = Vector2(38, -281)
+
+[node name="House30" parent="." unique_id=1856289542 instance=ExtResource("23_2wyq8")]
+position = Vector2(-30, 326)
+
+[node name="House31" parent="." unique_id=937530294 instance=ExtResource("23_2wyq8")]
+position = Vector2(-27, 237)
+
+[node name="House32" parent="." unique_id=1523988133 instance=ExtResource("23_2wyq8")]
+position = Vector2(-27, 143)
+
+[node name="House33" parent="." unique_id=1736059863 instance=ExtResource("23_2wyq8")]
+position = Vector2(-30, -272)
+
+[node name="House34" parent="." unique_id=954868439 instance=ExtResource("23_2wyq8")]
+position = Vector2(-31, -183)
+
+[node name="House35" parent="." unique_id=80791106 instance=ExtResource("23_2wyq8")]
+position = Vector2(471, 45)
+
+[node name="House36" parent="." unique_id=818338767 instance=ExtResource("23_2wyq8")]
+position = Vector2(333, 55)
+
+[node name="House37" parent="." unique_id=84132712 instance=ExtResource("23_2wyq8")]
+position = Vector2(202, 43)
+
+[node name="House38" parent="." unique_id=2042366561 instance=ExtResource("23_2wyq8")]
+position = Vector2(188, -458)
+
+[node name="House39" parent="." unique_id=1678892481 instance=ExtResource("23_2wyq8")]
+position = Vector2(188, -351)
+
+[node name="House40" parent="." unique_id=1657167613 instance=ExtResource("23_2wyq8")]
+position = Vector2(1388, -139)
+
+[node name="House41" parent="." unique_id=1085956029 instance=ExtResource("23_2wyq8")]
+position = Vector2(1268, -139)
+
+[node name="House42" parent="." unique_id=1617600114 instance=ExtResource("23_2wyq8")]
+position = Vector2(1132, -137)
+
+[node name="House43" parent="." unique_id=481584970 instance=ExtResource("23_2wyq8")]
+position = Vector2(993, -139)
+
+[node name="House44" parent="." unique_id=1011592453 instance=ExtResource("23_2wyq8")]
+position = Vector2(1388, 52)
+
+[node name="House45" parent="." unique_id=1330599402 instance=ExtResource("23_2wyq8")]
+position = Vector2(1260, 46)
+
+[node name="House46" parent="." unique_id=832100623 instance=ExtResource("23_2wyq8")]
+position = Vector2(1123, 43)
+
+[node name="House47" parent="." unique_id=1437468165 instance=ExtResource("23_2wyq8")]
+position = Vector2(983, 48)
+
+[node name="FireHydrant3" parent="." unique_id=1631806234 instance=ExtResource("24_vxglm")]
+position = Vector2(123, 101)
+
+[node name="Bin5" parent="." unique_id=129819967 instance=ExtResource("25_2f3dj")]
+position = Vector2(271, 102)
+
+[node name="Bin6" parent="." unique_id=1630556646 instance=ExtResource("25_2f3dj")]
+position = Vector2(548, 186)
+
+[node name="CollideableObject13" parent="." unique_id=731750532 instance=ExtResource("26_yq6so")]
+position = Vector2(631, 665)
+
+[node name="CollideableObject14" parent="." unique_id=2049096381 instance=ExtResource("26_yq6so")]
+position = Vector2(633, 408)
+
+[node name="CollideableObject15" parent="." unique_id=708424120 instance=ExtResource("26_yq6so")]
+position = Vector2(630, 170)
+
+[node name="CollideableObject16" parent="." unique_id=722342047 instance=ExtResource("26_yq6so")]
+position = Vector2(635, -4)
+
+[node name="CollideableObject17" parent="." unique_id=182948154 instance=ExtResource("26_yq6so")]
+position = Vector2(925, -6)
+
+[node name="CollideableObject18" parent="." unique_id=183710770 instance=ExtResource("26_yq6so")]
+position = Vector2(1230, -4)
+
+[node name="House48" parent="." unique_id=343431 instance=ExtResource("23_2wyq8")]
+position = Vector2(710, -225)
+
+[node name="House49" parent="." unique_id=747375258 instance=ExtResource("23_2wyq8")]
+position = Vector2(769, -875)
+
+[node name="House50" parent="." unique_id=644460882 instance=ExtResource("23_2wyq8")]
+position = Vector2(895, -977)
+
+[node name="House51" parent="." unique_id=1624738453 instance=ExtResource("23_2wyq8")]
+position = Vector2(1120, -925)
+
+[node name="House52" parent="." unique_id=37484126 instance=ExtResource("23_2wyq8")]
+position = Vector2(1114, -1015)
+
+[node name="House53" parent="." unique_id=1060105128 instance=ExtResource("23_2wyq8")]
+position = Vector2(888, -339)
+
+[node name="House54" parent="." unique_id=1886343777 instance=ExtResource("23_2wyq8")]
+position = Vector2(1007, -337)
+
+[node name="House55" parent="." unique_id=1935211022 instance=ExtResource("23_2wyq8")]
+position = Vector2(1118, -424)
+
+[node name="House56" parent="." unique_id=102176390 instance=ExtResource("23_2wyq8")]
+position = Vector2(648, -873)
+
+[node name="House57" parent="." unique_id=1829429299 instance=ExtResource("23_2wyq8")]
+position = Vector2(-789, -698)
+
+[node name="House58" parent="." unique_id=1433884181 instance=ExtResource("23_2wyq8")]
+position = Vector2(-310, -696)
+
+[node name="House59" parent="." unique_id=690784800 instance=ExtResource("23_2wyq8")]
+position = Vector2(526, -877)
+
+[node name="CommercialBuilding4" parent="." unique_id=2050577508 instance=ExtResource("7_pm3ni")]
+position = Vector2(378, -881)
+
+[node name="House60" parent="." unique_id=1261248345 instance=ExtResource("23_2wyq8")]
+position = Vector2(241, -871)
+
+[node name="CollideableObject19" parent="." unique_id=577943187 instance=ExtResource("26_yq6so")]
+position = Vector2(-815, -825)
+
+[node name="CollideableObject20" parent="." unique_id=1574903993 instance=ExtResource("26_yq6so")]
+position = Vector2(-392, -825)
+
+[node name="CollideableObject21" parent="." unique_id=1616712711 instance=ExtResource("26_yq6so")]
+position = Vector2(-24, -824)
+
+[node name="FireHydrant4" parent="." unique_id=860374701 instance=ExtResource("24_vxglm")]
+position = Vector2(-428, -742)
+
+[node name="FireHydrant5" parent="." unique_id=1973894594 instance=ExtResource("24_vxglm")]
+position = Vector2(111, -744)
+
+[node name="Bin7" parent="." unique_id=2115051274 instance=ExtResource("25_2f3dj")]
+position = Vector2(123, -826)
+
+[node name="Bin8" parent="." unique_id=561949241 instance=ExtResource("25_2f3dj")]
+position = Vector2(442, -823)
+
+[node name="CollideableObject22" parent="." unique_id=2061657459 instance=ExtResource("26_yq6so")]
+position = Vector2(745, -743)
+
+[node name="CollideableObject23" parent="." unique_id=1480554074 instance=ExtResource("26_yq6so")]
+position = Vector2(968, -635)
+
+[node name="Bin9" parent="." unique_id=973486984 instance=ExtResource("25_2f3dj")]
+position = Vector2(1048, -613)
+
+[node name="FireHydrant6" parent="." unique_id=492718477 instance=ExtResource("24_vxglm")]
+position = Vector2(1048, -848)
+
+[node name="CollideableObject24" parent="." unique_id=1194039494 instance=ExtResource("26_yq6so")]
+position = Vector2(894, -471)
+
+[node name="FireHydrant7" parent="." unique_id=817616579 instance=ExtResource("24_vxglm")]
+position = Vector2(553, -329)
+
+[node name="Bin10" parent="." unique_id=46693707 instance=ExtResource("25_2f3dj")]
+position = Vector2(744, -87)
+
+[node name="CollideableObject25" parent="." unique_id=1455248305 instance=ExtResource("26_yq6so")]
+position = Vector2(553, -150)
+
+[node name="CollideableObject26" parent="." unique_id=374714559 instance=ExtResource("26_yq6so")]
+position = Vector2(552, 62)
+
+[node name="FireHydrant8" parent="." unique_id=1555249594 instance=ExtResource("24_vxglm")]
+position = Vector2(1204, -90)
+
+[node name="FireHydrant9" parent="." unique_id=244488581 instance=ExtResource("24_vxglm")]
+position = Vector2(117, 429)
+
+[node name="FireHydrant10" parent="." unique_id=1132288028 instance=ExtResource("24_vxglm")]
+position = Vector2(121, 186)
+
+[node name="FireHydrant11" parent="." unique_id=143207826 instance=ExtResource("24_vxglm")]
+position = Vector2(-786, 456)
+
+[node name="FireHydrant12" parent="." unique_id=295686423 instance=ExtResource("24_vxglm")]
+position = Vector2(-775, 103)
+
+[node name="FireHydrant13" parent="." unique_id=322684973 instance=ExtResource("24_vxglm")]
+position = Vector2(-556, -232)
+
+[node name="Bin11" parent="." unique_id=701433481 instance=ExtResource("25_2f3dj")]
+position = Vector2(-606, -312)
+
+[node name="CollideableObject27" parent="." unique_id=1574956402 instance=ExtResource("26_yq6so")]
+position = Vector2(533, -387)
+
+[node name="FireHydrant14" parent="." unique_id=16431928 instance=ExtResource("24_vxglm")]
+position = Vector2(447, -480)
