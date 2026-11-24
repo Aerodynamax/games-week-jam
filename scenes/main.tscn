@@ -699,6 +699,9 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
+size = Vector2(1000, 20)
+
 [node name="Main" type="Node2D" unique_id=1716051565]
 
 [node name="MainMap" type="TileMapLayer" parent="." unique_id=617881891]
@@ -1271,3 +1274,27 @@ position = Vector2(533, -387)
 
 [node name="FireHydrant14" parent="." unique_id=16431928 instance=ExtResource("24_vxglm")]
 position = Vector2(447, -480)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=92785593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=365407303]
+position = Vector2(0, 711)
+scale = Vector2(5.9600024, 1)
+shape = SubResource("RectangleShape2D_q367f")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1703073849]
+position = Vector2(0, -1084)
+scale = Vector2(5.9600024, 1)
+shape = SubResource("RectangleShape2D_q367f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2057960095]
+position = Vector2(-1349, 140)
+rotation = 1.5707964
+scale = Vector2(5.9600024, 1)
+shape = SubResource("RectangleShape2D_q367f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1383459972]
+position = Vector2(1577, 140)
+rotation = 1.5707964
+scale = Vector2(5.9600024, 1)
+shape = SubResource("RectangleShape2D_q367f")
