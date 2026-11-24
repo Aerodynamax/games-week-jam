@@ -728,46 +728,46 @@ position = Vector2(171, -430)
 position = Vector2(-67, 491)
 rotation = -3.1415925
 loc_Name = "Wexler Street"
-loc_time = 1000
+loc_time = 550
 
 [node name="Busstop2" parent="BusStops" unique_id=1202129998 instance=ExtResource("15_jbj1t")]
 position = Vector2(-882, 180)
 rotation = -1.5707964
 loc_Name = "Walter Avenue"
-loc_time = 1000
+loc_time = 560
 
 [node name="Busstop3" parent="BusStops" unique_id=1813468865 instance=ExtResource("15_jbj1t")]
 position = Vector2(-649, -334)
 loc_Name = "Lois Lane"
-loc_time = 1000
+loc_time = 568
 
 [node name="Busstop4" parent="BusStops" unique_id=1317876085 instance=ExtResource("15_jbj1t")]
 position = Vector2(-208, -126)
 rotation = 1.5707964
 loc_Name = "Pinkman Street"
-loc_time = 1000
+loc_time = 575
 
 [node name="Busstop5" parent="BusStops" unique_id=733625638 instance=ExtResource("15_jbj1t")]
 position = Vector2(70, -845)
 loc_Name = "Schrader Road"
-loc_time = 1000
+loc_time = 586
 
 [node name="Busstop6" parent="BusStops" unique_id=705545013 instance=ExtResource("15_jbj1t")]
 position = Vector2(1079, -653)
 rotation = 1.5707964
 loc_Name = "Hank Drive"
-loc_time = 1000
+loc_time = 595
 
 [node name="Busstop7" parent="BusStops" unique_id=1430688366 instance=ExtResource("15_jbj1t")]
 position = Vector2(796, -124)
 loc_Name = "Fring Fling"
-loc_time = 1000
+loc_time = 605
 
 [node name="Busstop8" parent="BusStops" unique_id=1289506047 instance=ExtResource("15_jbj1t")]
 position = Vector2(525, 318)
 rotation = -1.5707964
 loc_Name = "UTS"
-loc_time = 56000
+loc_time = 610
 
 [node name="CommercialBuilding" parent="BusStops" unique_id=2052253755 instance=ExtResource("7_pm3ni")]
 position = Vector2(-39, -376)
