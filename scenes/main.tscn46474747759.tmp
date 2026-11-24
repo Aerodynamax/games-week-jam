@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bykdnh1eji7mu"]
+
+[ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="1_sugp2"]
+
+[node name="Main" type="Node3D" unique_id=1337647833]
+
+[node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("1_sugp2")]
+position = Vector2(156, -2)
+
+[node name="CollideableObject2" parent="." unique_id=1339501903 instance=ExtResource("1_sugp2")]
+position = Vector2(247, -2)
+
+[node name="CollideableObject3" parent="." unique_id=586799594 instance=ExtResource("1_sugp2")]
+position = Vector2(339, -2)
+
+[node name="CollideableObject4" parent="." unique_id=1403970892 instance=ExtResource("1_sugp2")]
+position = Vector2(436, -2)
+
+[node name="Player" parent="." unique_id=713872924 instance=ExtResource("1_o5qli")]
