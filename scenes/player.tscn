@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bo1ocx7d7wxj8" path="res://scripts/player/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://3afh8f76xp0h" path="res://assets/sprites/spr_bus.png" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/timetable.tscn" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqxiu"]
 radius = 8.0
@@ -27,3 +28,7 @@ shape = SubResource("CapsuleShape2D_dqxiu")
 zoom = Vector2(3, 3)
 process_callback = 0
 position_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2057277626]
+
+[node name="TimeTable" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_qhqgy")]
