@@ -35,6 +35,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			print("Too fast!")
 			Collisionshape.set_deferred("disabled", true)
 			area2d.set_deferred("monitoring", false)
+			animated_sprite_2d.frame=0
 			animated_sprite_2d.play("explosion")
 			Sprite.texture = COOKED_SPRITE
 			var tween = get_tree().create_tween()

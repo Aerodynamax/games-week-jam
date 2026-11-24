@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://vkwkv2cynpb0"]
+[gd_scene format=3 uid="uid://cypvf43ob7ud1"]
 
 [ext_resource type="Script" uid="uid://bpoeuvs5dyqjo" path="res://scripts/collision.gd" id="1_u8cmh"]
 [ext_resource type="Texture2D" uid="uid://c01nwygrri3ko" path="res://assets/explosion frames/1_0.png" id="2_ps58x"]
@@ -155,3 +155,4 @@ position = Vector2(-7.000001, -16.000002)
 scale = Vector2(2.004223, 1.1813626)
 sprite_frames = SubResource("SpriteFrames_ymtmc")
 animation = &"explosion"
+frame = 32

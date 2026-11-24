@@ -1,11 +1,11 @@
 class_name EndScreen
 extends Control
 
-@onready var timelabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Time")
-@onready var scorelabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Score")
-@onready var ranklabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Rank")
-@onready var sprite : Sprite2D = get_node("Sprite2D")
-@onready var colorrect : ColorRect = get_node("ColorRect")
+@onready var timelabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Time
+@onready var scorelabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Score
+@onready var ranklabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Rank
+@onready var node2d : Node2D = $Node2D
+@onready var colorrect : ColorRect = $ColorRect
 
 func calculate_scores():
 	var time = Global.timetable.get_time() - 540
@@ -30,7 +30,7 @@ func scroll():
 	var tween = create_tween()
 	
 	
-	tween.tween_property(sprite, "position", Vector2(573.0, 401.0), 1)
+	tween.tween_property(node2d, "position", Vector2(573.0, 300.0), 1)
 	
 	Global.player.end()
 	
