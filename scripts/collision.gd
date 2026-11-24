@@ -53,10 +53,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			get_parent().queue_free()
 		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
 			body.stop_movement()
-			body.apply_impulse(body.transform.x * -300)
+			body.apply_impulse(body.transform.x * -100)
 		else:
 			print("You aren't fast enough")
 			body.stop_movement()
-			body.apply_impulse(body.transform.x * -300)
+			body.apply_impulse(global_position.direction_to(body.global_position) * 300)
+			#body.apply_impulse(body.transform.x * -100)
 			
 	
