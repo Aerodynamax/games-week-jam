@@ -19,7 +19,7 @@
 &"portraits": {
 "Portrait": {
 "export_overrides": {
-"image": "\"res://assets/dialogic/characters/manager_nobg.png\""
+"image": "\"res://assets/sprites/spr_manager.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

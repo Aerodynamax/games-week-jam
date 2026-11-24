@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnntwbjymno8y"]
 
 [ext_resource type="Script" uid="uid://cwpbclrdfqure" path="res://scripts/intro/intro.gd" id="1_ioskq"]
-[ext_resource type="Texture2D" uid="uid://7kcyjn6nkf5y" path="res://assets/background/train-tracks-sunrise.jpg" id="2_yjqpq"]
+[ext_resource type="Texture2D" uid="uid://bpt7vh1s0g2hi" path="res://assets/sprites/spr_intro_bg.png" id="2_yjqpq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ioskq"]
 texture = ExtResource("2_yjqpq")

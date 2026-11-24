@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://41vm8rir4gps"
-path="res://.godot/imported/manager.jpg-ff2e8939da0e5ab31cb4e11e1a25056a.ctex"
+uid="uid://bpt7vh1s0g2hi"
+path="res://.godot/imported/spr_intro_bg.png-8ed864a3ac4a9dfcb33d6640c9e13312.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dialogic/characters/manager.jpg"
-dest_files=["res://.godot/imported/manager.jpg-ff2e8939da0e5ab31cb4e11e1a25056a.ctex"]
+source_file="res://assets/sprites/spr_intro_bg.png"
+dest_files=["res://.godot/imported/spr_intro_bg.png-8ed864a3ac4a9dfcb33d6640c9e13312.ctex"]
 
 [params]
 
