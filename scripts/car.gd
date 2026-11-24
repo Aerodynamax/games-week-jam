@@ -3,8 +3,11 @@ class_name Car extends PathFollow2D
 @export var move_speed: float = 10
 
 @onready var shapecast: ShapeCast2D = $StaticBody2D/ShapeCast2D
+var dead = false
+
 
 func _process(delta: float) -> void:
+	if dead: return
 	_move_along_path(delta)
 	if progress_ratio == 1 || is_close_to_car():
 		queue_free()

@@ -9,10 +9,13 @@ var crossing_distance: float
 var crossing_progress: float
 var lerp_time: float = 0
 var time_to_cross: float
+var dead = false
+
 
 var timer: float
 
 func _process(delta: float) -> void:
+	if dead: return
 	_move_at_crossing(delta)
 
 func cross_road(dest_path: Path2D) -> void:
