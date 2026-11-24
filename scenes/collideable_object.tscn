@@ -38,10 +38,10 @@
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="35_ose1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
-size = Vector2(62, 55)
+size = Vector2(132, 97)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mixel"]
-size = Vector2(117.109924, 119.383286)
+size = Vector2(259.47885, 204.4965)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mixel"]
 animations = [{
@@ -165,21 +165,15 @@ cooked_sprite = ExtResource("2_4v1yd")
 [node name="Area2D" type="Area2D" parent="." unique_id=870773434]
 
 [node name="hitbox" type="CollisionShape2D" parent="Area2D" unique_id=299843940]
-position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_qr2vy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750377753]
-position = Vector2(0.49999994, 0.15510662)
-scale = Vector2(0.43548828, 0.39946786)
 shape = SubResource("RectangleShape2D_mixel")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=678080495]
-scale = Vector2(0.45709762, 0.40453976)
 texture = ExtResource("1_asekn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207732290]
-position = Vector2(3, -17)
-scale = Vector2(2.004223, 1.1813626)
 sprite_frames = SubResource("SpriteFrames_mixel")
 animation = &"explosion"
 

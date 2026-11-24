@@ -19,6 +19,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			$Area2D.set_deferred("monitoring", false)
 			$AnimatedSprite2D.play("explosion")
 			$Sprite2D.texture = cooked_sprite
+			$Sprite2D.rotation = deg_to_rad(randf_range(0, 360))
 			var tween = get_tree().create_tween()
 			tween.tween_property($Sprite2D, "modulate:a", 0.2, 1.0)
 			
