@@ -14,6 +14,8 @@ func _ready() -> void:
 	$ProgressBar.rotation -= rotation
 	
 	current = current
+	
+	Global.score = 0
 
 
 var waited_Time: float = 0:
