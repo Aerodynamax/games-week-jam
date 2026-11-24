@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:addons/dialogic/Modules/Call/icon.png.import
 uid="uid://duvcdvtgy4h4b"
 path="res://.godot/imported/icon.png-12e444f0ed59397c7537943ea85b475c.ctex"
+========
+uid="uid://dmpgeji1luo66"
+path="res://.godot/imported/spr_manager.png-5a96bf4ab58818469ac3384f48751012.ctex"
+>>>>>>>> origin/dev:assets/sprites/spr_manager.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:addons/dialogic/Modules/Call/icon.png.import
 source_file="res://addons/dialogic/Modules/Call/icon.png"
 dest_files=["res://.godot/imported/icon.png-12e444f0ed59397c7537943ea85b475c.ctex"]
+========
+source_file="res://assets/sprites/spr_manager.png"
+dest_files=["res://.godot/imported/spr_manager.png-5a96bf4ab58818469ac3384f48751012.ctex"]
+>>>>>>>> origin/dev:assets/sprites/spr_manager.png.import
 
 [params]
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7au0m7yi37p5" path="res://scripts/npc.gd" id="1_if67s"]
 [ext_resource type="Texture2D" uid="uid://bbhcrwwx30ulv" path="res://assets/sprites/spr_npcs.png" id="2_qojcf"]
+[ext_resource type="PackedScene" uid="uid://budw7ure5cste" path="res://scenes/collision.tscn" id="3_pyx5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q367f"]
 size = Vector2(7.0051117, 7.9998894)
@@ -10,7 +11,7 @@ size = Vector2(7.0051117, 7.9998894)
 rotation = -1.565588
 loop = false
 script = ExtResource("1_if67s")
-move_speed = 100.0
+move_speed = 30.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269261412]
 texture = ExtResource("2_qojcf")
@@ -24,3 +25,10 @@ collision_mask = 3
 position = Vector2(5.9604645e-08, 3.7252903e-09)
 scale = Vector2(1.0000006, 1.0000006)
 shape = SubResource("RectangleShape2D_q367f")
+
+[node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_pyx5w")]
+destruction_velocity = 100.0
+value = 60.0
+Collisionshape = NodePath("../StaticBody2D/CollisionShape2D")
+area2d = NodePath("../StaticBody2D")
+Sprite = NodePath("../Sprite2D")

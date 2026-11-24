@@ -2,7 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="1_r32pp"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="2_65iv0"]
-[ext_resource type="PackedScene" uid="uid://bqm6lwxvn4n4m" path="res://scenes/UI/timetable.tscn" id="3_65iv0"]
+[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="3_65iv0"]
+[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="4_l2n4a"]
+[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="5_ye8wr"]
+
+[sub_resource type="Curve2D" id="Curve2D_l2n4a"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 40, 133, 0, 0, 0, 0, 4, 196, 0, 0, 0, 0, 22, 86, 0, 0, 0, 0, 44, 111, 0, 0, 0, 0, 40, 133)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_ye8wr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 104, 81, 0, 0, 0, 0, 66, 153, 0, 0, 0, 0, 140, 159, 0, 0, 0, 0, 104, 81, 0, 0, 0, 0, 195, 62, 0, 0, 0, 0, 264, 230, 0, 0, 0, 0, 89, 271, 0, 0, 0, 0, 27, 213, 0, 0, 0, 0, 51, 185, 0, 0, 0, 0, 130, 187, 0, 0, 0, 0, 155, 168, 0, 0, 0, 0, 174, 127, 0, 0, 0, 0, 141, 117, 0, 0, 0, 0, 114, 141, 0, 0, 0, 0, 104, 81)
+}
+point_count = 15
 
 [node name="Testscene" type="Node2D" unique_id=1033832060]
 
@@ -24,6 +38,23 @@ position = Vector2(107, 301)
 loc_Name = "Joestreet"
 loc_time = 100
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=416120333]
+[node name="Path2D" type="Path2D" parent="." unique_id=1216762724]
+curve = SubResource("Curve2D_l2n4a")
 
-[node name="TimeTable" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_65iv0")]
+[node name="NPC" parent="Path2D" unique_id=1939084926 instance=ExtResource("3_65iv0")]
+position = Vector2(40, 133)
+rotation = 2.0899425
+
+[node name="CrossingNPC" parent="Path2D" unique_id=1698074755 instance=ExtResource("4_l2n4a")]
+position = Vector2(75, 113)
+
+[node name="Car" parent="Path2D" unique_id=1647538176 instance=ExtResource("5_ye8wr")]
+position = Vector2(40, 133)
+rotation = 2.0899425
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1746521917]
+curve = SubResource("Curve2D_ye8wr")
+
+[node name="Car" parent="Path2D2" unique_id=1539224616 instance=ExtResource("5_ye8wr")]
+position = Vector2(104, 81)
+rotation = 2.0564184

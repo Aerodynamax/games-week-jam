@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://bhbacjoan5ix7" path="res://scripts/bus stop ui/timetable.gd" id="1_w4wbt"]
 [ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/UI/timetableslot.tscn" id="3_g5y8c"]
 [ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="3_w4wbt"]
-[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scenes/score.gd" id="5_ftwo6"]
+[ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scripts/score.gd" id="5_ftwo6"]
+[ext_resource type="Theme" uid="uid://bo0ouvs2fnqv8" path="res://assets/theme.tres" id="5_nof3t"]
 [ext_resource type="PackedScene" uid="uid://bxcdp6nkn27cq" path="res://scenes/UI/endscreen.tscn" id="6_f7mu3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxiu"]
@@ -17,19 +18,20 @@ script = ExtResource("1_w4wbt")
 
 [node name="Timer" type="Panel" parent="." unique_id=859173201]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(6.319999, 1.1999998)
+offset_right = 200.0
+offset_bottom = 75.0
+theme = ExtResource("5_nof3t")
 script = ExtResource("1_srplv")
 
 [node name="Time" type="Label" parent="Timer" unique_id=666944796]
-layout_mode = 0
-offset_left = 10.284811
-offset_top = 2.5000005
-offset_right = 52.284813
-offset_bottom = 25.5
-scale = Vector2(0.20393267, 1.3451842)
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 75.0
+theme = ExtResource("5_nof3t")
+theme_override_font_sizes/font_size = 50
 text = "hello"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="StopPanel" type="Panel" parent="." unique_id=1666307502]
 layout_mode = 0
@@ -37,6 +39,7 @@ offset_left = 918.0
 offset_top = 6.0
 offset_right = 1152.0
 offset_bottom = 646.0
+theme = ExtResource("5_nof3t")
 script = ExtResource("3_w4wbt")
 timetable_entry_template = ExtResource("3_g5y8c")
 
@@ -44,12 +47,22 @@ timetable_entry_template = ExtResource("3_g5y8c")
 layout_mode = 0
 offset_right = 234.0
 offset_bottom = 247.0
+theme = ExtResource("5_nof3t")
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="StopPanel/HBoxContainer" unique_id=247845430]
 layout_mode = 2
 offset_transform_enabled = true
+theme = ExtResource("5_nof3t")
 theme_override_constants/separation = 43
+
+[node name="Label" type="Label" parent="StopPanel/HBoxContainer/VBoxContainer" unique_id=1351965649]
+layout_mode = 2
+theme = ExtResource("5_nof3t")
+theme_override_font_sizes/font_size = 50
+text = "Route"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1926091268 groups=["ScreenBounds"]]
 collision_layer = 8
@@ -62,18 +75,20 @@ shape = SubResource("RectangleShape2D_dqxiu")
 [node name="Score" type="Panel" parent="." unique_id=339197598]
 layout_mode = 0
 offset_top = 599.0
-offset_right = 40.0
+offset_right = 35.0
 offset_bottom = 639.0
 scale = Vector2(6.319999, 1.1999998)
+theme = ExtResource("5_nof3t")
 script = ExtResource("5_ftwo6")
 
 [node name="Score" type="Label" parent="Score" unique_id=408593032]
 layout_mode = 0
-offset_left = 10.284811
-offset_top = 2.5000005
-offset_right = 52.284813
-offset_bottom = 25.5
+offset_left = 5.0
+offset_top = 2.5
+offset_right = 47.0
+offset_bottom = 26.5
 scale = Vector2(0.20393267, 1.3451842)
+theme = ExtResource("5_nof3t")
 text = "$0"
 
 [node name="Endscreen" parent="." unique_id=1154768268 instance=ExtResource("6_f7mu3")]

@@ -1,6 +1,9 @@
 extends RigidBody2D
 
 @export var destruction_velocity: float = 300.0
+
+@export var value : float = 10.01
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("hi")
@@ -28,7 +31,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			$Sprite2D.texture = COOKED_SPRITE
 			var tween = get_tree().create_tween()
 			tween.tween_property($Sprite2D, "modulate:a", 0.2, 1.0)
-			
+			Global.score += value
 		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
 			body.stop_movement()
 			body.apply_impulse(body.transform.x * -300)

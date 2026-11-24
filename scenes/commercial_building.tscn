@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://do51sto5m3bil"]
+[gd_scene format=3 uid="uid://tqh80ag1xepo"]
 
 [ext_resource type="Script" uid="uid://wgl1ki5lqdwq" path="res://scripts/collideable_object.gd" id="1_o3ff1"]
 [ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="3_sdk7q"]

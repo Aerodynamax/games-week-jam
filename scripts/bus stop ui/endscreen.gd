@@ -1,11 +1,11 @@
 class_name EndScreen
 extends Control
 
-@onready var timelabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Time")
-@onready var scorelabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Score")
-@onready var ranklabel : Label = get_node("Sprite2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Rank")
-@onready var sprite : Sprite2D = get_node("Sprite2D")
-@onready var colorrect : ColorRect = get_node("ColorRect")
+@onready var timelabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Time
+@onready var scorelabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Score
+@onready var ranklabel : Label = $Node2D/CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2/Rank
+@onready var node2d : Node2D = $Node2D
+@onready var colorrect : ColorRect = $ColorRect
 
 func calculate_scores():
 	var time = Global.timetable.get_time() - 540
@@ -19,14 +19,20 @@ func calculate_scores():
 	if scorecalc>70:
 		ranklabel.text = "LIFE!!!"
 	else:
-		ranklabel.text = str(scorecalc) + " YEARS!!!"
+		ranklabel.text = str(int(scorecalc)) + " YEARS!!!"
+
+func fail():
+	timelabel.text = "YOU"
+	scorelabel.text = "ARE"
+	ranklabel.text = "FIRED"
 
 func scroll():
 	var tween = create_tween()
 	
 	
-	tween.tween_property(sprite, "position", Vector2(573.0, 401.0), 1)
-	get_tree().paused = true
+	tween.tween_property(node2d, "position", Vector2(573.0, 300.0), 1)
+	
+	Global.player.end()
 	
 
 
