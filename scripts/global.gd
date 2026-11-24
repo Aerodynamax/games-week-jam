@@ -1,5 +1,6 @@
 extends Node
 
+
 #region player
 
 var player: Player:
@@ -54,4 +55,12 @@ func _get_EndScreen() -> EndScreen:
 		if node is EndScreen:
 			return node
 	return null
+#endregion
+
+#region audio management
+func play_audio(audio : AudioStream, vol : float, pitch_var : float):
+	var sound : PackedScene = load("uid://bg5gnx7sdusj7")
+	var s = sound.instantiate()
+	s.audio_load(audio, vol, pitch_var)
+	add_child(s)
 #endregion

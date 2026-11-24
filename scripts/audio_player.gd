@@ -1,3 +1,4 @@
+class_name AudioPlayer
 extends AudioStreamPlayer2D
 
 

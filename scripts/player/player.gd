@@ -8,6 +8,8 @@ func round_to_dec(num, digit):
 @onready var camera: Camera2D = $Camera2D
 @onready var sprite: Sprite2D = $Sprite
 
+@onready var screech_sound = preload("uid://ccijw13vrf10q")
+
 #region movement
 
 @export_group("Movement")
@@ -50,6 +52,7 @@ func movement(delta: float) -> Vector2:
 	# stop abruptly
 	if abs(_forwards_lerp_vel) < 0.5 and forwards == 0:
 		_forwards_lerp_vel = 0
+		Global.play_audio(screech_sound, -10, 1)
 	
 	return transform.x * _forwards_lerp_vel
 
