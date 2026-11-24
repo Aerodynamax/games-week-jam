@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/sprites/tiles/spr_road_tiles.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://bcp4cffv1dcgl" path="res://assets/sprites/tiles/spr_pavement_tiles.png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="3_sugp2"]
-[ext_resource type="Texture2D" uid="uid://c76oqqe8xb40t" path="res://assets/sprites/buildings/spr_house_red.png" id="5_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bk1reou44gab4" path="res://scenes/building_blocks/crossing.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="9_85g3d"]
@@ -13,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="11_trceg"]
 [ext_resource type="PackedScene" uid="uid://ohjfqnwsvd7a" path="res://scenes/NPCs/normal/npc4.tscn" id="12_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="13_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://bqb7gaoohi3wo" path="res://scenes/collideable_object.tscn" id="14_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://8ci5dvmx3m70" path="res://scenes/NPCs/cars/car2.tscn" id="17_0ld40"]
@@ -393,20 +390,20 @@ tile_data = PackedInt32Array(0, 458753, 9, 65536, 327681, 9, 131072, 393217, 9, 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ya4ey"]
 tile_data = PackedInt32Array(0, 458753, 5, 65536, 196609, 1, 131072, 196609, 0, 196608, 327681, 2, 1, 1, 3, 65537, 131073, 8, 131073, 131073, 8, 196609, 65537, 2, 2, 65537, 3, 65538, 131073, 8, 131074, 131073, 8, 196610, 1, 2, 3, 262145, 3, 65539, 131073, 0, 131075, 131073, 1, 196611, 393217, 4)
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_0wfyh"]
+tile_data = PackedInt32Array(0, 196609, 4, 1, 262145, 7, 2, 458753, 1342177288, 3, 327681, 7, 4, 458753, 1610612744, 5, 393217, 7, 6, 196609, 805306372)
+
 [sub_resource type="TileMapPattern" id="TileMapPattern_eb6dy"]
 tile_data = PackedInt32Array(0, 196609, 4, 1, 262145, 7, 2, 458753, 1342177288, 3, 327681, 8, 4, 458753, 1610612744, 5, 393217, 7, 6, 196609, 805306372)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_trceg"]
 tile_data = PackedInt32Array(0, 196609, 1342177284, 1, 262145, 6, 2, 458753, 805306376, 3, 393217, 8, 4, 458753, 8, 5, 393217, 6, 6, 196609, 1610612740)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_a8y0u"]
-tile_data = PackedInt32Array(0, 196609, 1342177284, 1, 262145, 6, 2, 458753, 805306376, 3, 327681, 6, 4, 458753, 8, 5, 393217, 6, 6, 196609, 1610612740)
-
 [sub_resource type="TileMapPattern" id="TileMapPattern_jkv2x"]
 tile_data = PackedInt32Array(0, 1, 1, 65536, 65537, 2, 131072, 65537, 3, 196608, 65537, 0)
 
-[sub_resource type="TileMapPattern" id="TileMapPattern_jbj1t"]
-tile_data = PackedInt32Array(0, 262145, 6, 1, 131073, 8, 2, 327681, 6, 3, 458753, 8, 4, 393217, 6)
+[sub_resource type="TileMapPattern" id="TileMapPattern_a8y0u"]
+tile_data = PackedInt32Array(0, 196609, 1342177284, 1, 262145, 6, 2, 458753, 805306376, 3, 327681, 6, 4, 458753, 8, 5, 393217, 6, 6, 196609, 1610612740)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_muem4"]
 tile_data = PackedInt32Array(0, 1, 1, 65536, 1, 2, 131072, 1, 3, 196608, 65537, 0)
@@ -531,10 +528,10 @@ pattern_13 = SubResource("TileMapPattern_tipki")
 pattern_14 = SubResource("TileMapPattern_85g3d")
 pattern_15 = SubResource("TileMapPattern_choun")
 pattern_16 = SubResource("TileMapPattern_ya4ey")
-pattern_17 = SubResource("TileMapPattern_eb6dy")
-pattern_18 = SubResource("TileMapPattern_trceg")
-pattern_19 = SubResource("TileMapPattern_a8y0u")
-pattern_20 = SubResource("TileMapPattern_jbj1t")
+pattern_17 = SubResource("TileMapPattern_0wfyh")
+pattern_18 = SubResource("TileMapPattern_eb6dy")
+pattern_19 = SubResource("TileMapPattern_trceg")
+pattern_20 = SubResource("TileMapPattern_a8y0u")
 
 [sub_resource type="Curve2D" id="Curve2D_o6xl0"]
 _data = {
@@ -584,15 +581,6 @@ side_b = NodePath("../NPCPaths/Path2D2")
 position = Vector2(7, 56)
 rotation = -1.600614
 
-[node name="SprHouseRed" type="Sprite2D" parent="." unique_id=874326266]
-position = Vector2(325, -321)
-rotation = 4.7445626
-texture = ExtResource("5_tbgi4")
-
-[node name="SprBuildingCommercial" type="Sprite2D" parent="." unique_id=1768688611]
-position = Vector2(124, -236)
-texture = ExtResource("6_tefeu")
-
 [node name="NPCPaths" type="Node2D" parent="." unique_id=735434109]
 
 [node name="Path2D" type="Path2D" parent="NPCPaths" unique_id=599964146]
@@ -605,14 +593,9 @@ curve = SubResource("Curve2D_tipki")
 script = ExtResource("8_tipki")
 templates = Array[Resource]([ExtResource("9_85g3d"), ExtResource("10_choun"), ExtResource("11_trceg"), ExtResource("12_a8y0u"), ExtResource("13_jkv2x")])
 
-[node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("14_jkv2x")]
-position = Vector2(-48, -156)
-
-[node name="CollideableObject2" parent="." unique_id=1392028784 instance=ExtResource("14_jkv2x")]
-position = Vector2(79, -433)
-
 [node name="Busstop" parent="." unique_id=834891058 instance=ExtResource("15_jbj1t")]
-position = Vector2(-78, -29)
+position = Vector2(-43.000008, -12)
+rotation = -1.5707964
 loc_Name = "Poo street"
 loc_time = 10
 

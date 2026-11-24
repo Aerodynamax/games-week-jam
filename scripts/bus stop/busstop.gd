@@ -10,6 +10,9 @@ extends Node2D
 
 @onready var tracker := $tracker
 
+func _ready() -> void:
+	$ProgressBar.rotation -= rotation
+
 
 var waited_Time: float = 0:
 	set(val):
