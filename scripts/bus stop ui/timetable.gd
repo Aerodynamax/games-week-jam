@@ -54,4 +54,9 @@ func next(time:int):
 		current_stop += 1
 		
 		stops[current_stop].current = true
-	
+	else:
+		Global.Endscreen.calculate_scores()
+		Global.Endscreen.scroll()
+
+func get_time() -> int:
+	return timer.time
