@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cjywa82iaslol" path="res://assets/sprites/tiles/spr_road_tiles.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://bcp4cffv1dcgl" path="res://assets/sprites/tiles/spr_pavement_tiles.png" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="3_sugp2"]
-[ext_resource type="Texture2D" uid="uid://blff73ocu0uvv" path="res://assets/sprites/buildings/spr_building_commercial.png" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://tqh80ag1xepo" path="res://scenes/commercial_building.tscn" id="7_pm3ni"]
 [ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="10_choun"]
 [ext_resource type="Script" uid="uid://ceejhlidf2j12" path="res://scripts/path_manager.gd" id="10_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="11_jkv2x"]
@@ -714,10 +714,6 @@ tile_set = SubResource("TileSet_n548s")
 position = Vector2(7, 56)
 rotation = -1.600614
 
-[node name="SprBuildingCommercial" type="Sprite2D" parent="." unique_id=1768688611]
-position = Vector2(182, -236)
-texture = ExtResource("6_tefeu")
-
 [node name="NPCPaths" type="Node2D" parent="." unique_id=735434109]
 
 [node name="CollideableObject" parent="." unique_id=336904130 instance=ExtResource("14_jkv2x")]
@@ -772,6 +768,21 @@ position = Vector2(525, 318)
 rotation = -1.5707964
 loc_Name = "UTS"
 loc_time = 56000
+
+[node name="CommercialBuilding" parent="BusStops" unique_id=2052253755 instance=ExtResource("7_pm3ni")]
+position = Vector2(-39, -376)
+
+[node name="CommercialBuilding2" parent="BusStops" unique_id=360574851 instance=ExtResource("7_pm3ni")]
+position = Vector2(-404, -390)
+
+[node name="CommercialBuilding3" parent="BusStops" unique_id=1139998532 instance=ExtResource("7_pm3ni")]
+position = Vector2(519, -680)
+
+[node name="CommercialBuilding4" parent="BusStops" unique_id=1274084555 instance=ExtResource("7_pm3ni")]
+position = Vector2(37, -691)
+
+[node name="CommercialBuilding5" parent="BusStops" unique_id=1644164915 instance=ExtResource("7_pm3ni")]
+position = Vector2(213, -673)
 
 [node name="RoadPaths" type="Node2D" parent="." unique_id=1969480662]
 script = ExtResource("10_ya4ey")
@@ -886,3 +897,30 @@ script = ExtResource("10_choun")
 [node name="Path2D11" type="Path2D" parent="PavementPaths" unique_id=1519840631]
 curve = SubResource("Curve2D_j8jky")
 script = ExtResource("10_choun")
+
+[node name="CommercialBuilding" parent="." unique_id=1409032900 instance=ExtResource("7_pm3ni")]
+position = Vector2(-394, 48)
+
+[node name="CommercialBuilding2" parent="." unique_id=814106035 instance=ExtResource("7_pm3ni")]
+position = Vector2(-710, 9)
+
+[node name="CommercialBuilding3" parent="." unique_id=1184225239 instance=ExtResource("7_pm3ni")]
+position = Vector2(-538, -164)
+
+[node name="CommercialBuilding4" parent="." unique_id=855577278 instance=ExtResource("7_pm3ni")]
+position = Vector2(463, -303)
+
+[node name="CommercialBuilding5" parent="." unique_id=570128738 instance=ExtResource("7_pm3ni")]
+position = Vector2(752, -327)
+
+[node name="CommercialBuilding6" parent="." unique_id=1316612125 instance=ExtResource("7_pm3ni")]
+position = Vector2(458, -58)
+
+[node name="CommercialBuilding7" parent="." unique_id=917790761 instance=ExtResource("7_pm3ni")]
+position = Vector2(233, 260)
+
+[node name="CommercialBuilding8" parent="." unique_id=1488438580 instance=ExtResource("7_pm3ni")]
+position = Vector2(737, 59)
+
+[node name="CommercialBuilding9" parent="." unique_id=1244018206 instance=ExtResource("7_pm3ni")]
+position = Vector2(-682, -494)
