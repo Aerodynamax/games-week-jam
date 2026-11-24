@@ -10,6 +10,9 @@ extends Node2D
 
 @onready var tracker := $tracker
 
+func _ready() -> void:
+	$ProgressBar.rotation -= rotation
+
 
 var waited_Time: float = 0:
 	set(val):
@@ -59,6 +62,9 @@ func _physics_process(delta: float) -> void:
 				change_target()
 				progressBar.hide()
 				finished = true
+		if Global.timetable.get_time()>loc_time:
+			Global.Endscreen.fail()
+			Global.Endscreen.scroll()
 
 func change_target():
 	Global.timetable.change_target()

@@ -715,11 +715,6 @@ tile_set = SubResource("TileSet_n548s")
 position = Vector2(7, 56)
 rotation = -1.600614
 
-[node name="SprHouseRed" type="Sprite2D" parent="." unique_id=874326266]
-position = Vector2(325, -321)
-rotation = 4.7445626
-texture = ExtResource("5_tbgi4")
-
 [node name="SprBuildingCommercial" type="Sprite2D" parent="." unique_id=1768688611]
 position = Vector2(182, -236)
 texture = ExtResource("6_tefeu")
@@ -777,7 +772,7 @@ loc_time = 10
 position = Vector2(525, 318)
 rotation = -1.5707964
 loc_Name = "Poo street"
-loc_time = 10
+loc_time = 560
 
 [node name="RoadPaths" type="Node2D" parent="." unique_id=1969480662]
 script = ExtResource("10_ya4ey")
