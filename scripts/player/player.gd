@@ -84,7 +84,11 @@ var prev_rotation: float = 0.0
 
 
 func steer(delta: float) -> float:
-	var rotation_direction := Input.get_axis("left", "right")
+	var rotation_direction : float
+	if(Input.is_action_pressed("backward")):
+		rotation_direction = Input.get_axis("right", "left")
+	else:
+		rotation_direction = Input.get_axis("left", "right")
 	
 	# reduce turning when not moving
 	var true_turning_speed := turning_speed

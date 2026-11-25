@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_13nuw"]
 [ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="36_58wso"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_dmc5u"]
+[ext_resource type="AudioStream" uid="uid://b3c4kxu520ggc" path="res://assets/sounds/bus_crash.wav" id="38_618rp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
 size = Vector2(16, 18)
@@ -156,6 +157,12 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3tfrs"]
+random_pitch = 1.27714
+random_volume_offset_db = 5.66
+streams_count = 1
+stream_0/stream = ExtResource("38_618rp")
+
 [node name="FireHydrant" type="RigidBody2D" unique_id=336904130]
 gravity_scale = 0.0
 contact_monitor = true
@@ -184,6 +191,9 @@ destruction_velocity = 50.0
 Collisionshape = NodePath("../CollisionShape2D")
 area2d = NodePath("../Area2D")
 Sprite = NodePath("../Sprite2D")
+
+[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=740079480]
+stream = SubResource("AudioStreamRandomizer_3tfrs")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

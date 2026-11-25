@@ -43,7 +43,7 @@ shape = SubResource("RectangleShape2D_mixel")
 scale = Vector2(0.45709762, 0.40453976)
 texture = ExtResource("1_asekn")
 
-[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=885512785]
+[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=358468003]
 stream = SubResource("AudioStreamRandomizer_wm08d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

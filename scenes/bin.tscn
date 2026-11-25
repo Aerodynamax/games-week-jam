@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_h3311"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_3s3xm"]
 [ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="36_rle04"]
+[ext_resource type="AudioStream" uid="uid://b3c4kxu520ggc" path="res://assets/sounds/bus_crash.wav" id="38_g0hx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
 size = Vector2(12, 12)
@@ -156,6 +157,12 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_jgh83"]
+random_pitch = 1.27714
+random_volume_offset_db = 5.66
+streams_count = 1
+stream_0/stream = ExtResource("38_g0hx3")
+
 [node name="Bin" type="RigidBody2D" unique_id=336904130]
 gravity_scale = 0.0
 contact_monitor = true
@@ -184,6 +191,9 @@ destruction_velocity = 30.0
 Collisionshape = NodePath("../CollisionShape2D")
 area2d = NodePath("../Area2D")
 Sprite = NodePath("../Sprite2D")
+
+[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=1784510914]
+stream = SubResource("AudioStreamRandomizer_jgh83")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
