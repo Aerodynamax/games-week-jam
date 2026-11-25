@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="1_r32pp"]
 [ext_resource type="PackedScene" uid="uid://cdsojuap5exvy" path="res://scenes/player.tscn" id="2_65iv0"]
-[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="3_65iv0"]
-[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="4_l2n4a"]
-[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="5_ye8wr"]
+[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc.tscn" id="3_65iv0"]
+[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc.tscn" id="4_l2n4a"]
+[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car.tscn" id="5_ye8wr"]
 
 [sub_resource type="Curve2D" id="Curve2D_l2n4a"]
 _data = {

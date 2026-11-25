@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://scripts/bus stop ui/endscreen.gd" id="1_0q5t1"]
 [ext_resource type="Texture2D" uid="uid://sifhgvq4uwbj" path="res://assets/sprites/spr_clipboard.png" id="2_w8nad"]
-[ext_resource type="FontFile" uid="uid://dw4ttx8ydyl6b" path="res://scripts/at01.ttf" id="3_w8nad"]
+[ext_resource type="FontFile" uid="uid://dw4ttx8ydyl6b" path="res://assets/at01.ttf" id="3_w8nad"]
 
 [node name="Endscreen" type="Control" unique_id=1154768268 groups=["EndScreen"]]
 process_mode = 3

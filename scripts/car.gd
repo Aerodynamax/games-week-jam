@@ -3,8 +3,11 @@ class_name Car extends PathFollow2D
 @export var move_speed: float = 10
 
 @onready var shapecast: ShapeCast2D = $StaticBody2D/ShapeCast2D
+@onready var sprite: Sprite2D = %Sprite2D
 var dead = false
 
+func _ready():
+	sprite.frame = randi_range(0, 3)
 
 func _process(delta: float) -> void:
 	if dead: return

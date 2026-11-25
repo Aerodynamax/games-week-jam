@@ -1,11 +1,11 @@
-*ring* *ring* *ring*
+[i]ring ring ring...[/i]
 join manager_character center
 manager_character: late Late LATE!!!
 manager_character: HOW MANY TIMES HAVE YOU BEEN LATE THIS MONTH?!?!!??
 manager_character: ALL OF THEM!!!!!!!!
-manager_character: I DON'T PAY YOU TO DRIVE BUSSES FOR NO-ONE!!!!!
-manager_character: IF YOU CAN'T MAKE IT *ON TIME* TO *ALL* YOUR STOPS TODAY...
+manager_character: I DON'T PAY YOU TO DRIVE BUSES FOR NO-ONE!!!!!
+manager_character: IF YOU CAN'T MAKE IT [b]ON TIME[/b] TO [b]ALL[/b] YOUR STOPS TODAY...
 manager_character: YOU'RE FIRED!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 leave manager_character
-*hangs up*
+[i]hangs up...[/i]
 [signal arg="load"]

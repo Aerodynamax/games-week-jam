@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://cc1e6ps4jawvi"]
-
-[ext_resource type="PackedScene" uid="uid://cwvs2cmomq2ih" path="res://scenes/NPCs/crossing/crossing_npc4.tscn" id="1_r7p5u"]
-
-[node name="CrossingNPC" unique_id=1698074755 instance=ExtResource("1_r7p5u")]
-
-[node name="Sprite2D" parent="." index="0" unique_id=542430420]
-region_rect = Rect2(6, 7, 6, 7)

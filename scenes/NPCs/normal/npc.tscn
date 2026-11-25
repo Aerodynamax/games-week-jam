@@ -14,8 +14,10 @@ script = ExtResource("1_if67s")
 move_speed = 30.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1269261412]
+unique_name_in_owner = true
 texture = ExtResource("2_qojcf")
-region_enabled = true
+hframes = 2
+vframes = 3
 region_rect = Rect2(6, 0, 6, 7)
 
 [node name="StaticBody2D" type="Area2D" parent="." unique_id=1013112484]
@@ -27,7 +29,7 @@ scale = Vector2(1.0000006, 1.0000006)
 shape = SubResource("RectangleShape2D_q367f")
 
 [node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_pyx5w")]
-destruction_velocity = 100.0
+destruction_velocity = 30.0
 value = 60.0
 Collisionshape = NodePath("../StaticBody2D/CollisionShape2D")
 area2d = NodePath("../StaticBody2D")

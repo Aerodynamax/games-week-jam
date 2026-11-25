@@ -154,6 +154,7 @@ streams_count = 1
 stream_0/stream = ExtResource("35_rjhso")
 
 [node name="Collision" type="Node2D" unique_id=100343889]
+z_index = 5
 script = ExtResource("1_u8cmh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1021962123]
