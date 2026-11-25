@@ -764,30 +764,8 @@ rotation = -1.5707964
 loc_Name = "UTS"
 loc_time = 625
 
-[node name="CommercialBuilding" parent="BusStops" unique_id=2052253755 instance=ExtResource("7_pm3ni")]
-position = Vector2(-39, -376)
-
-[node name="CommercialBuilding2" parent="BusStops" unique_id=360574851 instance=ExtResource("7_pm3ni")]
-position = Vector2(-404, -390)
-
-[node name="CommercialBuilding3" parent="BusStops" unique_id=1139998532 instance=ExtResource("7_pm3ni")]
-position = Vector2(519, -680)
-
-[node name="CommercialBuilding4" parent="BusStops" unique_id=1274084555 instance=ExtResource("7_pm3ni")]
-position = Vector2(37, -691)
-
-[node name="CommercialBuilding5" parent="BusStops" unique_id=1644164915 instance=ExtResource("7_pm3ni")]
-position = Vector2(213, -673)
-
-[node name="CommercialBuilding6" parent="BusStops" unique_id=2050577508 instance=ExtResource("7_pm3ni")]
-position = Vector2(378, -881)
-
 [node name="Player" parent="." unique_id=713872924 instance=ExtResource("3_sugp2")]
 position = Vector2(196.00002, 603)
-rotation = -1.600614
-
-[node name="Player2" parent="." unique_id=61192083 instance=ExtResource("3_sugp2")]
-position = Vector2(-66.00008, 483)
 rotation = -1.600614
 
 [node name="NPCPaths" type="Node2D" parent="." unique_id=735434109]
@@ -1192,6 +1170,24 @@ position = Vector2(-1036, -872)
 
 [node name="House29" parent="Buildings" unique_id=413423260 instance=ExtResource("23_2wyq8")]
 position = Vector2(-903, -876)
+
+[node name="CommercialBuilding13" parent="Buildings" unique_id=2052253755 instance=ExtResource("7_pm3ni")]
+position = Vector2(-39, -376)
+
+[node name="CommercialBuilding14" parent="Buildings" unique_id=360574851 instance=ExtResource("7_pm3ni")]
+position = Vector2(-404, -390)
+
+[node name="CommercialBuilding15" parent="Buildings" unique_id=1139998532 instance=ExtResource("7_pm3ni")]
+position = Vector2(519, -680)
+
+[node name="CommercialBuilding16" parent="Buildings" unique_id=1274084555 instance=ExtResource("7_pm3ni")]
+position = Vector2(37, -691)
+
+[node name="CommercialBuilding17" parent="Buildings" unique_id=1644164915 instance=ExtResource("7_pm3ni")]
+position = Vector2(213, -673)
+
+[node name="CommercialBuilding18" parent="Buildings" unique_id=2050577508 instance=ExtResource("7_pm3ni")]
+position = Vector2(378, -881)
 
 [node name="DestructibleProps" type="Node2D" parent="." unique_id=1644112004]
 
