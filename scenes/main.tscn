@@ -1116,165 +1116,165 @@ position = Vector2(-1036, -872)
 [node name="House29" parent="Buildings" unique_id=413423260 instance=ExtResource("23_2wyq8")]
 position = Vector2(-903, -876)
 
-[node name="DescrutibleProps" type="Node2D" parent="." unique_id=1644112004]
+[node name="DestructibleProps" type="Node2D" parent="." unique_id=1644112004]
 
-[node name="FireHydrant" parent="DescrutibleProps" unique_id=981796315 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant" parent="DestructibleProps" unique_id=981796315 instance=ExtResource("24_vxglm")]
 position = Vector2(128, -515)
 
-[node name="Bin" parent="DescrutibleProps" unique_id=16962140 instance=ExtResource("25_2f3dj")]
+[node name="Bin" parent="DestructibleProps" unique_id=16962140 instance=ExtResource("25_2f3dj")]
 position = Vector2(352, -513)
 
-[node name="FireHydrant2" parent="DescrutibleProps" unique_id=1290016509 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant2" parent="DestructibleProps" unique_id=1290016509 instance=ExtResource("24_vxglm")]
 position = Vector2(-126, -607)
 
-[node name="Bin2" parent="DescrutibleProps" unique_id=1882278122 instance=ExtResource("25_2f3dj")]
+[node name="Bin2" parent="DestructibleProps" unique_id=1882278122 instance=ExtResource("25_2f3dj")]
 position = Vector2(-317, -319)
 
-[node name="CollideableObject" parent="DescrutibleProps" unique_id=1710731415 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject" parent="DestructibleProps" unique_id=1710731415 instance=ExtResource("26_yq6so")]
 position = Vector2(-314, -383)
 
-[node name="CollideableObject2" parent="DescrutibleProps" unique_id=1847096515 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject2" parent="DestructibleProps" unique_id=1847096515 instance=ExtResource("26_yq6so")]
 position = Vector2(-313, -467)
 
-[node name="CollideableObject3" parent="DescrutibleProps" unique_id=1471066046 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject3" parent="DestructibleProps" unique_id=1471066046 instance=ExtResource("26_yq6so")]
 position = Vector2(-310, -579)
 
-[node name="CollideableObject4" parent="DescrutibleProps" unique_id=1511675247 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject4" parent="DestructibleProps" unique_id=1511675247 instance=ExtResource("26_yq6so")]
 position = Vector2(-856, -92)
 
-[node name="CollideableObject5" parent="DescrutibleProps" unique_id=1073726777 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject5" parent="DestructibleProps" unique_id=1073726777 instance=ExtResource("26_yq6so")]
 position = Vector2(-856, -275)
 
-[node name="CollideableObject6" parent="DescrutibleProps" unique_id=1119203256 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject6" parent="DestructibleProps" unique_id=1119203256 instance=ExtResource("26_yq6so")]
 position = Vector2(-857, -481)
 
-[node name="CollideableObject7" parent="DescrutibleProps" unique_id=1376398082 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject7" parent="DestructibleProps" unique_id=1376398082 instance=ExtResource("26_yq6so")]
 position = Vector2(-1073, -486)
 
-[node name="CollideableObject8" parent="DescrutibleProps" unique_id=1888128386 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject8" parent="DestructibleProps" unique_id=1888128386 instance=ExtResource("26_yq6so")]
 position = Vector2(-229, 373)
 
-[node name="CollideableObject9" parent="DescrutibleProps" unique_id=231227880 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject9" parent="DestructibleProps" unique_id=231227880 instance=ExtResource("26_yq6so")]
 position = Vector2(-232, 153)
 
-[node name="CollideableObject10" parent="DescrutibleProps" unique_id=1065926525 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject10" parent="DestructibleProps" unique_id=1065926525 instance=ExtResource("26_yq6so")]
 position = Vector2(-231, -56)
 
-[node name="CollideableObject11" parent="DescrutibleProps" unique_id=2051829525 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject11" parent="DestructibleProps" unique_id=2051829525 instance=ExtResource("26_yq6so")]
 position = Vector2(-232, -347)
 
-[node name="CollideableObject12" parent="DescrutibleProps" unique_id=595043651 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject12" parent="DestructibleProps" unique_id=595043651 instance=ExtResource("26_yq6so")]
 position = Vector2(-194, -520)
 
-[node name="Bin3" parent="DescrutibleProps" unique_id=1725047128 instance=ExtResource("25_2f3dj")]
+[node name="Bin3" parent="DestructibleProps" unique_id=1725047128 instance=ExtResource("25_2f3dj")]
 position = Vector2(-230, -519)
 
-[node name="Bin4" parent="DescrutibleProps" unique_id=870271994 instance=ExtResource("25_2f3dj")]
+[node name="Bin4" parent="DestructibleProps" unique_id=870271994 instance=ExtResource("25_2f3dj")]
 position = Vector2(38, -281)
 
-[node name="FireHydrant3" parent="DescrutibleProps" unique_id=1631806234 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant3" parent="DestructibleProps" unique_id=1631806234 instance=ExtResource("24_vxglm")]
 position = Vector2(123, 101)
 
-[node name="Bin5" parent="DescrutibleProps" unique_id=129819967 instance=ExtResource("25_2f3dj")]
+[node name="Bin5" parent="DestructibleProps" unique_id=129819967 instance=ExtResource("25_2f3dj")]
 position = Vector2(271, 102)
 
-[node name="Bin6" parent="DescrutibleProps" unique_id=1630556646 instance=ExtResource("25_2f3dj")]
+[node name="Bin6" parent="DestructibleProps" unique_id=1630556646 instance=ExtResource("25_2f3dj")]
 position = Vector2(548, 186)
 
-[node name="CollideableObject13" parent="DescrutibleProps" unique_id=731750532 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject13" parent="DestructibleProps" unique_id=731750532 instance=ExtResource("26_yq6so")]
 position = Vector2(631, 665)
 
-[node name="CollideableObject14" parent="DescrutibleProps" unique_id=2049096381 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject14" parent="DestructibleProps" unique_id=2049096381 instance=ExtResource("26_yq6so")]
 position = Vector2(633, 408)
 
-[node name="CollideableObject15" parent="DescrutibleProps" unique_id=708424120 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject15" parent="DestructibleProps" unique_id=708424120 instance=ExtResource("26_yq6so")]
 position = Vector2(630, 170)
 
-[node name="CollideableObject16" parent="DescrutibleProps" unique_id=722342047 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject16" parent="DestructibleProps" unique_id=722342047 instance=ExtResource("26_yq6so")]
 position = Vector2(635, -4)
 
-[node name="CollideableObject17" parent="DescrutibleProps" unique_id=182948154 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject17" parent="DestructibleProps" unique_id=182948154 instance=ExtResource("26_yq6so")]
 position = Vector2(925, -6)
 
-[node name="CollideableObject18" parent="DescrutibleProps" unique_id=183710770 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject18" parent="DestructibleProps" unique_id=183710770 instance=ExtResource("26_yq6so")]
 position = Vector2(1230, -4)
 
-[node name="CommercialBuilding4" parent="DescrutibleProps" unique_id=2050577508 instance=ExtResource("7_pm3ni")]
+[node name="CommercialBuilding4" parent="DestructibleProps" unique_id=2050577508 instance=ExtResource("7_pm3ni")]
 position = Vector2(378, -881)
 
-[node name="CollideableObject19" parent="DescrutibleProps" unique_id=577943187 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject19" parent="DestructibleProps" unique_id=577943187 instance=ExtResource("26_yq6so")]
 position = Vector2(-815, -825)
 
-[node name="CollideableObject20" parent="DescrutibleProps" unique_id=1574903993 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject20" parent="DestructibleProps" unique_id=1574903993 instance=ExtResource("26_yq6so")]
 position = Vector2(-392, -825)
 
-[node name="CollideableObject21" parent="DescrutibleProps" unique_id=1616712711 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject21" parent="DestructibleProps" unique_id=1616712711 instance=ExtResource("26_yq6so")]
 position = Vector2(-24, -824)
 
-[node name="FireHydrant4" parent="DescrutibleProps" unique_id=860374701 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant4" parent="DestructibleProps" unique_id=860374701 instance=ExtResource("24_vxglm")]
 position = Vector2(-428, -742)
 
-[node name="FireHydrant5" parent="DescrutibleProps" unique_id=1973894594 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant5" parent="DestructibleProps" unique_id=1973894594 instance=ExtResource("24_vxglm")]
 position = Vector2(111, -744)
 
-[node name="Bin7" parent="DescrutibleProps" unique_id=2115051274 instance=ExtResource("25_2f3dj")]
+[node name="Bin7" parent="DestructibleProps" unique_id=2115051274 instance=ExtResource("25_2f3dj")]
 position = Vector2(123, -826)
 
-[node name="Bin8" parent="DescrutibleProps" unique_id=561949241 instance=ExtResource("25_2f3dj")]
+[node name="Bin8" parent="DestructibleProps" unique_id=561949241 instance=ExtResource("25_2f3dj")]
 position = Vector2(442, -823)
 
-[node name="CollideableObject22" parent="DescrutibleProps" unique_id=2061657459 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject22" parent="DestructibleProps" unique_id=2061657459 instance=ExtResource("26_yq6so")]
 position = Vector2(745, -743)
 
-[node name="CollideableObject23" parent="DescrutibleProps" unique_id=1480554074 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject23" parent="DestructibleProps" unique_id=1480554074 instance=ExtResource("26_yq6so")]
 position = Vector2(968, -635)
 
-[node name="Bin9" parent="DescrutibleProps" unique_id=973486984 instance=ExtResource("25_2f3dj")]
+[node name="Bin9" parent="DestructibleProps" unique_id=973486984 instance=ExtResource("25_2f3dj")]
 position = Vector2(1048, -613)
 
-[node name="FireHydrant6" parent="DescrutibleProps" unique_id=492718477 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant6" parent="DestructibleProps" unique_id=492718477 instance=ExtResource("24_vxglm")]
 position = Vector2(1048, -848)
 
-[node name="CollideableObject24" parent="DescrutibleProps" unique_id=1194039494 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject24" parent="DestructibleProps" unique_id=1194039494 instance=ExtResource("26_yq6so")]
 position = Vector2(894, -471)
 
-[node name="FireHydrant7" parent="DescrutibleProps" unique_id=817616579 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant7" parent="DestructibleProps" unique_id=817616579 instance=ExtResource("24_vxglm")]
 position = Vector2(553, -329)
 
-[node name="Bin10" parent="DescrutibleProps" unique_id=46693707 instance=ExtResource("25_2f3dj")]
+[node name="Bin10" parent="DestructibleProps" unique_id=46693707 instance=ExtResource("25_2f3dj")]
 position = Vector2(744, -87)
 
-[node name="CollideableObject25" parent="DescrutibleProps" unique_id=1455248305 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject25" parent="DestructibleProps" unique_id=1455248305 instance=ExtResource("26_yq6so")]
 position = Vector2(553, -150)
 
-[node name="CollideableObject26" parent="DescrutibleProps" unique_id=374714559 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject26" parent="DestructibleProps" unique_id=374714559 instance=ExtResource("26_yq6so")]
 position = Vector2(552, 62)
 
-[node name="FireHydrant8" parent="DescrutibleProps" unique_id=1555249594 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant8" parent="DestructibleProps" unique_id=1555249594 instance=ExtResource("24_vxglm")]
 position = Vector2(1204, -90)
 
-[node name="FireHydrant9" parent="DescrutibleProps" unique_id=244488581 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant9" parent="DestructibleProps" unique_id=244488581 instance=ExtResource("24_vxglm")]
 position = Vector2(117, 429)
 
-[node name="FireHydrant10" parent="DescrutibleProps" unique_id=1132288028 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant10" parent="DestructibleProps" unique_id=1132288028 instance=ExtResource("24_vxglm")]
 position = Vector2(121, 186)
 
-[node name="FireHydrant11" parent="DescrutibleProps" unique_id=143207826 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant11" parent="DestructibleProps" unique_id=143207826 instance=ExtResource("24_vxglm")]
 position = Vector2(-786, 456)
 
-[node name="FireHydrant12" parent="DescrutibleProps" unique_id=295686423 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant12" parent="DestructibleProps" unique_id=295686423 instance=ExtResource("24_vxglm")]
 position = Vector2(-775, 103)
 
-[node name="FireHydrant13" parent="DescrutibleProps" unique_id=322684973 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant13" parent="DestructibleProps" unique_id=322684973 instance=ExtResource("24_vxglm")]
 position = Vector2(-556, -232)
 
-[node name="Bin11" parent="DescrutibleProps" unique_id=701433481 instance=ExtResource("25_2f3dj")]
+[node name="Bin11" parent="DestructibleProps" unique_id=701433481 instance=ExtResource("25_2f3dj")]
 position = Vector2(-606, -312)
 
-[node name="CollideableObject27" parent="DescrutibleProps" unique_id=1574956402 instance=ExtResource("26_yq6so")]
+[node name="CollideableObject27" parent="DestructibleProps" unique_id=1574956402 instance=ExtResource("26_yq6so")]
 position = Vector2(533, -387)
 
-[node name="FireHydrant14" parent="DescrutibleProps" unique_id=16431928 instance=ExtResource("24_vxglm")]
+[node name="FireHydrant14" parent="DestructibleProps" unique_id=16431928 instance=ExtResource("24_vxglm")]
 position = Vector2(447, -480)
 
 [node name="Bounds" type="StaticBody2D" parent="." unique_id=92785593]
