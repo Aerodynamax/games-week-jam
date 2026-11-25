@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://bo0ouvs2fnqv8"]
 
-[ext_resource type="FontFile" uid="uid://dw4ttx8ydyl6b" path="res://scripts/at01.ttf" id="1_5x3i2"]
+[ext_resource type="FontFile" uid="uid://dw4ttx8ydyl6b" path="res://assets/at01.ttf" id="1_5x3i2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
 bg_color = Color(0, 0.0627451, 0.3137255, 1)
