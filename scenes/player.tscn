@@ -189,15 +189,18 @@ position_smoothing_enabled = true
 stream = ExtResource("4_dqkch")
 volume_db = -2.0
 autoplay = true
+bus = &"Music"
 
 [node name="DriftAudio" type="AudioStreamPlayer2D" parent="." unique_id=713975239]
 stream = ExtResource("5_qlg0r")
 volume_db = -80.0
 autoplay = true
+bus = &"SFX"
 
 [node name="EngineAudio" type="AudioStreamPlayer2D" parent="." unique_id=1009127627]
 stream = ExtResource("6_tuyoq")
 autoplay = true
+bus = &"SFX"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1913588162]
 position = Vector2(-15, -50)
@@ -211,24 +214,29 @@ frame_progress = 1.0
 stream = ExtResource("40_cs1tg")
 volume_db = 1.0
 pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="DoorOpen" type="AudioStreamPlayer2D" parent="." unique_id=248758370]
 unique_name_in_owner = true
 stream = ExtResource("41_fdfoy")
 volume_db = -4.288
 pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="DoorClose" type="AudioStreamPlayer2D" parent="." unique_id=418527304]
 unique_name_in_owner = true
 stream = ExtResource("42_hhpqf")
 volume_db = -4.288
 pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="ExplosionAudio3" type="AudioStreamPlayer2D" parent="." unique_id=1001144844]
 stream = ExtResource("40_cs1tg")
 volume_db = 1.0
 pitch_scale = 2.0
+bus = &"SFX"
 
 [node name="BusExplosionEmphasiserAudio" type="AudioStreamPlayer2D" parent="." unique_id=89507030]
 stream = ExtResource("41_2dvfe")
 volume_db = 9.813
+bus = &"SFX"

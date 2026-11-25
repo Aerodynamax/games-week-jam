@@ -58,6 +58,7 @@ func _get_EndScreen() -> EndScreen:
 	return null
 #endregion
 
+# DONT USE #
 #region audio management
 func play_audio(audio : AudioStream, vol : float, pitch_var : float):
 	var sound : PackedScene = load("uid://bg5gnx7sdusj7")

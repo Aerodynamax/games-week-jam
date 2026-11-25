@@ -103,5 +103,6 @@ color = Color(0, 0, 0, 1)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=988810455]
 stream = ExtResource("4_o6yk7")
 volume_db = 18.712
+bus = &"SFX"
 
 [connection signal="pressed" from="Node2D/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -20,11 +20,15 @@ var spawn_timer: float = 0
 var jaywalk_timer: float = 0
 var path_manager: PathManager
 
+var world : Node2D
+
 func _ready() -> void:
 	path_manager = get_parent()
 	templates = path_manager.templates
 	jaywalking_templates = path_manager.jaywalking_templates
 	is_road = path_manager.is_road
+	## DO NOT USE GET NODE FOR THINGS!! IT IS VERY SLOW!!! I am just a lazy bastard. - Dom
+	world = get_tree().root.get_node("/root/Main")
 	
 	var initial_spawn = randi_range(init_spawn_min, init_spawn_max)
 	for i in initial_spawn:
@@ -55,7 +59,7 @@ func _spawn_jaywalker() -> void:
 	if opposite_side == null:
 		return
 	var npc = jaywalking_templates.pick_random().instantiate()
-	get_tree().root.call_deferred("add_child", npc)
+	world.call_deferred("add_child", npc)
 	npc.position = random_point
 	npc.cross_road(opposite_side)
 	_randomise_jaywalk_timer()

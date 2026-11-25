@@ -52,3 +52,4 @@ screen_margin = 48.0
 [node name="StopDone" type="AudioStreamPlayer2D" parent="." unique_id=1290946150]
 unique_name_in_owner = true
 stream = ExtResource("5_eru8g")
+bus = &"SFX"

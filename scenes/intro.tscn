@@ -31,3 +31,4 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ioskq")
 stream = ExtResource("3_4bx60")
 volume_db = 5.288
 autoplay = true
+bus = &"SFX"

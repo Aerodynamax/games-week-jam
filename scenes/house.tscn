@@ -188,6 +188,7 @@ animation = &"explosion"
 
 [node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=158940050]
 stream = SubResource("AudioStreamRandomizer_q425y")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

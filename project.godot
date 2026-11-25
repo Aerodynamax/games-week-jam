@@ -13,7 +13,12 @@ config_version=5
 config/name="Games Week Jam"
 run/main_scene="uid://bnntwbjymno8y"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://capfgxbl158e6"
 
 [autoload]
 
@@ -65,6 +70,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+audio/type_sound_bus="SFX"
 
 [display]
 
@@ -122,6 +128,11 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+reboot_game={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -138,3 +149,4 @@ dialogic_default_action={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

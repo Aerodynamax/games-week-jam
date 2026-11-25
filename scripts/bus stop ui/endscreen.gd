@@ -40,6 +40,9 @@ func scroll():
 	
 	Global.player.end()
 	
+	
+	if Input.is_action_pressed("reboot_game"):
+		get_tree().change_scene_to_file("res://scenes/intro.tscn")
 
 
 func _on_button_pressed() -> void:

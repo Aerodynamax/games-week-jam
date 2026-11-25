@@ -194,6 +194,7 @@ Sprite = NodePath("../Sprite2D")
 
 [node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=1784510914]
 stream = SubResource("AudioStreamRandomizer_jgh83")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

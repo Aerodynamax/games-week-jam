@@ -1,7 +1,7 @@
 class_name TimeTable
 extends Control
 
-@onready var timer := $Timer
+@onready var timer := %Timer
 @onready var stop_list := $StopPanel
 
 var stops: Array[BusStop]

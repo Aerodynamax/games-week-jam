@@ -4,9 +4,44 @@
 [ext_resource type="Script" uid="uid://bhbacjoan5ix7" path="res://scripts/bus stop ui/timetable.gd" id="1_w4wbt"]
 [ext_resource type="PackedScene" uid="uid://dahdrat61sk6j" path="res://scenes/UI/timetableslot.tscn" id="3_g5y8c"]
 [ext_resource type="Script" uid="uid://cdcy6tj8bdqos" path="res://scripts/bus stop ui/stop_panel.gd" id="3_w4wbt"]
+[ext_resource type="Texture2D" uid="uid://bv1p6k4yf5vn2" path="res://assets/UI_icons.png" id="4_1fvi3"]
 [ext_resource type="Script" uid="uid://cd8v8h6ip6by" path="res://scripts/score.gd" id="5_ftwo6"]
 [ext_resource type="Theme" uid="uid://bo0ouvs2fnqv8" path="res://assets/theme.tres" id="5_nof3t"]
+[ext_resource type="Texture2D" uid="uid://bnt0utl3e5ojs" path="res://assets/UI_icons_pressed.png" id="5_ri4f4"]
 [ext_resource type="PackedScene" uid="uid://bxcdp6nkn27cq" path="res://scenes/UI/endscreen.tscn" id="6_f7mu3"]
+[ext_resource type="Script" uid="uid://ch2gsywqbl5yg" path="res://scripts/ui_settings.gd" id="6_ri4f4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhunq"]
+atlas = ExtResource("4_1fvi3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o321v"]
+atlas = ExtResource("5_ri4f4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyvms"]
+atlas = ExtResource("4_1fvi3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s47l"]
+atlas = ExtResource("5_ri4f4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fvi3"]
+atlas = ExtResource("4_1fvi3")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri4f4"]
+atlas = ExtResource("5_ri4f4")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xln4b"]
+atlas = ExtResource("4_1fvi3")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c8f6"]
+atlas = ExtResource("5_ri4f4")
+region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxiu"]
 size = Vector2(912, 650)
@@ -16,22 +51,69 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_w4wbt")
 
-[node name="Timer" type="Panel" parent="." unique_id=859173201]
-layout_mode = 0
-offset_right = 200.0
-offset_bottom = 75.0
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1524641182]
+layout_mode = 1
+offset_right = 472.0
+offset_bottom = 64.0
+
+[node name="Timer" type="Panel" parent="HBoxContainer" unique_id=859173201]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 64)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_horizontal = 3
 theme = ExtResource("5_nof3t")
 script = ExtResource("1_srplv")
 
-[node name="Time" type="Label" parent="Timer" unique_id=666944796]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Timer" unique_id=688194405]
 layout_mode = 1
-offset_right = 200.0
-offset_bottom = 75.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Time" type="Label" parent="HBoxContainer/Timer/MarginContainer" unique_id=666944796]
+unique_name_in_owner = true
+layout_mode = 2
 theme = ExtResource("5_nof3t")
 theme_override_font_sizes/font_size = 50
 text = "hello"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Pause" type="TextureButton" parent="HBoxContainer" unique_id=199827421]
+process_mode = 3
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_bhunq")
+texture_pressed = SubResource("AtlasTexture_o321v")
+stretch_mode = 5
+script = ExtResource("6_ri4f4")
+
+[node name="Restart" type="TextureButton" parent="HBoxContainer" unique_id=1023014417]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_iyvms")
+texture_pressed = SubResource("AtlasTexture_7s47l")
+stretch_mode = 5
+
+[node name="AudioMute" type="TextureButton" parent="HBoxContainer" unique_id=193715636]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_1fvi3")
+texture_pressed = SubResource("AtlasTexture_ri4f4")
+stretch_mode = 5
+
+[node name="MusicMute" type="TextureButton" parent="HBoxContainer" unique_id=2105563228]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_xln4b")
+texture_pressed = SubResource("AtlasTexture_3c8f6")
+stretch_mode = 5
 
 [node name="StopPanel" type="Panel" parent="." unique_id=1666307502]
 layout_mode = 0
@@ -93,3 +175,8 @@ text = "$0"
 
 [node name="Endscreen" parent="." unique_id=1154768268 instance=ExtResource("6_f7mu3")]
 layout_mode = 1
+
+[connection signal="toggled" from="HBoxContainer/Pause" to="HBoxContainer/Pause" method="_on_toggled"]
+[connection signal="pressed" from="HBoxContainer/Restart" to="HBoxContainer/Pause" method="_on_restart_pressed"]
+[connection signal="toggled" from="HBoxContainer/AudioMute" to="HBoxContainer/Pause" method="_on_audio_mute_toggled"]
+[connection signal="toggled" from="HBoxContainer/MusicMute" to="HBoxContainer/Pause" method="_on_music_mute_toggled"]
