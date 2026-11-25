@@ -42,8 +42,8 @@
 [ext_resource type="AudioStream" uid="uid://d3vtfsxawhxg5" path="res://assets/sounds/explosion/explode-156615_2785350-lq.ogg" id="40_cs1tg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqxiu"]
-radius = 8.0
-height = 52.0
+radius = 6.0
+height = 48.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_770dr"]
 animations = [{
