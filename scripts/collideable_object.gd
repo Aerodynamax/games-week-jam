@@ -13,7 +13,7 @@ extends RigidBody2D
 @export var cooked : Texture2D
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if (body.name == "Player"):
+	if body is Player:
 		if (body.get_velocity().length() > destruction_velocity):
 			print("Too fast!")
 			$CollisionShape2D.set_deferred("disabled", true)
@@ -24,12 +24,23 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			var tween = get_tree().create_tween()
 			tween.tween_property($Sprite2D, "modulate:a", 0.2, 1.0)
 			Global.score += value
-		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
-			body.stop_movement()
-			body.apply_impulse(body.transform.x * -300)
 		else:
 			print("You aren't fast enough")
-			body.stop_movement()
-			body.apply_impulse(body.transform.x * -300)
+			print(body.get_velocity())
 			
-	
+			body.stop_movement()
+			
+			# get reflection
+			var collision: KinematicCollision2D
+			if body.get_velocity().length() > 0:
+				collision = body.get_next_collision()
+			else:
+				collision = self.get_next_collision()
+			
+			if collision:
+				var reflect = collision.get_remainder().bounce(collision.get_normal())
+				body.apply_impulse(reflect)
+
+func get_next_collision() -> KinematicCollision2D:
+	print("vel: "+str(linear_velocity))
+	return move_and_collide(linear_velocity, true) as KinematicCollision2D
