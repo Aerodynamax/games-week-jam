@@ -6,9 +6,13 @@ var move_dir: int
 var timer: float
 var dead = false
 
+@onready var sprite: Sprite2D = %Sprite2D
+
+
 func _ready() -> void:
 	progress_ratio = randf_range(0, 1) # selects a random point along the path for the NPC to start
 	move_dir = 1 if randi_range(0, 1) == 0 else -1 # selects a random direction to move along the path (either forwards or backwards)
+	sprite.frame = randi_range(0, 4) # choose a random npc sprite
 
 func _process(delta: float) -> void:
 	if dead: return

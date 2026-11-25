@@ -7,22 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://tqh80ag1xepo" path="res://scenes/commercial_building.tscn" id="7_pm3ni"]
 [ext_resource type="Script" uid="uid://7lummlv1w3sc" path="res://scripts/pavement.gd" id="10_choun"]
 [ext_resource type="Script" uid="uid://ceejhlidf2j12" path="res://scripts/path_manager.gd" id="10_ya4ey"]
-[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car1.tscn" id="11_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://8ci5dvmx3m70" path="res://scenes/NPCs/cars/car2.tscn" id="12_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://csmr1cc532ev7" path="res://scenes/NPCs/cars/car3.tscn" id="13_muem4"]
-[ext_resource type="PackedScene" uid="uid://igf7myibmsr4" path="res://scenes/NPCs/cars/car4.tscn" id="14_dp3eg"]
-[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc1.tscn" id="15_0ld40"]
+[ext_resource type="PackedScene" uid="uid://1ypud55hdr8y" path="res://scenes/NPCs/cars/car.tscn" id="11_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://c3a0g5yhf0ows" path="res://scenes/NPCs/normal/npc.tscn" id="15_0ld40"]
 [ext_resource type="PackedScene" uid="uid://b2pvdlsyod2yl" path="res://scenes/busstop.tscn" id="15_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://rsv2vgqu8rn1" path="res://scenes/NPCs/normal/npc2.tscn" id="16_gqmmt"]
-[ext_resource type="PackedScene" uid="uid://df1cbfc7kty83" path="res://scenes/NPCs/normal/npc3.tscn" id="17_yc10j"]
-[ext_resource type="PackedScene" uid="uid://ohjfqnwsvd7a" path="res://scenes/NPCs/normal/npc4.tscn" id="18_jscy8"]
-[ext_resource type="PackedScene" uid="uid://drf17m5mxhs22" path="res://scenes/NPCs/normal/npc5.tscn" id="19_pm3ni"]
-[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc1.tscn" id="20_y6deb"]
-[ext_resource type="PackedScene" uid="uid://ckegrf2j13rp4" path="res://scenes/NPCs/crossing/crossing_npc2.tscn" id="21_og1vs"]
-[ext_resource type="PackedScene" uid="uid://cy8bfqgdj3cug" path="res://scenes/NPCs/crossing/crossing_npc3.tscn" id="22_2wyq8"]
+[ext_resource type="PackedScene" uid="uid://rvekaqaterui" path="res://scenes/NPCs/crossing/crossing_npc.tscn" id="20_y6deb"]
 [ext_resource type="PackedScene" uid="uid://bulgmqc1ddu2e" path="res://scenes/house.tscn" id="23_2wyq8"]
-[ext_resource type="PackedScene" uid="uid://cwvs2cmomq2ih" path="res://scenes/NPCs/crossing/crossing_npc4.tscn" id="23_vxglm"]
-[ext_resource type="PackedScene" uid="uid://cc1e6ps4jawvi" path="res://scenes/NPCs/crossing/crossing_npc5.tscn" id="24_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://0mtw8dqmymkr" path="res://scenes/fire_hydrant.tscn" id="24_vxglm"]
 [ext_resource type="PackedScene" uid="uid://c77o0utr1a4qd" path="res://scenes/bin.tscn" id="25_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://rvyrct1258hr" path="res://scenes/lightpole.tscn" id="26_yq6so"]
@@ -633,6 +622,70 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="PackedScene" id="PackedScene_dp3eg"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("CrossingNPC", "Sprite2D", "region_rect"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1698074755, 542430420),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0),
+"variants": [ExtResource("20_y6deb"), Rect2(0, 0, 6, 7)],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_0ld40"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("CrossingNPC", "Sprite2D", "region_rect"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1698074755, 542430420),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0),
+"variants": [SubResource("PackedScene_dp3eg"), Rect2(0, 7, 6, 7)],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_gqmmt"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("CrossingNPC", "Sprite2D", "region_rect"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1698074755, 542430420),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0),
+"variants": [SubResource("PackedScene_0ld40"), Rect2(0, 14, 6, 7)],
+"version": 3
+}
+
+[sub_resource type="PackedScene" id="PackedScene_yc10j"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array()],
+"names": PackedStringArray("CrossingNPC", "Sprite2D", "region_rect"),
+"node_count": 2,
+"node_ids": PackedInt32Array(1698074755, 542430420),
+"node_paths": [NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 0, 0, 1073741824, -1, 2147483647, 262145, -1, 1, 2, 1, 0),
+"variants": [SubResource("PackedScene_gqmmt"), Rect2(6, 7, 6, 7)],
+"version": 3
+}
+
 [sub_resource type="Curve2D" id="Curve2D_og1vs"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -1211, -826, 0, 0, 0, 0, 969, -825, 0, 0, 0, 0, 969, -1051)
@@ -772,7 +825,7 @@ rotation = -1.600614
 
 [node name="RoadPaths" type="Node2D" parent="." unique_id=1969480662]
 script = ExtResource("10_ya4ey")
-templates = Array[Resource]([ExtResource("11_jkv2x"), ExtResource("12_jbj1t"), ExtResource("13_muem4"), ExtResource("14_dp3eg")])
+templates = Array[Resource]([ExtResource("11_jkv2x")])
 is_road = true
 
 [node name="Path2D" type="Path2D" parent="RoadPaths" unique_id=2020047379]
@@ -837,8 +890,8 @@ script = ExtResource("10_choun")
 
 [node name="PavementPaths" type="Node2D" parent="." unique_id=956321969]
 script = ExtResource("10_ya4ey")
-templates = Array[Resource]([ExtResource("15_0ld40"), ExtResource("16_gqmmt"), ExtResource("17_yc10j"), ExtResource("18_jscy8"), ExtResource("19_pm3ni")])
-jaywalking_templates = Array[Resource]([ExtResource("20_y6deb"), ExtResource("21_og1vs"), ExtResource("22_2wyq8"), ExtResource("23_vxglm"), ExtResource("24_2f3dj")])
+templates = Array[Resource]([ExtResource("15_0ld40")])
+jaywalking_templates = Array[Resource]([ExtResource("20_y6deb"), SubResource("PackedScene_dp3eg"), SubResource("PackedScene_0ld40"), SubResource("PackedScene_gqmmt"), SubResource("PackedScene_yc10j")])
 
 [node name="Path2D" type="Path2D" parent="PavementPaths" unique_id=116125716]
 curve = SubResource("Curve2D_og1vs")

@@ -11,8 +11,12 @@ var lerp_time: float = 0
 var time_to_cross: float
 var dead = false
 
+@onready var sprite: Sprite2D = %Sprite2D
 
 var timer: float
+
+func _ready():
+	sprite.frame = randi_range(0, 4)
 
 func _process(delta: float) -> void:
 	if dead: return
