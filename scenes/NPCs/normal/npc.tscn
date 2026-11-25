@@ -29,7 +29,7 @@ scale = Vector2(1.0000006, 1.0000006)
 shape = SubResource("RectangleShape2D_q367f")
 
 [node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_pyx5w")]
-destruction_velocity = 100.0
+destruction_velocity = 30.0
 value = 60.0
 Collisionshape = NodePath("../StaticBody2D/CollisionShape2D")
 area2d = NodePath("../StaticBody2D")

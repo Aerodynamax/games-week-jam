@@ -25,7 +25,7 @@ region_rect = Rect2(6, 0, 6, 7)
 shape = SubResource("RectangleShape2D_q367f")
 
 [node name="Collision" parent="." unique_id=100343889 node_paths=PackedStringArray("Collisionshape", "area2d", "Sprite") instance=ExtResource("3_1ddq4")]
-destruction_velocity = 100.0
+destruction_velocity = 30.0
 value = 70.01
 Collisionshape = NodePath("../CollisionShape2D")
 area2d = NodePath("../Area2D")
