@@ -82,14 +82,50 @@ var _rotation_vel: float = 0.0
 
 var prev_rotation: float = 0.0
 
+@onready var last_rotation_time: int = Time.get_ticks_msec()
+
+var _apply_rotation_fix: bool = true
+
+var _current_rotation_fix: int = -1
+
+var prev_steering_inputs: float = 0
 
 func steer(delta: float) -> float:
 	var rotation_direction := Input.get_axis("left", "right")
+	
+	# fix turning when going backwards
+	#if _forwards_lerp_vel < 0:
+		#_current_rotation_fix = -1
+	#else:
+		#_current_rotation_fix = 1
+	if (Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right")) and prev_steering_inputs == 0:
+		if Time.get_ticks_msec() - last_rotation_time > 200:
+			if (global_rotation < -0.0 and global_rotation > -4) and _forwards_lerp_vel < 0:
+				_current_rotation_fix = -1
+			else:
+				_current_rotation_fix = 1
+		else:
+			_current_rotation_fix = 1
+	else:
+		if prev_steering_inputs != 0:
+			last_rotation_time = Time.get_ticks_msec()
+	print("rot: " + str(global_rotation))
+	
+	#if rotation_direction != 0:
+		#last_rotation_time = Time.get_ticks_msec()
+		#_apply_rotation_fix = true
+		#_current_rotation_fix = 1
+	#else:
+		#if Time.get_ticks_msec() - last_rotation_time > 350:
+			#if _forwards_lerp_vel < 0 and rotation < 0:
+				#_apply_rotation_fix = true
+				#_current_rotation_fix = -1
 	
 	# reduce turning when not moving
 	var true_turning_speed := turning_speed
 	if _forwards_lerp_vel < 0:
 		true_turning_speed = turning_speed_backwards
+	
 	
 	true_turning_speed = true_turning_speed * clampf(absf(_forwards_lerp_vel + _impulse_velocity.length()) / turning_min_vel_to_turn, 0, 1)
 	
@@ -101,7 +137,11 @@ func steer(delta: float) -> float:
 	
 	_rotation_vel = round_to_dec(lerpf(_rotation_vel, rotation_direction * true_turning_speed, delta * lerp_amount), 3)
 	
-	return _rotation_vel * true_turning_speed * delta
+	
+	# for backwards fix
+	prev_steering_inputs = rotation_direction
+	
+	return _rotation_vel * true_turning_speed * delta * _current_rotation_fix
 
 #endregion
 
