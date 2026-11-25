@@ -14,12 +14,21 @@ bg_color = Color(0, 0, 1, 1)
 [node name="Busstop" type="Node2D" unique_id=834891058 groups=["busstop"]]
 script = ExtResource("1_oi4tm")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=381094470]
+[node name="BusTop" type="Sprite2D" parent="." unique_id=381094470]
+z_index = 12
 position = Vector2(0, -9.536743e-07)
 texture = ExtResource("2_xjad6")
+vframes = 2
+
+[node name="BusBottom" type="Sprite2D" parent="." unique_id=2018808753]
+z_index = 2
+position = Vector2(0, -9.536743e-07)
+texture = ExtResource("2_xjad6")
+vframes = 2
+frame = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=459311186]
-z_index = 1
+z_index = 54
 offset_left = -26.0
 offset_top = -50.0
 offset_right = 26.0
@@ -33,6 +42,7 @@ show_percentage = false
 [node name="tracker" type="Sprite2D" parent="." unique_id=1079494508]
 physics_interpolation_mode = 1
 top_level = true
+z_index = 64
 texture = ExtResource("3_xjad6")
 script = ExtResource("3_hr2fb")
 on_screen_offset = Vector2(0, -48)
