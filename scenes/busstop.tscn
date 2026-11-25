@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv45tso1amo1i" path="res://assets/sprites/buildings/spr_busstop.png" id="2_xjad6"]
 [ext_resource type="Script" uid="uid://babpdsfvhi2mh" path="res://scripts/tracker.gd" id="3_hr2fb"]
 [ext_resource type="Texture2D" uid="uid://pffjjphot4gb" path="res://assets/sprites/spr_arrow.png" id="3_xjad6"]
+[ext_resource type="AudioStream" uid="uid://b0c3v6truqtki" path="res://assets/sounds/stop_reached.wav" id="5_eru8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r32pp"]
 bg_color = Color(0.6027165, 0.60574514, 0.54955053, 1)
@@ -47,3 +48,7 @@ texture = ExtResource("3_xjad6")
 script = ExtResource("3_hr2fb")
 on_screen_offset = Vector2(0, -48)
 screen_margin = 48.0
+
+[node name="StopDone" type="AudioStreamPlayer2D" parent="." unique_id=1290946150]
+unique_name_in_owner = true
+stream = ExtResource("5_eru8g")

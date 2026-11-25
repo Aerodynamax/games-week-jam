@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://p3qc1pqnbhtn" path="res://scripts/bus stop ui/endscreen.gd" id="1_0q5t1"]
 [ext_resource type="Texture2D" uid="uid://sifhgvq4uwbj" path="res://assets/sprites/spr_clipboard.png" id="2_w8nad"]
 [ext_resource type="FontFile" uid="uid://dw4ttx8ydyl6b" path="res://assets/at01.ttf" id="3_w8nad"]
+[ext_resource type="AudioStream" uid="uid://b6hwibrcqbtqb" path="res://assets/sounds/paper_rustle.wav" id="4_o6yk7"]
 
 [node name="Endscreen" type="Control" unique_id=1154768268 groups=["EndScreen"]]
 process_mode = 3
@@ -98,5 +99,9 @@ offset_top = -381.0
 offset_right = 1589.0
 offset_bottom = 1728.0
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=988810455]
+stream = ExtResource("4_o6yk7")
+volume_db = 18.712
 
 [connection signal="pressed" from="Node2D/CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

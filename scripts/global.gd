@@ -1,5 +1,6 @@
 extends Node
 
+signal bus_stop_approached(entered: bool)
 
 #region player
 
