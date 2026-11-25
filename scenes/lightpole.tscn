@@ -156,7 +156,7 @@ animations = [{
 "speed": 24.0
 }]
 
-[node name="Lightpost" type="RigidBody2D" unique_id=336904130]
+[node name="Lightpole" type="RigidBody2D" unique_id=336904130]
 gravity_scale = 0.0
 contact_monitor = true
 max_contacts_reported = 2
