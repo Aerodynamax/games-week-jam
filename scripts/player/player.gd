@@ -8,8 +8,6 @@ func round_to_dec(num, digit):
 @onready var camera: Camera2D = $Camera2D
 @onready var sprite: Sprite2D = $Sprite
 
-@onready var screech_sound = preload("uid://ccijw13vrf10q")
-
 var dead  = false
 
 #region movement
@@ -273,6 +271,8 @@ func end():
 	if dead: return
 	
 	# explode
+	drift_audio.stop()
+	engine_audio.stop()
 	$AnimatedSprite2D.play("explosion")
 	explosion_audio.play()
 	dead = true

@@ -182,7 +182,7 @@ position_smoothing_enabled = true
 
 [node name="TimeTable" parent="CanvasLayer" unique_id=322771032 instance=ExtResource("3_qhqgy")]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1194550498]
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1194550498]
 stream = ExtResource("4_dqkch")
 volume_db = -2.0
 autoplay = true
