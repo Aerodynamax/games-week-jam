@@ -266,7 +266,7 @@ func _physics_process(delta: float) -> void:
 
 
 @onready var explosion_audio: AudioStreamPlayer2D = $ExplosionAudio
-
+@onready var emphasiser_audio: AudioStreamPlayer2D = $BusExplosionEmphasiserAudio
 func end():
 	if dead: return
 	
@@ -275,4 +275,5 @@ func end():
 	engine_audio.stop()
 	$AnimatedSprite2D.play("explosion")
 	explosion_audio.play()
+	emphasiser_audio.play()
 	dead = true

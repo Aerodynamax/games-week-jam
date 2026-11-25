@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_8txt3"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_2w11d"]
 [ext_resource type="AudioStream" uid="uid://d3vtfsxawhxg5" path="res://assets/sounds/explosion/explode-156615_2785350-lq.ogg" id="40_cs1tg"]
+[ext_resource type="AudioStream" uid="uid://3togasttt5fa" path="res://assets/sounds/bus/bus_explosion_emphasiser.wav" id="41_2dvfe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqxiu"]
 radius = 6.0
@@ -208,3 +209,7 @@ frame_progress = 1.0
 stream = ExtResource("40_cs1tg")
 volume_db = 1.0
 pitch_scale = 2.0
+
+[node name="BusExplosionEmphasiserAudio" type="AudioStreamPlayer2D" parent="." unique_id=89507030]
+stream = ExtResource("41_2dvfe")
+volume_db = 9.813
