@@ -244,6 +244,11 @@ func update_impulses(delta: float) -> Vector2:
 	
 	return _impulse_velocity
 
+func get_next_collision() -> KinematicCollision2D:
+	# 3 frames later
+	return move_and_collide(velocity, true) as KinematicCollision2D
+	
+
 #endregion
 
 func _physics_process(delta: float) -> void:

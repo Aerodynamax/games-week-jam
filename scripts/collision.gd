@@ -13,7 +13,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("hi")
+	#print("hi")
 	area2d.connect("body_entered", _on_area_2d_body_entered)
 
 
@@ -52,13 +52,34 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			await tween.finished
 			await explosion_audio.finished
 			get_parent().queue_free()
-		elif(body.get_velocity().length() < 0 and body.get_velocity().length() > -destruction_velocity):
-			body.stop_movement()
-			body.apply_impulse(body.transform.x * -100)
 		else:
 			print("You aren't fast enough")
-			body.stop_movement()
-			body.apply_impulse(global_position.direction_to(body.global_position) * 300)
-			#body.apply_impulse(body.transform.x * -100)
 			
-	
+			body.stop_movement()
+			
+			# push the player with the car/npc velocity
+			var push_vel: Vector2
+			var non_player = get_parent()
+			if non_player is Car or non_player is NPC or non_player is CrossingNPC:
+				var transfrm = non_player.transform
+				push_vel = non_player.move_speed * non_player.transform.x
+			
+			if non_player is NPC:
+				# npcs can go forwards or backwards
+				push_vel *= non_player.move_dir
+			
+			if push_vel:
+				body.apply_impulse(push_vel * 3)
+			
+			# get reflection of player movement
+			var collision: KinematicCollision2D
+			if body.get_velocity().length() > 0:
+				collision = body.get_next_collision()
+			if collision:
+				var reflect = collision.get_remainder().bounce(collision.get_normal())
+				body.apply_impulse(reflect)
+			
+			#body.apply_impulse(
+				#(global_position.direction_to(body.global_position)) * 300
+			#)
+			#body.apply_impulse(body.transform.x * -100)

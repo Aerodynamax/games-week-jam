@@ -56,7 +56,6 @@ func emit_on_update():
 	)
 
 func _physics_process(delta: float) -> void:
-	print(current)
 	if current:
 		progressBar.visible = player.global_position.distance_to(global_position) <= wait_Distance
 		if player.global_position.distance_to(global_position) <= wait_Distance:
