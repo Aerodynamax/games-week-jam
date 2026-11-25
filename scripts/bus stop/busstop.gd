@@ -2,17 +2,18 @@ class_name BusStop
 extends Node2D
 
 @onready var player : CharacterBody2D = Global.player
-@onready var progressBar : ProgressBar = get_node("ProgressBar")
 @export var wait_Time : float = 2.0
 @export var wait_Distance : int = 80.0
 @export var loc_Name: String
 @export var loc_time: int
 
 @onready var tracker := $tracker
+@onready var progress_bar = $ProgressBar
+@onready var stop_done: AudioStreamPlayer2D = %StopDone
 
 func _ready() -> void:
-	$ProgressBar.rotation -= rotation
-	
+	progress_bar.rotation -= rotation
+	progress_bar.visibility_changed.connect(_visiblity_changed)
 	current = current
 	
 	Global.score = 0
@@ -56,15 +57,15 @@ func emit_on_update():
 	)
 
 func _physics_process(delta: float) -> void:
-	print(current)
 	if current:
-		progressBar.visible = player.global_position.distance_to(global_position) <= wait_Distance
+		progress_bar.visible = player.global_position.distance_to(global_position) <= wait_Distance
 		if player.global_position.distance_to(global_position) <= wait_Distance:
-			progressBar.value = 100 - waited_Time/wait_Time * 100
+			progress_bar.value = 100 - waited_Time/wait_Time * 100
 			waited_Time+=delta
 			if waited_Time>wait_Time and not finished:
 				change_target()
-				progressBar.hide()
+				progress_bar.hide()
+				stop_done.play()
 				finished = true
 		if Global.timetable.get_time()>loc_time:
 			Global.Endscreen.fail()
@@ -73,3 +74,7 @@ func _physics_process(delta: float) -> void:
 
 func change_target():
 	Global.timetable.change_target()
+
+# Hacky but works hopefully
+func _visiblity_changed() -> void:
+	Global.bus_stop_approached.emit(progress_bar.visible)

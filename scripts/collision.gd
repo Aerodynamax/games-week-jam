@@ -13,7 +13,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("hi")
 	area2d.connect("body_entered", _on_area_2d_body_entered)
 
 

@@ -7,6 +7,8 @@ extends Control
 @onready var node2d : Node2D = $Node2D
 @onready var colorrect : ColorRect = $ColorRect
 
+var over = false
+
 func calculate_scores():
 	var time = Global.timetable.get_time() - 540
 	var seconds = fmod(time, 60)
@@ -29,6 +31,10 @@ func fail():
 func scroll():
 	var tween = create_tween()
 	
+	if !over:
+		$AudioStreamPlayer2D.play()
+		print("Audio test")
+		over = true
 	
 	tween.tween_property(node2d, "position", Vector2(573.0, 300.0), 1)
 	

@@ -10,6 +10,10 @@ func round_to_dec(num, digit):
 
 var dead  = false
 
+func _ready() -> void:
+	Global.bus_stop_approached.connect(_on_bus_stop_approached)
+
+
 #region movement
 
 @export_group("Movement")
@@ -264,15 +268,30 @@ func _physics_process(delta: float) -> void:
 	
 	prev_rotation = rotation
 
+#region door opening and closing sounds
+
+func _on_bus_stop_approached(entered: bool):
+	if(entered):
+		door_open.play()
+	else:
+		door_close.play()
+
+#endregion
+
 
 @onready var explosion_audio: AudioStreamPlayer2D = $ExplosionAudio
 @onready var emphasiser_audio: AudioStreamPlayer2D = $BusExplosionEmphasiserAudio
+@onready var door_open: AudioStreamPlayer2D = %DoorOpen
+@onready var door_close: AudioStreamPlayer2D = %DoorClose
+
 func end():
 	if dead: return
 	
 	# explode
 	drift_audio.stop()
 	engine_audio.stop()
+	door_open.stop()
+	door_close.stop()
 	$AnimatedSprite2D.play("explosion")
 	explosion_audio.play()
 	emphasiser_audio.play()
