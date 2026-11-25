@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://dxr0u3qxtx28s" path="res://assets/explosion frames/1_30.png" id="34_j8m1h"]
 [ext_resource type="Texture2D" uid="uid://cbcp228dp4w2c" path="res://assets/explosion frames/1_31.png" id="35_myx16"]
 [ext_resource type="Texture2D" uid="uid://dtyn8o1exam7d" path="res://assets/explosion frames/1_32.png" id="36_pktex"]
+[ext_resource type="AudioStream" uid="uid://b3c4kxu520ggc" path="res://assets/sounds/bus_crash.wav" id="37_in3qe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
 size = Vector2(102, 70)
@@ -155,6 +156,12 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_q425y"]
+random_pitch = 1.27714
+random_volume_offset_db = 5.66
+streams_count = 1
+stream_0/stream = ExtResource("37_in3qe")
+
 [node name="House" type="RigidBody2D" unique_id=336904130]
 gravity_scale = 0.0
 contact_monitor = true
@@ -178,6 +185,9 @@ script = ExtResource("3_q425y")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207732290]
 sprite_frames = SubResource("SpriteFrames_mixel")
 animation = &"explosion"
+
+[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=158940050]
+stream = SubResource("AudioStreamRandomizer_q425y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

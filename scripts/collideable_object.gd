@@ -5,6 +5,9 @@ extends RigidBody2D
 @export var value : float = 10.01
 
 
+@onready var crash_audio: AudioStreamPlayer2D = $CrashAudio
+
+
 #func _on_body_entered(body: Node) -> void:
 	#print("hello")
 	#Global.player.stop_movement()
@@ -34,12 +37,15 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			var collision: KinematicCollision2D
 			if body.get_velocity().length() > 0:
 				collision = body.get_next_collision()
+				crash_audio.volume_db += min(body.get_velocity().length() / 50, 2);
 			else:
 				collision = self.get_next_collision()
 			
 			if collision:
 				var reflect = collision.get_remainder().bounce(collision.get_normal())
 				body.apply_impulse(reflect)
+				if !crash_audio.playing:
+					crash_audio.play()
 
 func get_next_collision() -> KinematicCollision2D:
 	print("vel: "+str(linear_velocity))

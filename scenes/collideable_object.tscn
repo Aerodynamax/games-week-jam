@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqb7gaoohi3wo"]
 
 [ext_resource type="Texture2D" uid="uid://bohpvgaquqllp" path="res://icon.svg" id="1_asekn"]
+[ext_resource type="AudioStream" uid="uid://b3c4kxu520ggc" path="res://assets/sounds/bus_crash.wav" id="3_f0xms"]
 [ext_resource type="PackedScene" uid="uid://cypvf43ob7ud1" path="res://scenes/collision.tscn" id="35_6typr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qr2vy"]
@@ -8,6 +9,12 @@ size = Vector2(62, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mixel"]
 size = Vector2(117.109924, 119.383286)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wm08d"]
+random_pitch = 1.27714
+random_volume_offset_db = 5.66
+streams_count = 1
+stream_0/stream = ExtResource("3_f0xms")
 
 [node name="CollideableObject" type="RigidBody2D" unique_id=336904130]
 gravity_scale = 0.0
@@ -35,6 +42,9 @@ shape = SubResource("RectangleShape2D_mixel")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=678080495]
 scale = Vector2(0.45709762, 0.40453976)
 texture = ExtResource("1_asekn")
+
+[node name="CrashAudio" type="AudioStreamPlayer2D" parent="." unique_id=885512785]
+stream = SubResource("AudioStreamRandomizer_wm08d")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

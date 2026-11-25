@@ -9,6 +9,7 @@ extends Node2D
 @export var Sprite : Sprite2D
 
 @onready var explosion_audio: AudioStreamPlayer2D = $ExplosionAudio
+@onready var crash_audio: AudioStreamPlayer2D = $CrashAudio
 
 
 # Called when the node enters the scene tree for the first time.
@@ -53,6 +54,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			get_parent().queue_free()
 		else:
 			print("You aren't fast enough")
+			print("truly")
 			
 			body.stop_movement()
 			
@@ -60,7 +62,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			var push_vel: Vector2
 			var non_player = get_parent()
 			if non_player is Car or non_player is NPC or non_player is CrossingNPC:
-				var transfrm = non_player.transform
 				push_vel = non_player.move_speed * non_player.transform.x
 			
 			if non_player is NPC:
@@ -69,6 +70,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			
 			if push_vel:
 				body.apply_impulse(push_vel * 3)
+				crash_audio.volume_db += min((push_vel.length() / 50), 2)
 			
 			# get reflection of player movement
 			var collision: KinematicCollision2D
@@ -77,6 +79,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			if collision:
 				var reflect = collision.get_remainder().bounce(collision.get_normal())
 				body.apply_impulse(reflect)
+			
+			if !crash_audio.playing:
+				crash_audio.play()
+			print("Rumour has it that audio just played...")
 			
 			#body.apply_impulse(
 				#(global_position.direction_to(body.global_position)) * 300
